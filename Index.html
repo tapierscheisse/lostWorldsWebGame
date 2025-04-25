@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Spielleiter</title>
+  <style>
+    .monsters {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .monster {
+      margin: 10px;
+      text-align: center;
+    }
+    .monster img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+    }
+    .selected {
+      border: 3px solid green;
+    }
+  </style>
+</head>
+<body>
+  <h1>Spielleiter Bereich</h1>
+  <h2>Wähle Monster aus</h2>
+  <div class="monsters" id="monsterList"></div>
+  <button id="startGame">Spiel starten</button>
+  
+  <script>
+    const gameId = new URLSearchParams(window.location.search).get('gameId');
+    const selectedMonsters = [];
+    
+    // Monster laden
+    fetch('/api/get-monsters')
+      .then(res => res.json())
+      .then(monsters => {
+        const container = document.getElementById('monsterList');
+        
+        monsters.forEach(monster => {
+          const div = document.createElement('div');
+          div.className = 'monster';
+          div.innerHTML = `
+            <img src="/images/monster/${monster}/avatar.jpg" alt="${monster}">
+            <p>${monster}</p>
+          `;
+          div.addEventListener('click', () => {
+            div.classList.toggle('selected');
+            const index = selectedMonsters.indexOf(monster);
+            if (index === -1) {
+              selectedMonsters.push(monster);
+            } else {
+              selectedMonsters.splice(index, 1);
+            }
+          });
+          container.appendChild(div);
+        });
+      });
+    
+    document.getElementById('startGame').addEventListener('click', () => {
+      fetch('/api/select-monsters', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ gameId, monsters: selectedMonsters })
+      }).then(() => {
+        window.location.href = `/game.html?gameId=${gameId}&master=true`;
+      });
+    });
+  </script>
+</body>
+</html>

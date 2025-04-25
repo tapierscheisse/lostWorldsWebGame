@@ -1,0 +1,17 @@
+[
+  {
+    "id": "drache",
+    "name": "Drache",
+    "bild": "/images/monster/drache/avatar.jpg"
+  },
+  {
+    "id": "ork",
+    "name": "Ork",
+    "bild": "/images/monster/ork/avatar.jpg"
+  },
+  {
+    "id": "zombie",
+    "name": "Zombie",
+    "bild": "/images/monster/zombie/avatar.jpg"
+  }
+]

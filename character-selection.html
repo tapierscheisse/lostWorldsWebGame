@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Charakterauswahl</title>
+  <style>
+    .characters {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .character {
+      margin: 10px;
+      text-align: center;
+      cursor: pointer;
+    }
+    .character img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <h1>Wähle deinen Charakter</h1>
+  <div class="characters" id="characterList"></div>
+  
+  <script>
+    const gameId = new URLSearchParams(window.location.search).get('gameId');
+    const playerId = generatePlayerId();
+    
+    // Charaktere laden
+    fetch(`/api/get-characters?gameId=${gameId}`)
+      .then(res => res.json())
+      .then(characters => {
+        const container = document.getElementById('characterList');
+        
+        characters.forEach(character => {
+          const div = document.createElement('div');
+          div.className = 'character';
+          div.innerHTML = `
+            <img src="/images/spieler/${character}/avatar.jpg" alt="${character}">
+            <p>${character}</p>
+          `;
+          div.addEventListener('click', () => selectCharacter(character));
+          container.appendChild(div);
+        });
+      });
+    
+    function selectCharacter(character) {
+      fetch('/api/join-game', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ gameId, playerId, character })
+      }).then(() => {
+        window.location.href = `/game.html?gameId=${gameId}&playerId=${playerId}`;
+      });
+    }
+    
+    function generatePlayerId() {
+      return 'player-' + Math.random().toString(36).substring(2, 9);
+    }
+  </script>
+</body>
+</html>

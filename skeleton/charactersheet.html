@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost Worlds - Charakterblatt & Kampfsystem V3 (JSON Load)</title>
+    <style>
+        /* Grundlegendes Design von character_sheet.html */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .character-sheet {
+            background-color: #fff;
+            border: 2px solid #8B4513; /* Dunkelbraun */
+            border-radius: 5px;
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto; /* Zentriert mit etwas Abstand oben/unten */
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #8B0000; /* Dunkelrot */
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+        h2 {
+            color: #8B0000; /* Dunkelrot */
+            text-align: center;
+            font-size: 22px;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap; /* Ermöglicht Umbruch auf kleineren Bildschirmen */
+            margin-bottom: 20px;
+            background-color: #f0e6d2; /* Pergament-ähnlich */
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .stat-box {
+            text-align: center;
+            padding: 5px 10px; /* Etwas Padding für die Boxen */
+        }
+        .stat-value {
+            font-weight: bold;
+            font-size: 18px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th {
+            background-color: #8B0000; /* Dunkelrot */
+            color: white;
+            padding: 8px;
+            text-align: left;
+        }
+        td {
+            padding: 8px;
+            border-bottom: 1px solid #ddd; /* Hellgrau */
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9; /* Sehr helles Grau für Zebrastreifen */
+        }
+        .maneuver-btn {
+            display: block;
+            width: 100%;
+            padding: 8px;
+            margin: 3px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            text-align: left;
+            transition: opacity 0.2s ease-in-out; /* Sanfter Übergang für Klick-Effekt */
+        }
+        .maneuver-btn:hover {
+            opacity: 0.8; /* Leichte Transparenz beim Hover */
+        }
+
+        /* Farben für Manöver-Typen (aus deiner Version) */
+        .ORANGE { background-color: #FFA07A; color: black; } /* LightSalmon */
+        .GREEN { background-color: #98FB98; color: black; } /* PaleGreen */
+        .BLUE { background-color: #ADD8E6; color: black; } /* LightBlue */
+        .YELLOW { background-color: #FFD700; color: black; } /* Gold */
+        .protected { background-color: #DDA0DD; color: black; } /* Plum - Beibehalten falls doch verwendet */
+        .BROWN { background-color: #F5DEB3; color: black; } /* Wheat */
+        .RED { background-color: #FF6347; color: white; } /* Tomato */
+        .BLACK { background-color: black; color: white; } /* Black */
+        .WHITE { background-color: #D3D3D3; color: black; } /* LightGray */
+
+        /* CSS für Modals */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.6);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 5px;
+            position: relative;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+            animation-name: animatetop;
+            animation-duration: 0.4s
+        }
+
+        @keyframes animatetop {
+          from {top: -300px; opacity: 0}
+          to {top: 0; opacity: 1}
+        }
+
+        /* Styling für Gegner-Modal */
+        .enemy-modal-content {
+            background-color: #f0e6d2;
+            border: 2px solid #8B4513;
+        }
+        #enemyPageInput {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #8B4513;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        #submitEnemyPage {
+            background-color: #8B0000;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            margin: 0 auto;
+            transition: background-color 0.2s;
+        }
+        #submitEnemyPage:hover {
+            background-color: #A52A2A;
+        }
+        .input-label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        /* Schließen-Button (X) */
+        .close {
+            color: #aaa;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            line-height: 1;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Ergebnis-Modal spezifisch */
+        #resultMessage, #resultInstruction {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+        #resultImage {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 15px auto;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            background-color: #eee;
+        }
+        #nextRound {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            margin: 15px auto 0 auto;
+            transition: background-color 0.2s;
+        }
+        #nextRound:hover {
+            background-color: #45a049;
+        }
+        .error-message {
+            color: red;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        #loadingMessage { /* Added style for loading message */
+             text-align: center;
+             padding: 20px;
+             font-style: italic;
+             color: #555;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="character-sheet">
+        <h1>LOST WORLDS</h1>
+        <h2>CHARACTER SHEET & KAMPFSYSTEM V3</h2>
+
+        <div class="stats">
+            <div class="stat-box">
+                <div>NAME</div>
+                <div class="stat-value">Warrior</div> </div>
+            <div class="stat-box">
+                <div>HEIGHT</div>
+                <div class="stat-value">6'2"</div> </div>
+            <div class="stat-box">
+                <div>BODY PTS</div>
+                <div class="stat-value">14</div> </div>
+            <div class="stat-box">
+                <div>ATTACKS</div>
+                <div class="stat-value">1</div> </div>
+        </div>
+
+        <div id="loadingMessage">Lade Kampfdaten...</div>
+        <div id="controlsContainer" style="display: none;"> <table>
+                <thead>
+                    <tr>
+                        <th>MANEUVERS (Wähle dein Manöver)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><button class="maneuver-btn ORANGE" data-page="24">DOWN SWING SMASH</button></td></tr>
+                    <tr><td><button class="maneuver-btn ORANGE" data-page="28">SIDE SWING STRONG</button></td></tr>
+                    <tr><td><button class="maneuver-btn RED" data-page="10">DOWN SWING HIGH</button></td></tr>
+                    <tr><td><button class="maneuver-btn BLUE" data-page="2">DOWN SWING LOW</button></td></tr>
+                    <tr><td><button class="maneuver-btn RED" data-page="32">THRUST HIGH</button></td></tr>
+                    <tr><td><button class="maneuver-btn BLUE" data-page="14">THRUST LOW</button></td></tr>
+                    <tr><td><button class="maneuver-btn RED" data-page="42">FAKE HIGH</button></td></tr>
+                    <tr><td><button class="maneuver-btn BLUE" data-page="12">FAKE LOW</button></td></tr>
+                    <tr><td><button class="maneuver-btn BLUE" data-page="22">FAKE SIDE SWING</button></td></tr>
+                    <tr><td><button class="maneuver-btn RED" data-page="38">FAKE THRUST</button></td></tr>
+                    <tr><td><button class="maneuver-btn ORANGE" data-page="44">PROTECTED ATTACKS DOWN SWING</button></td></tr>
+                    <tr><td><button class="maneuver-btn BLUE" data-page="48">PROTECTED ATTACKS SIDE SWING</button></td></tr>
+                    <tr><td><button class="maneuver-btn RED" data-page="6">PROTECTED ATTACKS THRUST</button></td></tr>
+                    <tr><td><button class="maneuver-btn BLUE" data-page="34">SPECIAL KICK</button></td></tr>
+                    <tr><td><button class="maneuver-btn YELLOW" data-page="40">SPECIAL WILD SWING</button></td></tr>
+                    <tr><td><button class="maneuver-btn BLUE" data-page="30">SPECIAL DISLODGE WEAPON</button></td></tr>
+                    <tr><td><button class="maneuver-btn GREEN" data-page="46">SPECIAL RETRIEVE WEAPON</button></td></tr>
+                    <tr><td><button class="maneuver-btn GREEN" data-page="26">SHIELD BLOCK HIGH</button></td></tr>
+                    <tr><td><button class="maneuver-btn GREEN" data-page="4">SHIELD BLOCK LOW</button></td></tr>
+                    <tr><td><button class="maneuver-btn GREEN" data-page="18">JUMP UP</button></td></tr>
+                    <tr><td><button class="maneuver-btn YELLOW" data-page="8">JUMP DODGE</button></td></tr>
+                    <tr><td><button class="maneuver-btn GREEN" data-page="20">JUMP DUCK</button></td></tr>
+                    <tr><td><button class="maneuver-btn YELLOW" data-page="16">JUMP AWAY</button></td></tr>
+                    <tr><td><button class="maneuver-btn WHITE" data-page="50">EXTENDED RANGE CHARGE</button></td></tr>
+                    <tr><td><button class="maneuver-btn BLACK" data-page="64">EXTENDED RANGE SWING HIGH</button></td></tr>
+                    <tr><td><button class="maneuver-btn BLACK" data-page="58">EXTENDED RANGE SWING LOW</button></td></tr>
+                    <tr><td><button class="maneuver-btn WHITE" data-page="54">EXTENDED RANGE THRUST HIGH</button></td></tr>
+                    <tr><td><button class="maneuver-btn WHITE" data-page="60">EXTENDED RANGE THRUST LOW</button></td></tr>
+                    <tr><td><button class="maneuver-btn BROWN" data-page="56">EXTENDED RANGE BLOCK & CLOSE</button></td></tr>
+                    <tr><td><button class="maneuver-btn BROWN" data-page="52">EXTENDED RANGE DODGE</button></td></tr>
+                    <tr><td><button class="maneuver-btn BROWN" data-page="62">EXTENDED RANGE JUMP BACK</button></td></tr>
+                </tbody>
+            </table>
+        </div></div>
+
+    <div id="enemyModal" class="modal">
+        <div class="modal-content enemy-modal-content">
+            <span class="close enemy-close">&times;</span>
+            <h3>Gegner-Manöver eingeben</h3>
+            <label for="enemyPageInput" class="input-label">Seitenzahl des gegnerischen Manövers:</label>
+            <input type="number" id="enemyPageInput" placeholder="Zahl eingeben..." min="1">
+            <div id="enemyInputError" class="error-message" style="display: none;"></div>
+            <button id="submitEnemyPage">Kampf auswerten</button>
+        </div>
+    </div>
+
+    <div id="resultModal" class="modal">
+        <div class="modal-content">
+            <span class="close result-close">&times;</span>
+            <h3>Kampfergebnis</h3>
+            <div id="resultMessage"></div>
+            <div id="resultInstruction"></div>
+            <img id="resultImage" src="https://placehold.co/400x300/eee/ccc?text=Kampfszene" alt="Kampfszene">
+            <button id="nextRound">Nächste Runde</button>
+        </div>
+    </div>
+
+    <script>
+        // --- Globale Variable für geladene Outcomes ---
+        let loadedOutcomes = null;
+        let currentPlayerPage = null; // Speichert die Seite des Spielers
+
+        // --- Referenzen zu DOM-Elementen ---
+        const enemyModal = document.getElementById("enemyModal");
+        const resultModal = document.getElementById("resultModal");
+        const enemyPageInput = document.getElementById("enemyPageInput");
+        const submitEnemyPageBtn = document.getElementById("submitEnemyPage");
+        const resultMessage = document.getElementById("resultMessage");
+        const resultInstruction = document.getElementById("resultInstruction");
+        const resultImage = document.getElementById("resultImage");
+        const enemyInputError = document.getElementById("enemyInputError");
+        const loadingMessage = document.getElementById("loadingMessage");
+        const controlsContainer = document.getElementById("controlsContainer");
+
+
+        const enemyCloseBtn = enemyModal.querySelector(".enemy-close");
+        const resultCloseBtn = resultModal.querySelector(".result-close");
+        const nextRoundBtn = document.getElementById("nextRound");
+
+        // --- Funktion zum Laden der JSON-Daten ---
+        async function loadOutcomes() {
+            try {
+                // WICHTIG: Stelle sicher, dass 'lostWorldsOutcomes.json' im selben Verzeichnis liegt
+                // oder passe den Pfad entsprechend an.
+                const response = await fetch('lostWorldsOutcomes.json');
+                if (!response.ok) {
+                    // Fehlerbehandlung, wenn die Datei nicht gefunden wird oder Serverfehler auftritt
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                loadedOutcomes = await response.json(); // JSON parsen
+                console.log("Kampfdaten erfolgreich geladen.");
+                initializeControls(); // Steuerung initialisieren, NACHDEM die Daten geladen sind
+            } catch (error) {
+                console.error("Fehler beim Laden der Kampfdaten:", error);
+                // Fehlermeldung für den Benutzer anzeigen
+                loadingMessage.textContent = "Fehler beim Laden der Kampfdaten. Stelle sicher, dass 'lostWorldsOutcomes.json' vorhanden und korrekt formatiert ist.";
+                loadingMessage.style.color = 'red';
+                // Optional: Controls trotzdem anzeigen, aber mit Warnung? Oder blockieren?
+                // Hier wird blockiert, da ohne Daten keine Auswertung möglich ist.
+            }
+        }
+
+        // --- Funktion zum Initialisieren der Steuerungselemente (Buttons etc.) ---
+        function initializeControls() {
+            if (!loadedOutcomes) {
+                console.error("Initialisierung fehlgeschlagen: Kampfdaten nicht geladen.");
+                return;
+            }
+             // Ladeanzeige ausblenden und Steuerung anzeigen
+             loadingMessage.style.display = 'none';
+             controlsContainer.style.display = 'block';
+
+
+            // --- Event Listener für Spieler-Manöver ---
+            document.querySelectorAll('.maneuver-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    currentPlayerPage = this.getAttribute('data-page');
+                    console.log(`Spieler wählt Seite: ${currentPlayerPage}`);
+                    enemyPageInput.value = "";
+                    enemyInputError.style.display = 'none';
+                    enemyModal.style.display = "block";
+                    enemyPageInput.focus();
+                });
+            });
+
+            // --- Event Listener für "Kampf auswerten" Button ---
+            submitEnemyPageBtn.addEventListener('click', function() {
+                const enemyPageStr = enemyPageInput.value.trim();
+                const enemyPage = parseInt(enemyPageStr, 10);
+
+                if (!enemyPageStr || isNaN(enemyPage) || enemyPage <= 0) {
+                    enemyInputError.textContent = "Bitte eine gültige positive Zahl eingeben.";
+                    enemyInputError.style.display = 'block';
+                    return;
+                }
+
+                enemyInputError.style.display = 'none';
+                console.log(`Gegner-Seite eingegeben: ${enemyPage}`);
+                enemyModal.style.display = "none";
+                resolveCombat(currentPlayerPage, enemyPage);
+            });
+
+            // --- Event Listener für Enter-Taste im Input-Feld ---
+            enemyPageInput.addEventListener('keypress', function(event) {
+                if (event.key === 'Enter') {
+                    event.preventDefault();
+                    submitEnemyPageBtn.click();
+                }
+            });
+        }
+
+
+        // --- Funktion zur Kampfauswertung ---
+        function resolveCombat(playerPage, enemyPage) {
+             // Stelle sicher, dass die Daten geladen wurden
+            if (!loadedOutcomes) {
+                 console.error("Fehler: Kampfdaten (outcomes) nicht geladen.");
+                 resultMessage.textContent = "Fehler: Kampfdaten konnten nicht geladen werden.";
+                 resultInstruction.textContent = "";
+                 resultImage.src = "https://placehold.co/400x300/ffdddd/cc0000?text=Datenfehler";
+                 resultImage.alt = "Datenfehler";
+                 resultModal.style.display = "block";
+                 return;
+            }
+
+            if (!playerPage || !enemyPage) {
+                console.error("Fehler: Spieler- oder Gegnerseite fehlt.");
+                resultMessage.textContent = "Ein Fehler ist aufgetreten (Seiten fehlen). Bitte erneut versuchen.";
+                resultInstruction.textContent = "";
+                resultImage.src = "https://placehold.co/400x300/ffdddd/cc0000?text=Fehler";
+                resultImage.alt = "Fehler";
+                resultModal.style.display = "block";
+                return;
+            }
+
+            const key = `${enemyPage}-${playerPage}`;
+            console.log(`Suche Ergebnis für Schlüssel: ${key}`);
+
+            const result = loadedOutcomes[key]; // Suche das Ergebnis in den geladenen Daten
+
+            if (result) {
+                console.log("Ergebnis gefunden:", result);
+                resultMessage.textContent = result.message || "Keine Beschreibung gefunden.";
+                resultInstruction.textContent = "Nächster Zug: " + (result.nextInstruction || "Keine besonderen Anweisungen.");
+
+                const imageName = `skeleton_${result.resultPage}.jpg`;
+                // WICHTIG: Passe den Basispfad 'skeleton/' an, falls deine Bilder woanders liegen!
+                resultImage.src = `skeleton/${imageName}`;
+                resultImage.alt = result.message || `Kampfergebnis Seite ${result.resultPage}`;
+
+                resultImage.onerror = function() {
+                    console.warn(`Bild nicht gefunden: ${resultImage.src}`);
+                    this.onerror = null;
+                    this.src = `https://placehold.co/400x300/eeeeee/cccccc?text=Bild+${imageName}+fehlt`;
+                    this.alt = `Bild ${imageName} konnte nicht geladen werden`;
+                };
+
+            } else {
+                console.warn(`Kein Ergebnis für Schlüssel ${key} gefunden.`);
+                resultMessage.textContent = `Kein spezifisches Ergebnis für Kombination ${key} gefunden.`;
+                resultInstruction.textContent = "Die Aktionen neutralisieren sich möglicherweise.";
+                resultImage.src = "https://placehold.co/400x300/ddddff/6666cc?text=Unbekannt";
+                resultImage.alt = `Unbekanntes Ergebnis für ${key}`;
+                resultImage.onerror = null;
+            }
+
+            resultModal.style.display = "block";
+        }
+
+        // --- Event Listener zum Schließen der Modals ---
+        function closeModal(modal) {
+            modal.style.display = "none";
+        }
+
+        enemyCloseBtn.addEventListener('click', () => closeModal(enemyModal));
+        resultCloseBtn.addEventListener('click', () => closeModal(resultModal));
+        nextRoundBtn.addEventListener('click', () => closeModal(resultModal));
+
+        window.addEventListener('click', (event) => {
+            if (event.target == enemyModal) {
+                closeModal(enemyModal);
+            }
+            if (event.target == resultModal) {
+                closeModal(resultModal);
+            }
+        });
+
+        window.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') {
+                if (enemyModal.style.display === 'block') {
+                    closeModal(enemyModal);
+                }
+                if (resultModal.style.display === 'block') {
+                    closeModal(resultModal);
+                }
+            }
+        });
+
+        // --- Startet den Ladevorgang, wenn das DOM bereit ist ---
+        document.addEventListener('DOMContentLoaded', loadOutcomes);
+
+    </script>
+</body>
+</html>

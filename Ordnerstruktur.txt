@@ -1,0 +1,15 @@
+/projekt
+  /public
+    /images
+      /spieler
+        /charakter1
+        /charakter2
+        ...
+      /monster
+        /monster1
+        /monster2
+        ...
+  /data
+    spieler.json
+    monster.json
+  server.js

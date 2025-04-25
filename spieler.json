@@ -1,0 +1,17 @@
+[
+  {
+    "id": "krieger",
+    "name": "Krieger",
+    "bild": "/images/spieler/krieger/avatar.jpg"
+  },
+  {
+    "id": "magier",
+    "name": "Magier",
+    "bild": "/images/spieler/magier/avatar.jpg"
+  },
+  {
+    "id": "schurke",
+    "name": "Schurke",
+    "bild": "/images/spieler/schurke/avatar.jpg"
+  }
+]
