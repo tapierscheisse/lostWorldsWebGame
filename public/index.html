@@ -1,228 +1,38 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lost Worlds - Spielleiter</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f5f5;
-        }
-        h1 {
-            color: #2c3e50;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .game-id-box {
-            background: #e8f4f8;
-            padding: 15px;
-            border-radius: 8px;
-            margin: 20px 0;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .invite-link {
-            background: #d4edda;
-            padding: 15px;
-            border-radius: 8px;
-            margin: 20px 0;
-            word-break: break-all;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .monster-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-            gap: 20px;
-            margin: 30px 0;
-        }
-        .monster-card {
-            border: 2px solid #ddd;
-            border-radius: 10px;
-            padding: 12px;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            background: white;
-            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-        }
-        .monster-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        .monster-card.selected {
-            border-color: #3498db;
-            background-color: #eaf2f8;
-            box-shadow: 0 0 0 3px rgba(52,152,219,0.3);
-        }
-        .monster-image {
-            width: 100%;
-            height: 120px;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            border-radius: 5px;
-            margin-bottom: 10px;
-            position: relative;
-        }
-        .monster-name {
-            font-weight: bold;
-            color: #2c3e50;
-            margin-top: 8px;
-        }
-        #startGameBtn {
-            display: block;
-            margin: 30px auto;
-            padding: 12px 30px;
-            background-color: #3498db;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: all 0.3s;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        }
-        #startGameBtn:hover {
-            background-color: #2980b9;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }
-        #startGameBtn:disabled {
-            background-color: #95a5a6;
-            cursor: not-allowed;
-            transform: none;
-            box-shadow: none;
-        }
-        .loading {
-            text-align: center;
-            padding: 20px;
-            color: #7f8c8d;
-        }
-        .error {
-            color: #e74c3c;
-            text-align: center;
-            padding: 20px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lost Worlds - Spielleiter</title>
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
+  <div class="container">
     <h1>Spielleiter Bereich</h1>
     
-    <div class="game-id-box">
-        Deine Spiel-ID: <strong id="currentGameId"></strong>
+    <div class="game-info">
+      <div>Spiel-ID: <strong id="gameId"></strong></div>
+      <div>Spieler: <span id="playerCount">0</span>/4</div>
     </div>
-    
-    <div class="invite-link">
-        <strong>Einladungslink für Spieler:</strong><br>
-        <span id="inviteLink"></span>
+
+    <div class="monster-selection">
+      <h2>Monsterauswahl (<span id="selectedCount">0</span>/5)</h2>
+      <div class="monster-grid" id="availableMonsters"></div>
+      
+      <div class="selected-section">
+        <h3>Ausgewählte Monster:</h3>
+        <div id="selectedMonsters" class="monster-grid"></div>
+      </div>
     </div>
-    
-    <h2>Wähle Monster aus</h2>
-    <div class="monster-grid" id="monsterList">
-        <div class="loading">Lade Monster...</div>
+
+    <div class="player-list">
+      <h3>Verbundene Spieler:</h3>
+      <ul id="playersList"></ul>
     </div>
-    
-    <button id="startGameBtn" disabled>Spiel starten</button>
 
-    <script>
-        // Spiel initialisieren
-        const gameId = 'game-' + Math.random().toString(36).substring(2, 8);
-        document.getElementById('currentGameId').textContent = gameId;
-        document.getElementById('inviteLink').textContent = 
-            `${window.location.origin}/character-selection.html?gameId=${gameId}`;
+    <button id="startBtn" class="btn-primary" disabled>Spiel starten</button>
+  </div>
 
-        // Monster laden mit Cache-Busting
-        let selectedMonsters = [];
-        const monsterList = document.getElementById('monsterList');
-        
-        fetch(`/api/available-monsters?nocache=${Date.now()}`)
-            .then(response => {
-                if (!response.ok) throw new Error('Netzwerkfehler');
-                return response.json();
-            })
-            .then(monsters => {
-                monsterList.innerHTML = '';
-                
-                if (monsters.length === 0) {
-                    monsterList.innerHTML = '<div class="error">Keine Monster verfügbar!</div>';
-                    return;
-                }
-
-                monsters.forEach(monster => {
-                    const card = document.createElement('div');
-                    card.className = 'monster-card';
-                    card.innerHTML = `
-                        <div class="monster-image" style="background-image: url('${monster.bild}')">
-                            ${monster.bild.includes('default') ? 
-                              `<span style="
-                                position: absolute; 
-                                bottom: 0; 
-                                left: 0; 
-                                right: 0; 
-                                background: rgba(0,0,0,0.5); 
-                                color: white; 
-                                padding: 5px">
-                                ${monster.name}
-                              </span>` : ''}
-                        </div>
-                        <div class="monster-name">${monster.name}</div>
-                    `;
-                    
-                    card.addEventListener('click', () => {
-                        card.classList.toggle('selected');
-                        const index = selectedMonsters.indexOf(monster.id);
-                        if (index === -1) {
-                            selectedMonsters.push(monster.id);
-                        } else {
-                            selectedMonsters.splice(index, 1);
-                        }
-                        document.getElementById('startGameBtn').disabled = selectedMonsters.length === 0;
-                    });
-                    
-                    monsterList.appendChild(card);
-                });
-            })
-            .catch(error => {
-                console.error('Fehler:', error);
-                monsterList.innerHTML = `<div class="error">Fehler beim Laden: ${error.message}</div>`;
-            });
-
-        // Spiel starten
-        document.getElementById('startGameBtn').addEventListener('click', () => {
-            const btn = document.getElementById('startGameBtn');
-            btn.disabled = true;
-            btn.textContent = 'Starte Spiel...';
-            
-            fetch('/api/start-game', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ 
-                    gameId: gameId, 
-                    monsters: selectedMonsters 
-                })
-            })
-            .then(response => {
-                if (!response.ok) throw new Error('Serverfehler');
-                return response.json();
-            })
-            .then(data => {
-                if (data.success) {
-                    window.location.href = `/game.html?gameId=${gameId}&master=true`;
-                } else {
-                    throw new Error(data.message || 'Unbekannter Fehler');
-                }
-            })
-            .catch(error => {
-                console.error('Fehler:', error);
-                alert('Start fehlgeschlagen: ' + error.message);
-                btn.disabled = false;
-                btn.textContent = 'Spiel starten';
-            });
-        });
-    </script>
+  <script src="/gamemaster.js"></script>
 </body>
 </html>

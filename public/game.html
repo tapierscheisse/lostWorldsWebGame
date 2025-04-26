@@ -1,53 +1,212 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lost Worlds - Spiel</title>
+  <link rel="stylesheet" href="/styles.css">
   <style>
-    body { font-family: Arial, sans-serif; padding: 20px; }
-    #gameStatus { 
-      background: #f0f0f0; 
-      padding: 15px; 
+    /* Spiel-spezifische Styles */
+    .game-container {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      gap: 20px;
+    }
+    
+    .player-area, .monster-area, .action-area {
+      background: #f8f9fa;
+      padding: 15px;
       border-radius: 8px;
-      margin-bottom: 20px;
+    }
+    
+    .health-bar {
+      height: 20px;
+      background: #e9ecef;
+      border-radius: 4px;
+      margin-top: 5px;
+      overflow: hidden;
+    }
+    
+    .health-progress {
+      height: 100%;
+      background: #28a745;
+      width: 100%;
+      transition: width 0.3s;
+    }
+    
+    .combat-log {
+      height: 300px;
+      overflow-y: auto;
+      background: #212529;
+      color: #f8f9fa;
+      padding: 10px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    
+    .dice-roller {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+    }
+    
+    .dice-result {
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
     }
   </style>
 </head>
 <body>
-  <h1>Spielbereich</h1>
-  <div id="gameStatus">Lade Spielstatus...</div>
-  
+  <div class="container">
+    <h1>Lost Worlds - Spielbereich</h1>
+    
+    <div class="game-info">
+      <div>Spiel-ID: <strong id="displayGameId"></strong></div>
+      <div>Spieler: <span id="displayPlayerId"></span></div>
+      <div>Status: <span id="gameStatus">Läuft</span></div>
+    </div>
+    
+    <div class="game-container">
+      <!-- Spielerbereich -->
+      <div class="player-area">
+        <h2>Spieler</h2>
+        <div id="playersList"></div>
+      </div>
+      
+      <!-- Hauptspielbereich -->
+      <div class="action-area">
+        <h2>Aktionen</h2>
+        <div class="combat-log" id="combatLog"></div>
+        
+        <div class="dice-roller">
+          <button id="rollD20" class="btn">W20</button>
+          <button id="rollD12" class="btn">W12</button>
+          <button id="rollD10" class="btn">W10</button>
+          <button id="rollD6" class="btn">W6</button>
+          <div class="dice-result" id="diceResult"></div>
+        </div>
+        
+        <div id="actionButtons">
+          <button id="attackBtn" class="btn-primary">Angreifen</button>
+          <button id="defendBtn" class="btn-secondary">Verteidigen</button>
+        </div>
+      </div>
+      
+      <!-- Monsterbereich -->
+      <div class="monster-area">
+        <h2>Monster</h2>
+        <div id="monstersList"></div>
+      </div>
+    </div>
+  </div>
+
   <script>
+    // Spielinitialisierung
     const urlParams = new URLSearchParams(window.location.search);
     const gameId = urlParams.get('gameId');
     const playerId = urlParams.get('playerId');
-
-    // Spielstatus abfragen
-    function updateGameStatus() {
-      fetch(`/api/game-status/${gameId}`)
-        .then(response => response.json())
-        .then(data => {
-          document.getElementById('gameStatus').innerHTML = `
-            <h2>Spiel ID: ${gameId}</h2>
-            <h3>Spieler:</h3>
-            <ul>
-              ${data.players.map(p => `<li>${p.character}</li>`).join('')}
-            </ul>
-            <h3>Monster:</h3>
-            <ul>
-              ${data.monsters.map(m => `<li>${m}</li>`).join('')}
-            </ul>
-          `;
-        })
-        .catch(error => {
-          console.error('Fehler:', error);
-          document.getElementById('gameStatus').textContent = 
-            'Fehler beim Laden des Spielstatus';
-        });
+    const isMaster = urlParams.get('master') === 'true';
+    
+    document.getElementById('displayGameId').textContent = gameId;
+    document.getElementById('displayPlayerId').textContent = playerId;
+    
+    // WebSocket-Verbindung
+    const socket = new WebSocket(`ws://${window.location.host}`);
+    
+    socket.onopen = () => {
+      socket.send(JSON.stringify({ 
+        type: 'join-game', 
+        gameId, 
+        playerId,
+        isMaster 
+      }));
+    };
+    
+    socket.onmessage = (event) => {
+      const data = JSON.parse(event.data);
+      
+      switch(data.type) {
+        case 'game-update':
+          updateGameState(data);
+          break;
+        case 'combat-log':
+          addCombatLogEntry(data.message);
+          break;
+        case 'dice-roll':
+          showDiceResult(data.value, data.player);
+          break;
+      }
+    };
+    
+    // Spielstatus aktualisieren
+    function updateGameState(state) {
+      // Spielerliste
+      const playersList = document.getElementById('playersList');
+      playersList.innerHTML = state.players.map(player => `
+        <div class="player-card ${player.id === playerId ? 'you' : ''}">
+          <h3>${player.character} ${player.id === playerId ? '(Du)' : ''}</h3>
+          <div>HP: ${player.hp}/${player.maxHp}</div>
+          <div class="health-bar">
+            <div class="health-progress" 
+                 style="width: ${(player.hp / player.maxHp) * 100}%"></div>
+          </div>
+        </div>
+      `).join('');
+      
+      // Monsterliste
+      const monstersList = document.getElementById('monstersList');
+      monstersList.innerHTML = state.monsters.map(monster => `
+        <div class="monster-card" data-id="${monster.id}">
+          <h3>${monster.name}</h3>
+          <div>HP: ${monster.hp}/${monster.maxHp}</div>
+          <div class="health-bar">
+            <div class="health-progress" 
+                 style="width: ${(monster.hp / monster.maxHp) * 100}%"></div>
+          </div>
+          ${isMaster ? `<button class="btn-small" data-action="damage" data-id="${monster.id}">-5 HP</button>` : ''}
+        </div>
+      `).join('');
     }
-
-    // Alle 5 Sekunden aktualisieren
-    updateGameStatus();
-    setInterval(updateGameStatus, 5000);
+    
+    // Würfelfunktionen
+    document.querySelectorAll('.dice-roller button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const diceType = parseInt(btn.textContent.substring(1));
+        const roll = Math.floor(Math.random() * diceType) + 1;
+        
+        socket.send(JSON.stringify({
+          type: 'dice-roll',
+          gameId,
+          playerId,
+          value: roll,
+          diceType
+        }));
+      });
+    });
+    
+    function showDiceResult(value, player) {
+      const diceResult = document.getElementById('diceResult');
+      diceResult.textContent = `${player}: ${value}`;
+      diceResult.style.animation = 'none';
+      void diceResult.offsetWidth; // Trigger reflow
+      diceResult.style.animation = 'bounce 0.5s';
+    }
+    
+    // Kampflog
+    function addCombatLogEntry(message) {
+      const log = document.getElementById('combatLog');
+      const entry = document.createElement('div');
+      entry.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
+      log.prepend(entry);
+    }
+    
+    // Initialisierung
+    if (isMaster) {
+      document.getElementById('actionButtons').innerHTML += `
+        <button id="nextTurnBtn" class="btn-warning">Nächste Runde</button>
+      `;
+    }
   </script>
 </body>
 </html>
