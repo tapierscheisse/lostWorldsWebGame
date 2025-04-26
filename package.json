@@ -1,23 +1,10 @@
 {
   "name": "lostworldswebgame",
   "version": "1.0.0",
-  "main": "Backend.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tapierscheisse/lostWorldsWebGame.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/tapierscheisse/lostWorldsWebGame/issues"
-  },
-  "homepage": "https://github.com/tapierscheisse/lostWorldsWebGame#readme",
-  "description": "",
   "dependencies": {
     "express": "^4.18.2"
   }

@@ -1,6 +1,22 @@
-// Füge diese Endpunkte zu deiner server.js hinzu
+const express = require('express');
+const fs = require('fs');
+const path = require('path');
+const app = express();
+const port = process.env.PORT || 3000;
 
-// Verfügbare Charaktere abrufen
+// Middleware
+app.use(express.json());
+app.use(express.static('public'));
+
+// In-Memory Datenbank für Spiele
+let games = {};
+
+// Root-Endpoint für die Frontend-Seite
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+// API-Endpunkte (die du bereits hast)
 app.get('/api/available-characters', (req, res) => {
   try {
     const gameId = req.query.gameId;
@@ -8,7 +24,6 @@ app.get('/api/available-characters', (req, res) => {
       return res.status(404).json({ error: 'Spiel nicht gefunden' });
     }
     
-    // Lade alle Charaktere und filtere bereits gewählte
     const allCharacters = JSON.parse(fs.readFileSync('spieler.json'));
     const availableChars = allCharacters.filter(char => 
       games[gameId].availableCharacters.includes(char.id));
@@ -20,7 +35,6 @@ app.get('/api/available-characters', (req, res) => {
   }
 });
 
-// Charakter auswählen
 app.post('/api/select-character', (req, res) => {
   const { gameId, playerId, character } = req.body;
   
@@ -38,7 +52,6 @@ app.post('/api/select-character', (req, res) => {
   res.json({ success: true });
 });
 
-// Verfügbare Monster abrufen
 app.get('/api/available-monsters', (req, res) => {
   try {
     const monsters = JSON.parse(fs.readFileSync('monster.json'));
@@ -49,7 +62,6 @@ app.get('/api/available-monsters', (req, res) => {
   }
 });
 
-// Spiel starten
 app.post('/api/start-game', (req, res) => {
   const { gameId, monsters } = req.body;
   
@@ -61,4 +73,9 @@ app.post('/api/start-game', (req, res) => {
   games[gameId].started = true;
   
   res.json({ success: true });
+});
+
+// Server starten
+app.listen(port, () => {
+  console.log(`Server läuft auf Port ${port}`);
 });
