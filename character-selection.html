@@ -6,58 +6,134 @@
     .characters {
       display: flex;
       flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
     }
     .character {
-      margin: 10px;
-      text-align: center;
+      border: 2px solid #ddd;
+      padding: 10px;
+      border-radius: 8px;
       cursor: pointer;
+      transition: all 0.3s;
+    }
+    .character:hover {
+      border-color: #4CAF50;
+      transform: scale(1.05);
+    }
+    .character.selected {
+      border-color: #4CAF50;
+      background-color: #f0fff0;
     }
     .character img {
-      width: 100px;
-      height: 100px;
+      width: 150px;
+      height: 150px;
       object-fit: cover;
+      border-radius: 4px;
+    }
+    .character p {
+      text-align: center;
+      margin-top: 8px;
+      font-weight: bold;
+    }
+    #confirmBtn {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 20px;
+      display: none;
+    }
+    #confirmBtn:hover {
+      background-color: #45a049;
     }
   </style>
 </head>
 <body>
-  <h1>Wähle deinen Charakter</h1>
+  <h1 style="text-align: center;">Wähle deinen Charakter</h1>
   <div class="characters" id="characterList"></div>
-  
+  <div style="text-align: center;">
+    <button id="confirmBtn">Charakter bestätigen</button>
+  </div>
+
   <script>
     const gameId = new URLSearchParams(window.location.search).get('gameId');
-    const playerId = generatePlayerId();
-    
-    // Charaktere laden
-    fetch(`/api/get-characters?gameId=${gameId}`)
-      .then(res => res.json())
+    const playerId = 'player-' + Math.random().toString(36).substring(2, 9);
+    let selectedCharacter = null;
+
+    // Lade verfügbare Charaktere
+    fetch(`/api/available-characters?gameId=${gameId}`)
+      .then(response => {
+        if (!response.ok) throw new Error('Netzwerkantwort war nicht ok');
+        return response.json();
+      })
       .then(characters => {
         const container = document.getElementById('characterList');
         
+        if (characters.length === 0) {
+          container.innerHTML = '<p>Keine Charaktere mehr verfügbar!</p>';
+          return;
+        }
+
         characters.forEach(character => {
-          const div = document.createElement('div');
-          div.className = 'character';
-          div.innerHTML = `
-            <img src="/images/spieler/${character}/avatar.jpg" alt="${character}">
-            <p>${character}</p>
+          const charDiv = document.createElement('div');
+          charDiv.className = 'character';
+          charDiv.innerHTML = `
+            <img src="${character.bild}" alt="${character.name}">
+            <p>${character.name}</p>
           `;
-          div.addEventListener('click', () => selectCharacter(character));
-          container.appendChild(div);
+          
+          charDiv.addEventListener('click', () => {
+            // Deselect previous selection
+            document.querySelectorAll('.character').forEach(el => {
+              el.classList.remove('selected');
+            });
+            
+            // Select new one
+            charDiv.classList.add('selected');
+            selectedCharacter = character.id;
+            document.getElementById('confirmBtn').style.display = 'inline-block';
+          });
+          
+          container.appendChild(charDiv);
         });
+      })
+      .catch(error => {
+        console.error('Fehler beim Laden der Charaktere:', error);
+        document.getElementById('characterList').innerHTML = 
+          '<p>Fehler beim Laden der Charaktere. Bitte versuche es später erneut.</p>';
       });
-    
-    function selectCharacter(character) {
-      fetch('/api/join-game', {
+
+    // Bestätigungs-Button
+    document.getElementById('confirmBtn').addEventListener('click', () => {
+      if (!selectedCharacter) return;
+      
+      fetch('/api/select-character', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ gameId, playerId, character })
-      }).then(() => {
-        window.location.href = `/game.html?gameId=${gameId}&playerId=${playerId}`;
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          gameId: gameId,
+          playerId: playerId,
+          character: selectedCharacter
+        }),
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          window.location.href = `/game.html?gameId=${gameId}&playerId=${playerId}`;
+        } else {
+          alert('Auswahl fehlgeschlagen: ' + (data.message || 'Unbekannter Fehler'));
+        }
+      })
+      .catch(error => {
+        console.error('Fehler:', error);
+        alert('Ein Fehler ist aufgetreten. Bitte versuche es erneut.');
       });
-    }
-    
-    function generatePlayerId() {
-      return 'player-' + Math.random().toString(36).substring(2, 9);
-    }
+    });
   </script>
 </body>
 </html>
