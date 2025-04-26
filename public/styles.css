@@ -55,7 +55,30 @@ body {
   border: 2px dashed red !important; /* Hilft sichtbare Container zu finden */
 }
 
-button {
-  opacity: 1 !important;
-  display: block !important;
+/* Füge dies HINZU */
+.btn-primary {
+  background: #3498db;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 20px auto;
+  display: block;
+  transition: all 0.3s;
 }
+
+.btn-primary:hover {
+  background: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn-primary:disabled {
+  background: #95a5a6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+

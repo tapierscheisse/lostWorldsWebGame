@@ -44,6 +44,67 @@ function updatePlayers(players) {
 
 // Initialisierung
 loadMonsters();
+// Füge am ENDE der Datei hinzu:
+document.getElementById('startBtn').addEventListener('click', () => {
+  if (selectedMonsters.length === 0) {
+    alert('Bitte mindestens ein Monster auswählen');
+    return;
+  }
+  
+  fetch('/api/start-game', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ gameId, monsters: selectedMonsters })
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.success) {
+      window.location.href = `/game.html?gameId=${gameId}&master=true`;
+    }
+  });
+// Füge am ENDE der Datei hinzu:
+document.getElementById('startBtn').addEventListener('click', () => {
+  if (selectedMonsters.length === 0) {
+    alert('Bitte mindestens ein Monster auswählen');
+    return;
+  }
+  
+  fetch('/api/start-game', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ gameId, monsters: selectedMonsters })
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.success) {
+      window.location.href = `/game.html?gameId=${gameId}&master=true`;
+    }
+  });
+});
+
+// Toggle-Funktion ergänzen
+function toggleSelection(monsterId) {
+  const index = selectedMonsters.indexOf(monsterId);
+  if (index === -1) {
+    selectedMonsters.push(monsterId);
+  } else {
+    selectedMonsters.splice(index, 1);
+  }
+  updateSelection();
+}
+
+function updateSelection() {
+  document.getElementById('selectedCount').textContent = selectedMonsters.length;
+  document.getElementById('startBtn').disabled = selectedMonsters.length === 0;
+  
+  // Visuelles Feedback
+  document.querySelectorAll('.monster-card').forEach(card => {
+    card.classList.toggle(
+      'selected', 
+      selectedMonsters.includes(card.dataset.id)
+    );
+  });
+}
 
 
 
