@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lost Worlds - Spiel</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    #gameStatus { 
+      background: #f0f0f0; 
+      padding: 15px; 
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Spielbereich</h1>
+  <div id="gameStatus">Lade Spielstatus...</div>
+  
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const gameId = urlParams.get('gameId');
+    const playerId = urlParams.get('playerId');
+
+    // Spielstatus abfragen
+    function updateGameStatus() {
+      fetch(`/api/game-status/${gameId}`)
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('gameStatus').innerHTML = `
+            <h2>Spiel ID: ${gameId}</h2>
+            <h3>Spieler:</h3>
+            <ul>
+              ${data.players.map(p => `<li>${p.character}</li>`).join('')}
+            </ul>
+            <h3>Monster:</h3>
+            <ul>
+              ${data.monsters.map(m => `<li>${m}</li>`).join('')}
+            </ul>
+          `;
+        })
+        .catch(error => {
+          console.error('Fehler:', error);
+          document.getElementById('gameStatus').textContent = 
+            'Fehler beim Laden des Spielstatus';
+        });
+    }
+
+    // Alle 5 Sekunden aktualisieren
+    updateGameStatus();
+    setInterval(updateGameStatus, 5000);
+  </script>
+</body>
+</html>
