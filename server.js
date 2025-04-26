@@ -1,3 +1,19 @@
+// Stelle sicher, dass dies am Anfang steht:
+const https = require('https');
+const fs = require('fs');
+
+// SSL-Zertifikate (für lokale Entwicklung)
+const options = {
+  key: fs.readFileSync('key.pem'),
+  cert: fs.readFileSync('cert.pem')
+};
+
+// Server erstellen
+const server = https.createServer(options, app); // Für HTTPS/WSS
+
+// WebSocket-Server
+const wss = new WebSocket.Server({ server });
+
 const express = require('express');
 const fs = require('fs');
 const path = require('path');

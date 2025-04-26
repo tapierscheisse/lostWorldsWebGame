@@ -6,11 +6,25 @@ document.getElementById('gameId').textContent = gameId;
 
 console.log("GameID:", gameId);
 
-let selectedMonsters = [];
-const socket = new WebSocket(`ws://${window.location.host}`);
+// Ersetze die WebSocket-Verbindung durch:
+const socket = new WebSocket(
+  window.location.protocol === 'https:' 
+    ? `wss://${window.location.host}`
+    : `ws://${window.location.host}`
+);
 
+// Debug-Ausgaben hinzufügen
 socket.onopen = () => {
-  socket.send(JSON.stringify({ type: 'register', gameId, role: 'master' }));
+  console.log("WebSocket verbunden");
+  socket.send(JSON.stringify({ 
+    type: 'register', 
+    gameId, 
+    role: 'master' 
+  }));
+};
+
+socket.onerror = (error) => {
+  console.error("WebSocket Fehler:", error);
 };
 
 // Monster laden
