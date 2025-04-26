@@ -1,5 +1,16 @@
+const express = require('express');
 const fs = require('fs');
 const path = require('path');
+
+// Express-App erstellen
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+// Middleware für statische Dateien (wichtig für deine HTML/CSS/Images)
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Middleware für JSON-Parsing
+app.use(express.json());
 
 // Dynamische Monsterliste generieren
 function generateMonsterList() {
@@ -10,7 +21,6 @@ function generateMonsterList() {
     );
 
     const monsterList = monsterFolders.map(folder => {
-      // Suche nach einer passenden Bilddatei (z.B. DRACHE_01.jpg)
       const images = fs.readdirSync(path.join(monstersDir, folder));
       const icon = images.find(img => 
         img.toLowerCase().includes('_01.') || 
@@ -24,7 +34,6 @@ function generateMonsterList() {
       };
     });
 
-    // Schreibe die generierte Liste in monster.json
     fs.writeFileSync('monster.json', JSON.stringify(monsterList, null, 2));
     return monsterList;
   } catch (error) {
@@ -36,10 +45,9 @@ function generateMonsterList() {
 // Initiale Generierung beim Serverstart
 generateMonsterList();
 
-// API-Endpunkt für Monster (jetzt dynamisch)
+// API-Endpunkte
 app.get('/api/available-monsters', (req, res) => {
   try {
-    // Immer aktuell aus dem Ordner lesen
     const monsters = generateMonsterList();
     res.json(monsters);
   } catch (error) {
@@ -48,8 +56,12 @@ app.get('/api/available-monsters', (req, res) => {
   }
 });
 
-// Neu generieren bei Bedarf
 app.post('/api/refresh-monsters', (req, res) => {
-  cachedMonsters = generateMonsterList();
-  res.json({ success: true });
+  const updatedMonsters = generateMonsterList();
+  res.json({ success: true, monsters: updatedMonsters });
+});
+
+// Starte den Server
+app.listen(PORT, () => {
+  console.log(`Server läuft auf http://localhost:${PORT}`);
 });
