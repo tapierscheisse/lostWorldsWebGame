@@ -12,6 +12,50 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Middleware für JSON-Parsing
 app.use(express.json());
 
+// Dynamische Charakterliste generieren
+function generateCharacterList() {
+  const charactersDir = path.join(__dirname, 'public', 'images', 'characters');
+  try {
+    const characterFolders = fs.readdirSync(charactersDir).filter(file => 
+      fs.statSync(path.join(charactersDir, file)).isDirectory()
+    );
+
+    const characterList = characterFolders.map(folder => {
+      const images = fs.readdirSync(path.join(charactersDir, folder));
+      const icon = images.find(img => 
+        img.toLowerCase().includes('_01.') || 
+        img.toLowerCase().includes('thumbnail.')
+      ) || (images.length > 0 ? images[0] : null);
+
+      return {
+        id: folder.toLowerCase(),
+        name: folder.split('_').map(word => 
+          word.charAt(0).toUpperCase() + word.slice(1)
+        ).join(' '),
+        bild: icon ? `/images/characters/${folder}/${icon}` : '/images/default-character.jpg'
+      };
+    });
+
+    fs.writeFileSync('characters.json', JSON.stringify(characterList, null, 2));
+    return characterList;
+  } catch (error) {
+    console.error('Fehler beim Generieren der Charakterliste:', error);
+    return [];
+  }
+}
+
+// API-Endpunkt für Charaktere
+app.get('/api/available-characters', (req, res) => {
+  try {
+    const characters = generateCharacterList();
+    res.json(characters);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Serverfehler' });
+  }
+});
+
+
 // Dynamische Monsterliste generieren
 function generateMonsterList() {
   const monstersDir = path.join(__dirname, 'public', 'images', 'monster');
