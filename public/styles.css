@@ -16,13 +16,6 @@ body {
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-/* Monster-Grid */
-.monster-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 15px;
-  margin: 15px 0;
-}
 
 .monster-card {
   cursor: pointer;
