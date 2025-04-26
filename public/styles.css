@@ -49,3 +49,13 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   }
 }
+
+/* Füge dies temporär in styles.css ein */
+.monster-grid, #selectedMonsters, #playersList {
+  border: 2px dashed red !important; /* Hilft sichtbare Container zu finden */
+}
+
+button {
+  opacity: 1 !important;
+  display: block !important;
+}

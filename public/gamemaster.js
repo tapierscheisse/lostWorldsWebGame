@@ -1,6 +1,10 @@
+console.log("Script geladen"); // Erste Zeile
+
 // Initialisierung
 const gameId = 'game-' + Math.random().toString(36).substring(2, 8);
 document.getElementById('gameId').textContent = gameId;
+
+console.log("GameID:", gameId); // Nach der Initialisierung
 
 let selectedMonsters = [];
 const socket = new WebSocket(`ws://${window.location.host}`);
@@ -40,3 +44,6 @@ function updatePlayers(players) {
 
 // Initialisierung
 loadMonsters();
+
+
+
