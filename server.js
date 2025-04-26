@@ -1,28 +1,46 @@
 const express = require('express');
+const fs = require('fs');
 const path = require('path');
 const app = express();
-
-// STATISCHE DATEIEN (HTML/CSS/JS)
-app.use(express.static(path.join(__dirname, 'public')));
-
-// ROUTE FÜR DIE HAUPTSEITE
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
+const PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(express.json());
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // In-Memory Datenbank für Spiele
 let games = {};
 
-// Root-Endpoint für die Frontend-Seite
+// Hilfsfunktion: Lädt alle Charakter-IDs aus spieler.json
+function getAllCharacterIds() {
+  try {
+    const characters = JSON.parse(fs.readFileSync('spieler.json'));
+    return characters.map(char => char.id);
+  } catch (error) {
+    console.error('Fehler beim Laden der Charaktere:', error);
+    return [];
+  }
+}
+
+// ROUTEN
+// Hauptseite
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-// API-Endpunkte (die du bereits hast)
+// Neues Spiel erstellen
+app.post('/api/create-game', (req, res) => {
+  const gameId = 'game-' + Math.random().toString(36).substring(2, 8);
+  games[gameId] = {
+    players: {},
+    monsters: [],
+    availableCharacters: getAllCharacterIds(),
+    started: false
+  };
+  res.json({ gameId });
+});
+
+// Verfügbare Charaktere abrufen
 app.get('/api/available-characters', (req, res) => {
   try {
     const gameId = req.query.gameId;
@@ -41,6 +59,7 @@ app.get('/api/available-characters', (req, res) => {
   }
 });
 
+// Charakter auswählen
 app.post('/api/select-character', (req, res) => {
   const { gameId, playerId, character } = req.body;
   
@@ -58,6 +77,7 @@ app.post('/api/select-character', (req, res) => {
   res.json({ success: true });
 });
 
+// Verfügbare Monster abrufen
 app.get('/api/available-monsters', (req, res) => {
   try {
     const monsters = JSON.parse(fs.readFileSync('monster.json'));
@@ -68,6 +88,7 @@ app.get('/api/available-monsters', (req, res) => {
   }
 });
 
+// Spiel starten
 app.post('/api/start-game', (req, res) => {
   const { gameId, monsters } = req.body;
   
@@ -82,5 +103,4 @@ app.post('/api/start-game', (req, res) => {
 });
 
 // Server starten
-const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server läuft auf Port ${PORT}`));

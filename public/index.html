@@ -1,10 +1,156 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
-    <title>Lost Worlds Web Game</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost Worlds - Spielleiter</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        .game-id-box {
+            background: #e8f4f8;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .invite-link {
+            background: #d4edda;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            word-break: break-all;
+        }
+        .monster-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .monster-card {
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: white;
+        }
+        .monster-card:hover {
+            border-color: #3498db;
+            transform: translateY(-5px);
+        }
+        .monster-card.selected {
+            border-color: #3498db;
+            background-color: #eaf2f8;
+        }
+        .monster-card img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        #startGameBtn {
+            display: block;
+            margin: 20px auto;
+            padding: 12px 25px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        #startGameBtn:hover {
+            background-color: #2980b9;
+        }
+        #startGameBtn:disabled {
+            background-color: #95a5a6;
+            cursor: not-allowed;
+        }
+    </style>
 </head>
 <body>
-    <h1>Willkommen zum Spiel!</h1>
-    <p>Dies ist die Hauptseite.</p>
+    <h1>Spielleiter Bereich</h1>
+    
+    <div class="game-id-box">
+        Deine Spiel-ID: <strong id="currentGameId"></strong>
+    </div>
+    
+    <div class="invite-link">
+        <strong>Einladungslink für Spieler:</strong><br>
+        <span id="inviteLink"></span>
+    </div>
+    
+    <h2>Wähle Monster aus</h2>
+    <div class="monster-grid" id="monsterList"></div>
+    
+    <button id="startGameBtn" disabled>Spiel starten</button>
+
+    <script>
+        // Spiel-ID generieren
+        const gameId = 'game-' + Math.random().toString(36).substring(2, 8);
+        document.getElementById('currentGameId').textContent = gameId;
+        document.getElementById('inviteLink').textContent = 
+            `${window.location.origin}/character-selection.html?gameId=${gameId}`;
+
+        // Monster-Daten laden
+        let selectedMonsters = [];
+        
+        fetch('/api/available-monsters')
+            .then(response => response.json())
+            .then(monsters => {
+                const container = document.getElementById('monsterList');
+                
+                monsters.forEach(monster => {
+                    const card = document.createElement('div');
+                    card.className = 'monster-card';
+                    card.innerHTML = `
+                        <img src="${monster.bild}" alt="${monster.name}">
+                        <p>${monster.name}</p>
+                    `;
+                    
+                    card.addEventListener('click', () => {
+                        card.classList.toggle('selected');
+                        const index = selectedMonsters.indexOf(monster.id);
+                        if (index === -1) {
+                            selectedMonsters.push(monster.id);
+                        } else {
+                            selectedMonsters.splice(index, 1);
+                        }
+                        document.getElementById('startGameBtn').disabled = selectedMonsters.length === 0;
+                    });
+                    
+                    container.appendChild(card);
+                });
+            });
+
+        // Spiel starten
+        document.getElementById('startGameBtn').addEventListener('click', () => {
+            fetch('/api/start-game', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ gameId, monsters: selectedMonsters })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    window.location.href = `/game.html?gameId=${gameId}&master=true`;
+                } else {
+                    alert('Fehler: ' + (data.message || 'Spiel konnte nicht gestartet werden'));
+                }
+            });
+        });
+    </script>
 </body>
 </html>
