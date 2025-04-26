@@ -1,0 +1,35 @@
+Height: 4
+Attacks: 1
+Body Points: 30
+Luck Points: 0
+Weapon:Lightsaber
+Uses Force
+--
+Down Swing,Smash,36,50,5,O,1
+Side Swing,Spin,28,64,3,O,1
+Side Swing,High,10,64,2,D,1
+Side Swing,Low,2,58,2,U,1
+Thrust,High,32,60,0,D,1
+Thrust,Low,14,60,0,U,1
+Block,High,26,56,-2,G,0
+Block,Low,4,56,-2,G,0
+Force,Hurl Objects,24,60,2,O,S
+Force,Reveal Dark Side,22,54,0,D,S
+Force,Retrieve Weapon,46,52,-6,G,S
+Force,Resist Good,6,60,0,G,S
+Force,Sense Maneuver,44,0,-4,G,S
+Special,Kick,34,56,1,U,0
+Special,Wild Swing,40,64,4,Y,1
+Special,Dislodge Weapon,30,64,-2,U,1
+Jump,Up,18,52,-3,G,0
+Jump,Dodge,8,52,-4,Y,0
+Jump,Duck,20,52,-5,G,0
+Jump,Away,16,62,-4,Y,0
+Extended Range,Charge,50,0,3,W,1
+Extended Range,Swing High,64,0,0,K,1
+Extended Range,Swing Low,58,0,0,K,1
+Extended Range,Hurl Objects,60,0,2,W,S
+Extended Range,Reveal Dark Side,54,0,0,W,S
+Extended Range,Restore Force,56,0,-4,B,0
+Extended Range,Dodge,52,0,-4,B,0
+Extended Range,Backstep,62,0,-4,B,0

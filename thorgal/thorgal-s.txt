@@ -1,0 +1,40 @@
+Height: 4
+Attacks: 1
+Body Points: 12
+Luck Points: 5
+Tactics Points: 5
+Weapon:Hammer
+Metal Armor
+Metal Weapon
+Not Edged Weapon
+Restricted move "Dragon Speak" trait "Dragon"
+--
+Down Swing,Bash,36,50,5,O,1
+Down Swing,Smash,24,50,4,O,1
+Side Swing,Strong,28,64,3,O,1
+Side Swing,High,10,64,2,D,1
+Side Swing,Low,2,64,2,U,1
+Poke,High,32,54,-2,D,1
+Poke,Low,14,54,-2,U,1
+Skill,Spin and Strike,44,56,3,O,1
+Skill,Spin and Thwack,48,56,2,U,1
+Dragon Speak,Call and Swing,38,58,10,O,1
+Dragon Speak,Call and Poke,22,58,8,O,1
+Special,Kick,34,56,1,U,0
+Special,Wild Swing,40,64,4,Y,1
+Special,Dislodge Weapon,30,64,-3,U,1
+Special,Retrieve Weapon,46,52,-6,G,0
+Block and Strike,High,26,56,2,G,1
+Block and Strike,Low,4,56,2,G,1
+Jump,Up,18,52,-6,G,0
+Jump,Dodge,8,52,-4,Y,0
+Jump,Duck,20,52,-5,G,0
+Jump,Away,16,62,-4,Y,0
+Extended Range,Charge,50,0,4,W,1
+Extended Range,Swing,64,0,-2,K,1
+Extended Range,Dragon Speak,58,0,8,K,1
+Extended Range,Poke,54,0,-4,W,1
+Extended Range,Throw Hammer,60,0,7,W,1
+Extended Range,Block and Close,56,0,-4,B,0
+Extended Range,Dodge,52,0,-6,B,0
+Extended Range,Jump Back,62,0,-6,B,0

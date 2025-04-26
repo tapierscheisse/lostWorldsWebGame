@@ -1,0 +1,42 @@
+Height: 4
+Attacks: 2
+Body Points: 20
+Tactics Points: 0
+Animal
+Not Two-legged
+Weapon System = Activate Unarmed
+Venom Points = 3
+Magic Resistance = 1
+Initial Energy = 3
+Maximum Energy = 3
+Special Name = Venom
+--
+Bite,Chomp,24,54,3,O,0
+Right Claw,High,10,54,1,D,0
+Right Claw,Low,2,54,1,U,0
+Left Claw,High,32,54,1,D,0
+Left Claw,Low,14,54,1,U,0
+Restricted Flying,Attack,6,50,3,D,R
+Restricted Flying,Swoop,22,50,1,U,R
+Restricted Flying,Tail Whip,42,58,1,U,R
+Restricted Flying,Pounce,12,50,3,D,R
+Restricted Non-Flying,Hold and Bite,44,54,4,O,R
+Restricted Non-Flying,Grab,48,54,1,U,R
+Special,Pounce,38,54,2,D,0
+Special,Wild Swing,40,54,2,Y,0
+Special,Dislodge Weapon,30,54,0,U,0
+Special,Venomous Sting,36,60,-9,G,0
+Special,Tail Whip,4,64,-4,G,0
+Jump,Leap Over,26,56,-1,G,0
+Jump,Fly Off,18,52,-3,G,0
+Jump,Dodge,8,52,-2,Y,0
+Jump,Fly Down (Land),20,52,-3,G,0
+Jump,Away,16,62,-2,Y,0
+Extended Range,Flying Attack,50,0,3,W,R
+Extended Range,Slash High,64,0,-3,K,0
+Extended Range,Slash Low,58,0,-3,K,0
+Extended Range,Bite and Claw,54,0,1,W,0
+Extended Range,Venomous Sting,60,0,-9,W,0
+Extended Range,Block and Close,56,0,0,B,0
+Extended Range,Dodge,52,0,-3,B,0
+Extended Range,Jump or Fly Back,62,0,-3,B,0

@@ -1,0 +1,39 @@
+Height: 4
+Attacks: 1
+Body Points: 13
+Tactics Points: 14
+Weapon:Dire Sword
+Metal Armor
+Metal Weapon
+--
+Down Swing,Flashing Blade,24,50,3,O,1
+Dire Sword Cut,Strong,28,64,2,O,1
+Dire Sword Cut,High,10,64,1,D,1
+Dire Sword Cut,Low,2,64,1,U,1
+Dire Sword Thrust,High,32,60,0,D,1
+Dire Sword Thrust,Low,14,60,0,U,1
+Fake,High,42,64,0,D,1
+Fake,Low,12,64,0,U,1
+Bluff,Trick Foe,38,58,-4,D,0
+Eldar Path,Hail of Blows,44,56,3,O,1
+Eldar Path,Grapple,48,56,1,U,0
+Eldar Path,Psychic Blast,6,56,2,D,0
+Eldar Path,Flying Leap,22,52,-9,G,0
+Special,Deathblow,34,56,1,U,0
+Special,Sudden Lunge,40,64,3,Y,1
+Special,Disarm Opponent,30,56,-3,U,1
+Special,Retrieve Weapon,46,52,-6,G,0
+Block,High,26,56,-1,G,1
+Block,Low,4,56,-1,G,1
+Jump,Up,18,52,-6,G,0
+Jump,Dodge,8,52,-6,Y,0
+Jump,Duck,20,52,-6,G,0
+Jump,Away,16,62,-6,Y,0
+Extended Range,Charge,50,0,3,W,1
+Extended Range,Diresword Cut,64,0,0,K,1
+Extended Range,Photon Flash,58,0,-4,K,0
+Extended Range,Diresword Thrust,54,0,-1,W,1
+Extended Range,Shuriken Pistol,60,0,2,W,0
+Extended Range,Block and Close,56,0,0,B,0
+Extended Range,Dodge,52,0,-5,B,0
+Extended Range,Regroup,62,0,-5,B,0

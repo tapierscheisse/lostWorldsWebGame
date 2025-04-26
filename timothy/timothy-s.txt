@@ -1,0 +1,46 @@
+Height: 3
+Attacks: 1
+Body Points: 11
+Luck Points: 0
+Weapon:Sword
+Weapon2:Dagger*
+Shield:Shield
+Weapon3:Dagger2*
+Weapon4:Dagger3*
+Cloth Armor
+Metal Weapon
+Attack Modifier Change
+Weapon System = Choose Main-Second-Shield
+Style Choices = Use Sword + Dagger | Use Sword + Shield
+--
+Throw,Dagger,36,54,3,O,2
+Down Swing,Smash,24,50,3/1,O,3
+Side Swing,Strong,28,64,2/1,O,3
+Side Swing,High,10,64,1/0,D,3
+Side Swing,Low,2,58,1/0,U,3
+Thrust,High,32,60,0,D,3
+Thrust,Lunge,14,60,0,U,3
+Fake,High,42,58,0,D,3
+Fake,Low,12,64,0,U,3
+Fake,Side Swing,22,60,-1,U,3
+Fake,Thrust,38,58,0,D,3
+Protected Attack,Side Swing,48,56,0,U,3
+Protected Attack,Thrust,6,56,-1,D,3
+Special,Trip,34,56,1,U,0
+Special,Wild Swing,40,58,3/1,Y,3
+Special,Draw Dagger,30,58,-4,U,0
+Special,Retrieve Weapon,46,52,-6,G,0
+Shield Block,High,26,56,1,G,1
+Shield Block,Low,4,56,1,G,1
+Jump,Up,18,52,-6,G,0
+Jump,Dodge,8,52,-4,Y,0
+Jump,Duck,20,52,-5,G,0
+Jump,Away,16,62,-4,Y,0
+Extended Range,Charge,50,0,3/2,W,3
+Extended Range,Swing High,64,0,-7,K,3
+Extended Range,Swing Low,58,0,-7,K,3
+Extended Range,Draw and Throw,54,0,3,W,0
+Extended Range,Thrust,60,0,-7,W,3
+Extended Range,Block and Close,56,0,0,B,0
+Extended Range,Dodge,52,0,-7,B,0
+Extended Range,Jump Back,62,0,-7,B,0

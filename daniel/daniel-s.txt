@@ -1,0 +1,43 @@
+Height: 4
+Attacks: 1
+Body Points: 12
+Tactics Points: 2
+Luck Points: 7
+Weapon:Foil
+Weapon2:Pistol
+Weapon System = Main-Activate
+Style Choices = Reload | Get +1 score bonus
+Cloth Armor
+Hair
+Always Turn 0 Enable move all
+--
+Down Swing,Smash,24,50,2,O,1
+Side Swing,Strong,28,64,1,O,1
+Side Swing,High,10,64,0,D,1
+Side Swing,Low,2,64,0,U,1
+Thrust,High,32,54,2,D,1
+Thrust,Low,14,54,2,U,1
+Fake,High,42,64,1,D,1
+Fake,Low,12,64,1,U,1
+Skill,Leap and Down Swing,44,50,2,O,1
+Skill,Spin and Swing,48,58,1,D,1
+Skill,Lunge,6,54,3,U,1
+Parry,Parry and Punch,22,56,-9,O,0
+Special,Kick,34,56,1,U,0
+Special,Wild Swing,40,64,2,Y,1
+Special,Dislodge Weapon,30,64,-2,U,1
+Special,Retrieve Weapon,46,52,-6,G,0
+Pistol,Fire High,26,60,5,G,2
+Pistol,Fire Low,4,60,4,G,2
+Jump,Up,18,52,-6,G,0
+Jump,Dodge and Reload,8,52,-4,Y,0
+Jump,Duck,20,52,-5,G,0
+Jump,Away,16,62,-6,Y,0
+Extended Range,Charge,50,0,3,W,1
+Extended Range,Swing,64,0,-1,K,1
+Extended Range,Spin and Swing,58,0,0,K,1
+Extended Range,Thrust,54,0,0,W,1
+Extended Range,Fire Pistol,60,0,5,W,2
+Extended Range,Block and Close,56,0,-4,B,0
+Extended Range,Dodge and Reload,52,0,-6,B,0
+Extended Range,Jump Back,62,0,-6,B,0

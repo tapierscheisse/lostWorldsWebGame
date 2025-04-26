@@ -1,0 +1,43 @@
+Height: 5
+Attacks: 2
+Body Points: 37
+Tactics Points: 4
+Weapon:Axe
+Cloth Armor
+Metal Weapon
+Hair
+Weapon System = Main-Activate
+Style Choices = Retrieve weapon | Pick up rock
+Always disable move Opponent
+--
+Down Swing,Bash,36,50,4,O,4
+Down Swing,Smash,24,50,3,O,4
+Swing,Lash,28,64,2,O,1
+Swing,High,10,64,1,D,1
+Swing,Low,2,58,1,U,1
+Swing,Upswing,12,58,1,U,1
+Throw,Low,32,54,3,D,2
+Throw,High,14,60,3,U,2
+Throw,Opponent,22,54,2,U,2
+Block,Block and Slash,38,64,1,D,1
+Block,Block and Chop,44,64,2,O,4
+Physical Attack,Grab,48,60,2,U,0
+Physical Attack,Punch,6,54,3,D,0
+Physical Attack,Kick,34,58,2,U,0
+Special,Wild Swing,40,58,4,Y,1
+Special,Dislodge Weapon,30,58,4,U,1
+Special,Retrieve Weapon,46,52,-6,G,0
+Block,High,26,56,2,G,1
+Block,Low,4,56,2,G,1
+Jump,Up,18,52,-6,G,0
+Jump,Dodge,8,52,-4,Y,0
+Jump,Duck,20,52,-5,G,0
+Jump,Away,16,62,-4,Y,0
+Extended Range,Charge,50,0,4,W,1
+Extended Range,Swing High,64,0,0,K,1
+Extended Range,Swing Low,58,0,0,K,1
+Extended Range,Throw High,54,0,3,W,2
+Extended Range,Throw Low,60,0,3,W,2
+Extended Range,Block and Close,56,0,0,B,0
+Extended Range,Dodge,52,0,-4,B,0
+Extended Range,Pick Up Rock,62,0,-4,B,0

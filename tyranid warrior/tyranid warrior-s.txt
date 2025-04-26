@@ -1,0 +1,37 @@
+Height: 4
+Attacks: 1
+Body Points: 10
+Luck Points: 6
+Weapon:Bonesword
+Metal Weapon
+Metal Armor
+--
+Down Swing,Fancy Sword Play,24,50,3,O,1
+Bonesword Cut,Strong,28,64,2,O,1
+Bonesword Cut,High,10,64,1,D,1
+Bonesword Cut,Low,2,64,1,U,1
+Bonesword Thrust,High,32,58,0,D,1
+Bonesword Thrust,Low,14,58,0,U,1
+Bonesword Thrust,Sudden Lunge,12,58,1,U,1
+Hive Mind,Mind Scream,38,60,-4,D,S
+Hive Mind,Psychic Blast,22,60,2,U,S
+Protected Attack,Hail of Blows,44,56,2,O,1
+Protected Attack,Crazed Swing,48,56,1,U,1
+Protected Attack,Crazed Lunge,6,56,0,D,1
+Special,Deathblow,34,56,2,U,0
+Special,Wild Swing,40,64,1,Y,1
+Special,Retrieve Weapon,46,52,-6,G,0
+Block,High,26,56,1,G,0
+Block,Low,4,56,1,G,0
+Jump,Circle,18,52,-6,G,0
+Jump,Dodge,8,52,-4,Y,0
+Jump,Duck,20,52,-4,G,0
+Jump,Step Back,16,62,-4,Y,0
+Extended Range,Charge,50,0,4,W,1
+Extended Range,Bonesword Cut,64,0,-5,K,1
+Extended Range,Bonesword Thrust,58,0,-5,K,1
+Extended Range,Spine Fist,54,0,2,W,S
+Extended Range,Bio-Plasma,60,0,-9,W,S
+Extended Range,Block and Close,56,0,-4,B,0
+Extended Range,Dodge,52,0,-6,B,0
+Extended Range,Regroup,62,0,-6,B,0

@@ -1,0 +1,43 @@
+Height: 4
+Attacks: 1
+Body Points: 10
+Luck Points: 7
+Weapon:Sword
+Shield:Shield
+Chainmail
+Helmet
+Hair
+Metal Armor
+Metal Weapon
+--
+Down Swing,Smash,24,50,3,O,1
+Side Swing,Strong,28,64,2,O,1
+Side Swing,High,10,64,1,D,1
+Side Swing,Low,2,58,1,U,1
+Thrust,High,32,54,0,D,1
+Thrust,Low,14,60,0,U,1
+Fake,High,42,58,0,D,1
+Fake,Low,12,64,0,U,1
+Fake,Side Swing,22,54,-1,U,1
+Fake,Thrust,38,58,0,D,1
+Protected Attack,Down Swing,44,56,2,O,1
+Protected Attack,Side Swing,48,56,0,U,1
+Protected Attack,Thrust,6,56,-1,D,1
+Special,Kick,34,56,0,U,0
+Special,Wild Swing,40,58,2,Y,1
+Special,Dislodge Weapon,30,58,-4,U,1
+Special,Retrieve Weapon,46,52,-6,G,0
+Shield Block,High,26,56,1,G,S
+Shield Block,Low,4,56,1,G,S
+Jump,Up,18,52,-6,G,0
+Jump,Dodge,8,52,-4,Y,0
+Jump,Duck,20,52,-5,G,0
+Jump,Away,16,62,-4,Y,0
+Extended Range,Charge,50,0,3,W,1
+Extended Range,Swing High,64,0,-6,K,1
+Extended Range,Swing Low,58,0,-6,K,1
+Extended Range,Thrust High,54,0,-5,W,1
+Extended Range,Thrust Low,60,0,-5,W,1
+Extended Range,Block and Close,56,0,0,B,0
+Extended Range,Dodge,52,0,-6,B,0
+Extended Range,Jump Back,62,0,-6,B,0

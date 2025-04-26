@@ -1,0 +1,35 @@
+Height: 4
+Attacks: 1
+Body Points: 25
+Magic Resistance: 3
+Weapon System = Activate Unarmed
+Not Two-legged
+Animal
+Always Disable move Restricted Rearing
+Always Disable move Restricted Special
+--
+Restricted Rearing,Stomp,36,64,3,O,R
+Restricted Rearing,Downthrust,24,64,4,O,R
+Restricted Rearing,Box,44,64,1,O,R
+Horn Swing,High,10,60,0,D,0
+Horn Swing,Low,2,60,0,U,0
+Horn Thrust,High,32,54,2,D,0
+Horn Thrust,Low,14,54,2,U,0
+Horn Toss,High,42,60,1,D,0
+Horn Toss,Low,12,60,1,U,0
+Special,Kick,34,58,3,U,0
+Special,Buck,40,58,2,Y,0
+Restricted Special,Magical Charm,30,56,-9,U,RS
+Restricted Special,Trample,26,58,4,G,R
+Jump,Rear,18,64,-6,G,0
+Jump,Sidestep,8,52,-4,Y,0
+Jump,Duck,20,52,-5,G,0
+Jump,Away,16,62,-4,Y,0
+Extended Range,Charge,50,0,5,W,0
+Extended Range,Rear,64,0,0,K,0
+Extended Range,Kick,58,0,1,K,0
+Extended Range,Horn Thrust,54,0,-1,W,0
+Extended Range,Horn Swing,60,0,-2,W,0
+Extended Range,Advance,56,0,0,B,0
+Extended Range,Sidestep,52,0,-6,B,0
+Extended Range,Jump Back,62,0,-6,B,0

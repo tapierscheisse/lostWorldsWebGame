@@ -1,0 +1,37 @@
+Height: 4
+Attacks: 1
+Body Points: 12
+Tactics Points: 7
+Weapon:Short Sword
+Weapon2:Dagger
+Cloth Armor
+Metal Weapon
+Beard
+--
+Down Swing,Smash,24,50,3/1,O,3
+Side Swing,Strong,28,64,2/1,O,3
+Side Swing,High,10,64,1/0,D,3
+Side Swing,Low,2,58,1/0,U,3
+Thrust,High,32,60,0/-1,D,3
+Thrust,Low,14,60,0/-1,U,3
+Fake,High,42,58,0,D,3
+Fake,Low,12,64,0,U,3
+Fake,Side Swing,22,60,-1,U,3
+Fake,Thrust,38,58,0,D,3
+Dagger,Throw,36,54,0,O,2
+Special,Kick,34,56,0,U,0
+Special,Wild Swing,40,58,2/0,Y,3
+Special,Dislodge Weapon,30,58,-4,U,3
+Special,Retrieve Weapon,46,52,-6,G,0
+Jump,Up,18,52,-6,G,0
+Jump,Dodge,8,52,-4,Y,0
+Jump,Duck,20,52,-5,G,0
+Jump,Away,16,62,-4,Y,0
+Extended Range,Charge,50,0,3/2,W,3
+Extended Range,Swing High,64,0,-6,K,3
+Extended Range,Swing Low,58,0,-6,K,3
+Extended Range,Throw Dagger,54,0,0,W,2
+Extended Range,Thrust,60,0,-5,W,3
+Extended Range,Block and Close,56,0,0,B,0
+Extended Range,Dodge,52,0,-6,B,0
+Extended Range,Jump Back,62,0,-6,B,0

@@ -1,0 +1,33 @@
+Height: 3
+Attacks: 1
+Body Points: 14
+Luck Points: 7
+Weapon:Battleaxe
+Beard
+Chainmail
+Helmet
+Metal Weapon
+Metal Armor
+--
+Down Swing,Bash,36,50,3,O,1
+Down Swing,Smash,24,50,2,O,1
+Side Swing,Strong,28,64,1,O,1
+Side Swing,High,10,64,-1,D,1
+Side Swing,Low,2,58,-1,U,1
+Thrust,Hook Shield,32,54,-2,D,1
+Thrust,Hook Leg,14,60,-4,U,1
+Special,Kick,34,56,-1,U,0
+Special,Wild Swing,40,58,3,Y,1
+Special,Dislodge Weapon,30,58,-4,U,1
+Special,Retrieve Weapon,46,52,-6,G,0
+Jump,Up,18,52,-6,G,0
+Jump,Dodge,8,52,-4,Y,0
+Jump,Duck,20,52,-5,G,0
+Jump,Away,16,62,-4,Y,0
+Extended Range,Charge,50,0,5,W,1
+Extended Range,Swing High,64,0,3,K,1
+Extended Range,Swing Low,58,0,3,K,1
+Extended Range,Hook Leg,60,0,0,W,1
+Extended Range,Block and Close,56,0,0,B,0
+Extended Range,Dodge,52,0,-4,B,0
+Extended Range,Jump Back,62,0,-4,B,0

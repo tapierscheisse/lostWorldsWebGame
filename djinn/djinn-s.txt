@@ -1,0 +1,40 @@
+Height: 3
+Attacks: 2
+Body Points: 35
+Tactics Points: 12
+Weapon:Sword
+Metal Weapon
+Cloth Armor
+Purple Spells
+Hair
+Flying
+--
+Down Swing,Bash,36,50,5,O,1
+Down Swing,Smash,24,50,4,O,1
+Side Swing,Strong,28,64,3,O,1
+Side Swing,High,10,64,1,D,1
+Side Swing,Low,2,64,1,U,1
+Thrust,High,32,64,-1,D,1
+Thrust,Low,14,64,-1,U,1
+Fake,High,42,64,-1,D,1
+Fake,Low,38,64,-1,U,1
+Whirlwind,Whirlwind Rush,6,54,-4,U,1
+Whirlwind,Whirlwind Sweep,12,54,-4,D,1
+Magic,Read Scroll,44,58,-9,O,1
+Magic,Cast Spell,48,56,-9,U,0
+Magic,Lightning Bolt,22,60,4,D,1
+Special,Wild Swing,40,64,2,Y,1
+Special,Dislodge Weapon,30,64,-4,U,1
+Special,Retrieve Weapon,46,52,-6,G,0
+Jump,Up,18,52,-6,G,0
+Jump,Dodge,8,52,-4,Y,0
+Jump,Duck,20,52,-5,G,0
+Jump,Away,16,62,-4,Y,0
+Extended Range,Charge,50,0,4,W,1
+Extended Range,Attack,64,0,-6,K,1
+Extended Range,Read Scroll,58,0,-9,K,1
+Extended Range,Whirlwind,54,0,-5,W,1
+Extended Range,Lightning,60,0,2,W,1
+Extended Range,Block and Close,56,0,0,B,0
+Extended Range,Dodge,52,0,-6,B,0
+Extended Range,Jump Back,62,0,-6,B,0

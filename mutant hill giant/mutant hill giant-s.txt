@@ -1,0 +1,36 @@
+Height: 5
+Attacks: 2
+Body Points: 25
+Luck Points: 4
+Tactic Points: 2
+Weapon:Club
+Weapon2:Club2
+Cloth Armor
+Hair
+--
+Down Swing,Crushing Blow,36,50,5,O,3
+Down Swing,Smash,24,50,3,O,3
+Side Swing,Strong,28,64,3,O,3
+Side Swing,High,10,64,2,D,3
+Side Swing,Low,2,58,2,U,3
+Thrust,High,32,56,-1,D,3
+Thrust,Low,14,56,-1,U,3
+Bite and Throw,Grab and Bite,44,56,3,O,0
+Bite and Throw,Throw Club,48,60,4,U,3
+Bite and Throw,Throw Rock,6,54,5,D,RS
+Special,Kick,34,56,2,U,0
+Special,Wild Swing,40,58,3,Y,3
+Special,Dislodge Weapon,30,64,-1,U,3
+Special,Retrieve Weapon,46,56,-4,G,0
+Jump,Up,18,52,-6,G,0
+Jump,Dodge and Get Rock,8,52,-4,Y,0
+Jump,Duck,20,52,-5,G,0
+Jump,Away,16,62,-4,Y,0
+Extended Range,Charge,50,0,5,W,3
+Extended Range,Swing High,64,0,2,K,3
+Extended Range,Swing Low,58,0,2,K,3
+Extended Range,Throw Rock,54,0,5,W,RS
+Extended Range,Throw Club,60,0,4,W,3
+Extended Range,Block and Close,56,0,0,B,0
+Extended Range,Dodge and Get Rock,52,0,-5,B,0
+Extended Range,Jump Back,62,0,-5,B,0

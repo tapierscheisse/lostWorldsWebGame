@@ -1,0 +1,37 @@
+Height: 4
+Attacks: 1
+Body Points: 16
+Luck Points: 4
+Weapon:Scimitar
+Weapon System = Main-Activate
+Flying
+--
+Down Swing,Smash,24,56,4,O,1
+Side Swing,Strong,28,64,3,O,1
+Side Swing,High,10,64,1,D,1
+Side Swing,Low,2,64,1,U,1
+Thrust,High,32,60,-1,D,1
+Thrust,Low,14,60,-1,U,1
+Restricted Flying,Attack,6,50,0,D,2
+Restricted Flying,Pounce,26,50,4,U,2
+Restricted Flying,Swoop,22,58,1,U,2
+Restricted Flying,Down Swing Smash,38,56,-1,D,3
+Restricted Flying,Down Swing Bash,44,56,1,O,3
+Restricted Flying,Thrust Low,42,54,-1,U,3
+Restricted Flying,Thrust High,12,54,0,D,3
+Special,Kick,34,56,0,U,0
+Special,Wild Swing,40,64,2,Y,1
+Special,Dislodge Weapon,30,64,-4,U,1
+Special,Retrieve Weapon,46,52,-6,G,0
+Jump,Take Off,18,62,-6,G,0
+Jump,Dodge,8,52,-4,Y,0
+Jump,Land,20,52,-5,G,0
+Jump,Away,16,62,-4,Y,0
+Extended Range,Flying Charge,50,0,3,W,2
+Extended Range,Swing,64,0,-7,K,1
+Extended Range,Flying Swoop,58,0,-5,K,3
+Extended Range,Flying Thrust,54,0,-4,W,3
+Extended Range,Thrust,60,0,-6,W,1
+Extended Range,Block and Close,56,0,0,B,0
+Extended Range,Dodge,52,0,0,B,0
+Extended Range,Jump Back,62,0,-7,B,0

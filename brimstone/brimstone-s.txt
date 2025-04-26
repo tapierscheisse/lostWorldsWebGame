@@ -1,0 +1,43 @@
+Height: 5
+Attacks: 2
+Body Points: 20
+Tactics Points: 5
+Weapon:Axe
+Metal Weapon
+Cloth Armor
+Weapon System = Main-Activate
+Beard
+Hair
+Resistance Fire = 3
+Restricted move "Grab Beard" trait "Beard"
+--
+Down Swing,Bash,36,50,6,O,4
+Down Swing,Smash,24,50,5,O,4
+Side Swing,Strong,28,64,4,O,1
+Side Swing,High,10,64,3,D,1
+Side Swing,Low,2,64,3,U,1
+Thrust,High,32,54,1,D,1
+Thrust,Low,14,54,1,U,1
+Throw,Lava Rock,42,60,5,D,2
+Hand to Hand,Shove,6,56,1,U,0
+Hand to Hand,Grab Opponent,38,56,8,D,0
+Hand to Hand,Grab Beard,44,56,-1,O,0
+Hand to Hand,Slug,48,56,2,U,0
+Special,Kick,34,56,0,U,0
+Special,Wild Swing,40,64,3,Y,1
+Special,Dislodge Weapon,30,64,-4,U,1
+Special,Retrieve Weapon,46,52,-6,G,0
+Lava Rock,Block High,26,56,0,G,2
+Lava Rock,Block Low,4,56,0,G,2
+Jump,Up,18,62,-5,G,0
+Jump,Dodge and Get Rock,8,52,-4,Y,0
+Jump,Duck,20,52,-5,G,0
+Jump,Away,16,62,-4,Y,0
+Extended Range,Charge,50,0,4,W,1
+Extended Range,Swing Axe High,64,0,-1,K,1
+Extended Range,Swing Axe Low,58,0,-1,K,1
+Extended Range,Thrust Axe,54,0,0,W,1
+Extended Range,Chuck Rock,60,0,10,W,2
+Extended Range,Block and Close,56,0,0,B,0
+Extended Range,Dodge,52,0,-6,B,0
+Extended Range,Jump Back,62,0,-7,B,0

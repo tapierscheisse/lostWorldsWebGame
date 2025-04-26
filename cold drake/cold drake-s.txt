@@ -1,0 +1,36 @@
+Height: 6
+Attacks: 2
+Body Points: 60
+Tactics Points: 0
+Not Two-legged
+Dragon
+Animal
+Weapon System = Activate Unarmed
+Style Choices = Knock opponent down | Drop opponent and escape
+--
+Bite,Chomp,24,54,4,O,0
+Right Claw,High,10,54,3,D,0
+Right Claw,Low,2,54,3,U,0
+Left Claw,High,32,54,3,D,0
+Left Claw,Low,14,54,3,U,0
+Restricted Flying,Attack,6,50,3,D,R
+Restricted Flying,Pounce,26,50,6,U,R
+Restricted Flying,Tail Whip,34,58,2,U,R
+Restricted Flying,Snatch,46,50,0,D,R
+Restricted Non-Flying,Hold and Bite,44,54,12,O,R
+Restricted Non-Flying,Grab,48,54,3,U,R
+Special,Wild Swing,40,54,6,Y,0
+Special,Dislodge Weapon,30,54,0,U,0
+Special,Tail Whip,36,64,5,G,0
+Jump,Fly Off,18,52,-3,G,0
+Jump,Dodge,8,52,-2,Y,0
+Jump,Fly Down (Land),20,52,-3,G,0
+Jump,Away,16,62,-2,Y,0
+Extended Range,Flying Attack,50,0,1,W,R
+Extended Range,Tail Whip,64,0,3,K,0
+Extended Range,Flying Tail Whip,58,0,1,K,R
+Extended Range,Bite and Claw,54,0,2,W,0
+Extended Range,Breathe Coldness,60,16,-9,W,RS
+Extended Range,Block and Close,56,0,0,B,0
+Extended Range,Dodge,52,0,-3,B,0
+Extended Range,Jump or Fly Back,62,0,-3,B,0

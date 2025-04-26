@@ -1,0 +1,46 @@
+Height: 5
+Attacks: 1
+Body Points: 17
+Tactics Points: 2
+Luck Points:5
+Weapon:Sword
+Weapon2:Crossbow
+Weapon System = Main-Activate
+Shield
+Metal Armor
+Metal Weapon
+Helmet
+Always Turn 0 Enable move Fire Crossbow
+Always Disable move Spin Web
+--
+Crossbow,Fire Crossbow,36,54,8,O,2
+Down Swing,Sword Chop,24,50,4,O,1
+Side Swing,Strong,28,64,3,O,1
+Side Swing,High,10,64,2,D,1
+Side Swing,Low,2,58,2,U,1
+Thrust,High,32,60,1,D,1
+Thrust,Low,14,60,1,U,1
+Fake,High,42,56,0,D,1
+Fake,Low,12,56,0,U,1
+Protected Attack,Down Swing,44,56,2,O,1
+Protected Attack,Side Swing,48,56,1,U,1
+Protected Attack,Thrust,6,60,1,D,1
+Thread,Spew Thread,38,60,-9,D,S
+Restricted,Spin Web,34,56,-9,U,RS
+Special,Wild Swing,40,58,5,Y,1
+Special,Dislodge Weapon,30,64,-1,U,1
+Special,Retrieve Weapon,46,56,-4,G,0
+Shield Block,High,26,60,0,G,S
+Shield Block,Low,4,60,0,G,S
+Jump,Spring,18,52,-6,G,0
+Jump,Dodge,8,52,-4,Y,0
+Jump,Duck,20,52,-5,G,0
+Jump,Spring Back,16,62,-4,Y,0
+Extended Range,Charge,50,0,4,W,1
+Extended Range,Swing High,64,0,-1,K,1
+Extended Range,Swing Low,58,0,-1,K,1
+Extended Range,Fire Crossbow,54,0,7,W,2
+Extended Range,Thread,60,0,-9,W,S
+Extended Range,Block and Close,56,0,0,B,0
+Extended Range,Dodge and Reload,52,0,-5,B,0
+Extended Range,Jump Back,62,0,-6,B,0

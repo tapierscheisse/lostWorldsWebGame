@@ -1,0 +1,38 @@
+Height: 4
+Attacks: 1
+Body Points: 11
+Luck Points: 13
+Weapon:Power Sword
+Metal Weapon
+Metal Armor
+Hair
+--
+Down Swing,Fancy Sword Play,24,50,3,O,1
+Power Sword Cut,Strong,28,50,2,O,1
+Power Sword Cut,High,10,64,1,D,1
+Power Sword Cut,Low,2,64,1,U,1
+Power Sword Thrust,High,32,64,-1,D,1
+Power Sword Thrust,Low,14,64,-1,U,1
+Fake,High,42,64,0,D,1
+Fake,Low,12,64,0,U,1
+Protected Attack,Hail of Blows,44,56,1,O,1
+Protected Attack,Mighty Cut,48,56,0,U,1
+Protected Attack,Sudden Lunge,6,56,-1,D,1
+Battle Sister,Flying Leap,22,54,-9,G,S
+Special,Deathblow,34,56,1,U,0
+Special,Wild Swing,40,58,3,Y,1
+Special,Retrieve Weapon,46,52,-6,G,0
+Block,High,26,60,1,G,1
+Block,Low,4,60,1,G,1
+Jump,Up,18,52,-6,G,0
+Jump,Dodge,8,52,-6,Y,0
+Jump,Duck,20,52,-6,G,0
+Jump,Away,16,62,-6,Y,0
+Extended Range,Charge,50,0,3,W,1
+Extended Range,Power Sword Cut,64,0,-1,K,1
+Extended Range,Bolt Pistol,58,0,2,K,S
+Extended Range,Power Sword Thrust,54,0,-2,W,1
+Extended Range,Flamer,60,0,-9,W,S
+Extended Range,Block and Close,56,0,-4,B,0
+Extended Range,Dodge,52,0,-6,B,0
+Extended Range,Regroup,62,0,-6,B,0

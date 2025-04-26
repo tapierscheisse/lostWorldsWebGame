@@ -1,0 +1,36 @@
+Height: 5
+Attacks: 1
+Body Points: 23
+Luck Points:5
+Weapon:Axe
+Metal Weapon
+Always Disable move Spin Web
+--
+Down Swing,Bash,36,50,6,O,1
+Down Swing,Smash,24,50,3,O,1
+Side Swing,Strong,28,64,2,O,1
+Side Swing,High,10,64,2,D,1
+Side Swing,Low,2,58,2,U,1
+Jab,High,32,56,1,D,0
+Jab,Low,14,56,1,U,0
+Magic,Cast,12,54,-9,U,S
+Unarmed Attack,Gore,44,56,3,O,S
+Unarmed Attack,Claw,48,56,2,U,S
+Unarmed Attack,Bite,6,56,1,D,S
+Unarmed Attack,Spew Thread,38,60,-9,D,S
+Restricted,Spin Web,34,56,-9,U,RS
+Special,Wild Swing,40,58,5,Y,1
+Special,Dislodge Weapon,30,64,-1,U,1
+Special,Retrieve Weapon,46,56,-4,G,0
+Jump,Spring,18,52,-6,G,0
+Jump,Dodge,8,52,-4,Y,0
+Jump,Duck,20,52,-5,G,0
+Jump,Take It and Step Back,16,62,-4,Y,0
+Extended Range,Charge,50,0,7,W,1
+Extended Range,Swing High,64,0,-1,K,1
+Extended Range,Swing Low,58,0,-1,K,1
+Extended Range,Cast Magic,54,0,-9,W,S
+Extended Range,Thread,60,0,-9,W,S
+Extended Range,Block and Close,56,0,0,B,0
+Extended Range,Dodge,52,0,-5,B,0
+Extended Range,Jump Back,62,0,-6,B,0

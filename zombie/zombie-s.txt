@@ -1,0 +1,35 @@
+Height: 4
+Attacks: 1
+Body Points: 9
+Tactics Points: 0
+Weapon System = Activate Unarmed
+Undead
+--
+Thump,Thump on Head,24,50,2,O,0
+Punch,Strong,28,64,1,O,0
+Punch,High,10,64,0,D,0
+Punch,Low,2,64,0,U,0
+Jab,High,32,54,-1,D,0
+Jab,Low,14,54,-1,U,0
+Jab,Push,42,54,-1,D,0
+Cause Disease,Touch,44,56,-9,O,0
+Cause Disease,Scratch,48,56,0,U,0
+Cause Disease,Hug,6,56,-9,D,0
+Throw Rock,Turn and Throw,38,60,4,O,RS
+Throw Rock,Aim and Throw,22,60,3,O,RS
+Special,Kick,34,56,1,U,0
+Special,Wild Punch,40,64,2,Y,0
+Foul,Shriek of Terror,26,58,-9,G,S
+Foul,Acrid Breath,4,56,-9,G,S
+Jump,Up,18,52,-6,G,0
+Jump,Dodge and Get Rock,8,52,-4,Y,0
+Jump,Duck,20,52,-5,G,0
+Jump,Away,16,62,-6,Y,0
+Extended Range,Charge,50,0,3,W,0
+Extended Range,Punch,64,0,-5,K,0
+Extended Range,Shriek of Terror,58,0,-9,K,S
+Extended Range,Jab,54,0,-4,W,0
+Extended Range,Throw Rock,60,0,4,W,RS
+Extended Range,Block and Close,56,0,-4,B,0
+Extended Range,Dodge and Get Rock,52,0,-6,B,0
+Extended Range,Jump Back,62,0,-6,B,0

@@ -1,0 +1,44 @@
+Height: 5
+Attacks: 2
+Body Points: 20
+Luck Points: 0
+Weapon:Axe
+Shield:Shield
+Metal Weapon
+Metal Armor
+Helmet
+Animal
+Hair
+--
+Trample,Fore Hooves,36,50,4,O,1
+Down Swing,Smash,24,50,2,O,1
+Side Swing,Strong,28,64,2,O,1
+Side Swing,High,10,64,1,D,1
+Side Swing,Low,2,64,1,U,1
+Thrust,High,32,64,-2,D,1
+Thrust,Low,14,64,-2,U,1
+Fake,High,42,64,0,D,1
+Fake,Low,12,64,0,U,1
+Magic,Call "Halt",38,54,-9,U,0
+Magic,Cast Spell,22,60,-9,D,0
+Protected Attack,Down Swing,44,64,1,O,1
+Protected Attack,Side Swing,48,64,0,U,1
+Protected Attack,Thrust,6,64,0,D,1
+Rear Hooves,Spin and Kick,34,58,5,U,0
+Rear Hooves,Kick Wildly,40,58,3,Y,0
+Special,Dislodge Weapon,30,64,-4,U,1
+Special,Retrieve Weapon,46,52,-6,G,0
+Shield Block,High,26,56,0,G,0
+Shield Block,Low,4,56,0,G,0
+Jump,Up,18,52,-6,G,0
+Jump,Dodge,8,52,-4,Y,0
+Jump,Duck,20,52,-5,G,0
+Jump,Away,16,62,-4,Y,0
+Extended Range,Charge,50,0,4,K,1
+Extended Range,Axe Attack,64,0,-3,K,1
+Extended Range,Spin and Kick,58,0,1,K,0
+Extended Range,Call "Halt",54,0,-9,W,0
+Extended Range,Chant Magic,60,0,-9,W,0
+Extended Range,Block and Close,56,0,0,B,0
+Extended Range,Dodge,52,0,-6,B,0
+Extended Range,Jump Away,62,0,-6,B,0

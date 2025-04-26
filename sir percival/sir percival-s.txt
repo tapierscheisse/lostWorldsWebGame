@@ -1,0 +1,39 @@
+Height: 4
+Attacks: 1
+Body Points: 14
+Luck Points: 0
+Weapon:Sword
+Metal Weapon
+Metal Armor
+Helmet
+Weapon System = Main-Activate
+--
+Mounted,Bash,36,50,3,O,3
+Down Swing,Smash,24,58,3,O,1
+Side Swing,Strong,28,58,2,O,1
+Side Swing,High,10,58,0,D,1
+Side Swing,Low,2,58,0,U,1
+Thrust,High,32,60,-2,D,1
+Thrust,Low,14,60,-2,U,1
+Parry,Parry and Strike,42,60,0,U,1
+Mounted Attack,Parry and Swing,38,64,1,D,3
+Mounted Attack,Steed Rears,44,50,4,O,2
+Mounted Attack,Great Swing,48,64,2,U,3
+Mounted Attack,Thrust,6,54,-1,D,3
+Mounted Attack,Steed Kick,34,56,5,U,2
+Special,Wild Swing,40,58,2,Y,1
+Special,Dislodge Weapon,30,58,-4,U,1
+Special,Retrieve Weapon,46,52,-6,G,0
+Mounted Jump,Mounted Away,4,56,-6,G,2
+Mounted Jump,Mounted Dodge,18,56,-6,G,2
+Jump,Dodge,8,52,-4,Y,0
+Jump,Duck,20,52,-5,G,0
+Jump,Away,16,62,-4,Y,0
+Extended Range,Mounted Rush,50,0,7,W,3
+Extended Range,Mounted Swing,64,0,1,K,3
+Extended Range,Side Swing,58,0,1,K,1
+Extended Range,Mounted Thrust,54,0,2,W,3
+Extended Range,Thrust,60,0,2,W,1
+Extended Range,Mounted Close,56,0,0,B,2
+Extended Range,Dodge,52,0,-4,B,0
+Extended Range,Mount Steed,62,0,-4,B,0

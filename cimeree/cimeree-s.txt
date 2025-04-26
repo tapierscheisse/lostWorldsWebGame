@@ -1,0 +1,43 @@
+Height: 4
+Attacks: 1
+Body Points: 14
+Tactics Points: 8
+Weapon:Sword
+Weapon2:Dagger
+Metal Weapon
+Cloth Armor
+Hair
+Yellow Spells
+Attack Modifier Change
+--
+Down Swing,Smash,24,50,3/1,O,3
+Side Swing,Strong,28,64,2/0,O,3
+Side Swing,High,10,64,1/-1,D,3
+Side Swing,Low,2,64,1/-1,U,3
+Thrust,High,32,54,0/-2,D,3
+Thrust,Low,14,54,0/-2,U,3
+Fake,High,42,64,0/-2,D,3
+Fake,Low,12,64,0/-2,U,3
+Fake,Swing,22,54,0/-2,U,3
+Fake,Thrust,38,64,-1/-3,D,3
+Abilities,Throw Dagger,36,56,2,O,2
+Abilities,Cast Magic,48,60,-9,U,0
+Abilities,Pick Pocket,6,56,-9,D,0
+Special,Kick,34,56,0,U,0
+Special,Wild Swing,40,64,2/0,Y,3
+Special,Dislodge Weapon,30,64,-4/-6,U,3
+Special,Retrieve Weapon,46,52,-6,G,0
+Parry,Thrust,26,56,-1,G,4
+Parry,Swing,4,56,-1,G,4
+Jump,Up,18,62,-5,G,0
+Jump,Dodge,8,52,-4,Y,0
+Jump,Duck,20,52,-5,G,0
+Jump,Away,16,62,-4,Y,0
+Extended Range,Charge,50,0,3/1,W,3
+Extended Range,Swing,64,0,-5/-7,K,3
+Extended Range,Throw Dagger,58,0,3,K,2
+Extended Range,Thrust,54,0,-3/-5,W,3
+Extended Range,Cast Magic,60,0,-9,W,0
+Extended Range,Block and Close,56,0,0,B,0
+Extended Range,Dodge,52,0,-6,B,0
+Extended Range,Jump Back,62,0,-6,B,0

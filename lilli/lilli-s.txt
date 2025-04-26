@@ -1,0 +1,42 @@
+Height: 4
+Attacks: 1
+Body Points: 11
+Tactics Points: 10
+Weapon:Rapier
+Weapon2:Main Gauche
+Cloth Armor
+Metal Weapon
+Attack Modifier Change
+Hair
+--
+Parry,Cut Purse,12,56,-9,O,4
+Down Swing,Smash,24,50,1/-2,O,3
+Side Swing,Strong,28,64,1/-2,O,3
+Side Swing,High,10,64,-1/-4,D,3
+Side Swing,Low,2,64,-1/-4,U,3
+Thrust,High,32,54,2/-1,D,3
+Thrust,Low,14,60,2/-1,U,3
+Thrust,Lunge,42,60,4/1,U,3
+Main Gauche,Parry and Whack,44,56,5,U,4
+Main Gauche,Parry and Swing,48,56,4,U,4
+Main Gauche,Parry and Thrust,6,58,6,D,4
+Distract,Wink and Thrust,38,58,-1,U,3
+Distract,Smile and Swing,22,58,-2,D,3
+Special,Kick,34,56,1,U,0
+Special,Wild Swing,40,58,2/-1,Y,3
+Special,Dislodge Weapon,30,64,-4/-7,U,3
+Special,Retrieve Weapon,46,52,-6,G,0
+Back Hand,Knuckle Bang,26,56,0,G,0
+Back Hand,Slap,4,56,-1,G,0
+Jump,Up,18,52,-6,G,0
+Jump,Dodge,8,52,-4,Y,0
+Jump,Duck,20,52,-5,G,0
+Jump,Away,16,62,-4,Y,0
+Extended Range,Charge,50,0,4/1,W,3
+Extended Range,Swing,64,0,-1/-4,K,3
+Extended Range,Distract,58,0,0,K,3
+Extended Range,Thrust High,54,0,1/-2,W,3
+Extended Range,Thrust Low,60,0,1/-2,W,3
+Extended Range,Block and Close,56,0,0,B,0
+Extended Range,Dodge,52,0,-6,B,0
+Extended Range,Jump Back,62,0,-6,B,0

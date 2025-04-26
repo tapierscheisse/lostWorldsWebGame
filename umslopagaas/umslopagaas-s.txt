@@ -1,0 +1,37 @@
+Height: 4
+Attacks: 1
+Body Points: 17
+Luck Points: 4
+Weapon:Staff
+Metal Weapon
+--
+Down Swing,Bash,36,50,3,O,1
+Down Swing,Smash,24,50,2,O,1
+Side Swing,Strong,28,64,2,O,1
+Side Swing,High,10,64,1,D,1
+Side Swing,Low,2,64,1,U,1
+Thrust,High,32,64,0,D,1
+Thrust,Low,14,64,0,U,1
+Fake,High,42,64,0,D,1
+Fake,Low,12,64,0,U,1
+Invoke Magic,Staff Tap Ground,6,58,2,U,1
+Invoke Magic,Cast Magic,48,54,-9,U,S
+Invoke Magic,Big Smile,22,60,-9,D,S
+Special,Trip,34,56,0,U,0
+Special,Wild Swing,40,64,2,Y,1
+Special,Dislodge Weapon,30,64,-4,U,1
+Special,Retrieve Weapon,46,52,-6,G,0
+Tail Whip,Snapping High,26,56,0,G,0
+Tail Whip,Snapping Low,4,56,0,G,0
+Jump,Up,18,62,-6,G,0
+Jump,Dodge,8,52,-4,Y,0
+Jump,Duck,20,52,-5,G,0
+Jump,Away,16,62,-4,Y,0
+Extended Range,Charge,50,0,3,W,1
+Extended Range,Swing,64,0,2,K,1
+Extended Range,Staff Tap Ground,58,0,2,K,1
+Extended Range,Cast Magic,54,0,-9,W,S
+Extended Range,Magic Smile,60,0,-9,W,S
+Extended Range,Block and Close,56,0,0,B,0
+Extended Range,Dodge,52,0,-4,B,0
+Extended Range,Jump Back,62,0,-4,B,0

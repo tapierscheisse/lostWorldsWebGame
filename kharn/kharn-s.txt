@@ -1,0 +1,40 @@
+Height: 4
+Attacks: 1
+Body Points: 16
+Tactics Points: 6
+Weapon:Chain Axe
+Helmet
+Fearless
+Metal Armor
+Metal Weapon
+--
+Down Swing,Swift Axe Work,24,50,3,O,1
+Chain Axe Cut,Strong,28,64,2,O,1
+Chain Axe Cut,High,10,64,1,D,1
+Chain Axe Cut,Low,2,64,1,U,1
+Chain Axe Thrust,High,32,54,0,D,1
+Chain Axe Thrust,Low,14,54,0,U,1
+Chain Axe Thrust,Sudden Lunge,12,50,1,O,1
+Blood God,Battle Cry,38,60,-9,U,0
+Blood God,Head Butt,22,58,3,D,0
+Protected Attack,Hail of Blows,44,50,2,O,1
+Protected Attack,Crazed Swing,48,64,1,D,1
+Protected Attack,Crazed Lunge,6,54,-1,U,1
+Special,Deathblow,34,56,2,U,0
+Special,Wild Swing,40,64,2,Y,1
+Special,Disarm Opponent,30,56,-2,U,1
+Special,Retrieve Weapon,46,52,-6,G,0
+Block,High,26,56,1,G,1
+Block,Low,4,56,1,G,1
+Jump,Circle,18,52,-6,G,0
+Jump,Dodge,8,52,-6,Y,0
+Jump,Duck,20,52,-6,G,0
+Jump,Step Back,16,62,-6,Y,0
+Extended Range,Charge,50,0,4,W,1
+Extended Range,Chain Axe Cut High,64,0,1,K,1
+Extended Range,Chain Axe Cut Low,58,0,1,K,1
+Extended Range,Chain Axe Thrust,54,0,0,W,1
+Extended Range,Plasma Pistol,60,0,2,W,0
+Extended Range,Block and Close,56,0,0,B,0
+Extended Range,Dodge,52,0,-6,B,0
+Extended Range,Regroup,62,0,-6,B,0

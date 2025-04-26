@@ -1,0 +1,42 @@
+Height: 4
+Attacks: 1
+Body Points: 8
+Weapon:Epee
+Weapon2:Bow
+Magic Points = 10
+Magic Resistance = 2
+Cloth Armor
+Metal Weapon
+Hair
+Weapon System = Main-Activate
+Always Turn 0 Enable move all
+--
+Down Swing,Slash,24,50,2,O,1
+Side Swing,High,10,64,-1,D,1
+Side Swing,Low,2,64,-1,U,1
+Thrust,High,32,54,2,D,1
+Thrust,Low,14,54,2,U,1
+Fake,High,42,64,1,D,1
+Fake,Low,12,64,1,U,1
+Fake,Swing,6,54,0,D,1
+Special,Lunge,22,50,4,O,1
+Special,Move Behind,48,52,2,U,S
+Magic,Minor,38,60,-9,D,S
+Special,Kick,34,56,2,U,0
+Special,Wild Swing,40,58,1,Y,1
+Special,Dislodge Weapon,30,58,-4,U,1
+Special,Retrieve Weapon,46,52,-6,G,0
+Parry and Thrust,High,26,56,1,G,1
+Parry and Thrust,Low,4,56,1,G,1
+Jump,Up,18,52,-6,G,0
+Jump,Dodge,8,52,-4,Y,0
+Jump,Duck,20,52,-5,G,0
+Jump,Away,16,62,-4,Y,0
+Extended Range,Charge,50,0,3,W,1
+Extended Range,Swing,64,0,0,K,1
+Extended Range,Loose Arrow,58,0,3,K,2
+Extended Range,Thrust High,54,0,3,W,1
+Extended Range,Major Magic,60,0,-9,W,S
+Extended Range,Block and Close,56,0,0,B,0
+Extended Range,Dodge,52,0,-4,B,0
+Extended Range,Nock Arrow,62,0,-4,B,0

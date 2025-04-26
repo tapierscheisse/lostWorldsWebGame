@@ -1,0 +1,38 @@
+Height: 4
+Attacks: 1
+Body Points: 15
+Luck Points: 3
+Weapon:Scimitar
+Shield:Shield
+Cloth Armor
+Metal Weapon
+--
+Down Swing,Smash,24,50,3,O,1
+Side Swing,Strong,28,64,2,O,1
+Side Swing,High,10,64,1,D,1
+Side Swing,Low,2,64,1,U,1
+Thrust,High,32,54,1,D,1
+Thrust,Low,14,54,0,U,1
+Fake,High,42,64,0,D,1
+Fake,Low,12,64,0,U,1
+Skill,Strike and Bite,44,56,4,O,0
+Skill,Constrict Foe,48,58,3,U,0
+Skill,Tail Whip,6,58,2,D,0
+Power,Gaze,38,56,1,O,S
+Power,Throw Snake,22,60,2,O,S
+Special,Wild Swing,40,64,2,Y,1
+Special,Dislodge Weapon,30,56,-2,U,1
+Special,Retrieve Weapon,46,52,-6,G,0
+Magic Shield,Blind,26,56,-9,G,S
+Jump,Up,18,52,-6,G,0
+Jump,Dodge,8,52,-4,Y,0
+Jump,Duck,20,52,-5,G,0
+Jump,Away,16,62,-6,Y,0
+Extended Range,Charge,50,0,3,W,1
+Extended Range,Swing,64,0,1,K,1
+Extended Range,Tail Whip,58,0,1,K,0
+Extended Range,Thrust,54,0,1,W,1
+Extended Range,Throw Snake,60,0,1,W,S
+Extended Range,Block and Close,56,0,-4,B,0
+Extended Range,Dodge,52,0,-6,B,0
+Extended Range,Jump Back,62,0,-6,B,0

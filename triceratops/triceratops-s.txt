@@ -1,0 +1,38 @@
+Height: 5
+Attacks: 1
+Body Points: 65
+Weapon System = Activate Unarmed
+Animal
+Dinosaur
+Cretaceous
+Always Critical Hit Enable move Goal
+--
+Power,Horn Thrust,36,50,6,O,0
+Strong,Body Slam,24,50,3,O,0
+Slash Horns,Strong,28,64,7,O,0
+Slash Horns,High,10,64,5,D,0
+Slash Horns,Low,2,64,4,U,0
+Bite,Neck,32,54,2,D,0
+Bite,Body,14,54,2,U,0
+Bite,Legs,42,64,2,U,0
+Goal,Drive Attacker Off,12,64,-9,A,RS
+Skill,Head Thrust,44,56,3,O,0
+Skill,Bite and Shake,48,56,2,D,0
+Skill,Trample,6,56,3,U,0
+Distract,Stomp and Bellow,38,58,-9,O,0
+Special,Shove Over,34,56,1,U,0
+Special,Desperate Slash,40,64,3,Y,0
+Block,High,26,56,0,G,0
+Block,Low,4,56,0,G,0
+Jump,Rear Up,18,52,-9,G,0
+Jump,Dodge,8,52,-9,Y,0
+Jump,Crouch,20,52,-9,G,0
+Jump,Rear Back,16,52,-9,Y,0
+Extended Range,Charge,50,0,12,W,0
+Extended Range,Slash High,64,0,2,K,0
+Extended Range,Slash Low,58,0,2,K,0
+Extended Range,Bite,54,0,-1,W,0
+Extended Range,Stomp and Bellow,60,0,-1,W,0
+Extended Range,Close to Attack,56,0,-4,B,0
+Extended Range,Dodge,52,0,-6,B,0
+Extended Range,Back,62,0,-6,B,0

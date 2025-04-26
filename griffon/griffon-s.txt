@@ -1,0 +1,40 @@
+Height: 10
+Attacks: 1
+Body Points: 36
+Tactics Points: 0
+Metal Always
+Initial Energy = 0
+Maximum Energy = 30
+Special Name = Heat Gauge
+Aftercheck Result 30 - special < 1 Restrict moves
+Aftercheck Result 30 - special < 1 Not Extended Range Only page 46
+Aftercheck Result 30 - special < 1 Not Extended Range Only page 20
+Aftercheck Result 30 - special < 1 Extended Range Only page 58
+--
+Power Attack,Death From Above,24,50,4,O,0
+Punch,Strong,28,64,3,O,0
+Punch,High,10,64,2,D,0
+Punch,Low,2,58,2,U,0
+Push,High,32,60,2,D,0
+Push,Low,14,60,2,U,0
+Missile,High,12,60,4,U,S
+Missile,Low,42,60,4,D,S
+PPC,High,38,56,3,U,S
+PPC,Low,22,60,3,D,S
+Cover,PPC High,48,56,2,D,S
+Cover,PPC Low,6,56,2,U,S
+Special,Kick,34,56,3,U,0
+Special,Wild Swing,40,58,5,Y,0
+Special,Cool Off,46,56,-9,G,S
+Jump,Up,18,52,-6,G,0
+Jump,Dodge,8,52,-4,Y,0
+Jump,Duck,20,52,-5,G,0
+Jump,Away,16,62,-6,Y,0
+Extended Range,Charge,50,0,6,W,0
+Extended Range,Missile,64,0,4,K,S
+Extended Range,Cool Off,58,0,-9,K,S
+Extended Range,PPC High,54,0,3,W,S
+Extended Range,PPC Low,60,0,3,W,S
+Extended Range,Block and Close,56,0,0,B,0
+Extended Range,Dodge,52,0,-5,B,0
+Extended Range,Jump Back,62,0,-6,B,0

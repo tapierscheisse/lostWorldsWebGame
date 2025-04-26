@@ -1,0 +1,40 @@
+Height: 4
+Attacks: 1
+Body Points: 18
+Luck Points: 3
+Tactics Points: 3
+Weapon:Morning Star
+Shield:Shield
+Cloth Armor
+Metal Weapon
+--
+Down Swing,Smash,36,50,5,O,1
+Down Swing,Bash,24,50,3,O,1
+Side Swing,Strong,28,64,3,O,1
+Side Swing,High,10,64,1,D,1
+Side Swing,Low,2,64,1,U,1
+Entangle,Leg,42,58,2,U,1
+Entangle,Body,12,64,2,D,1
+Protected Attack,Down Swing,44,56,2,O,1
+Protected Attack,Side Swing,48,56,1,U,1
+Protected Attack,Shield Impale,6,56,1,D,1
+Special,War Cry,38,54,-9,G,0
+Special,Kick Dirt,22,60,-1,U,0
+Special,Kick,34,56,1,U,0
+Special,Wild Punch,40,64,2,Y,1
+Special,Dislodge Weapon,30,64,-3,U,1
+Special,Retrieve Weapon,46,52,-6,G,0
+Shield Block,High,26,56,-9,G,0
+Shield Block,Low,4,56,-9,G,0
+Jump,Up,18,52,-6,G,0
+Jump,Dodge,8,52,-4,Y,0
+Jump,Duck,20,52,-5,G,0
+Jump,Away,16,62,-6,Y,0
+Extended Range,Charge,50,0,4,W,1
+Extended Range,Swing High,64,0,0,K,1
+Extended Range,Swing Low,58,0,0,K,1
+Extended Range,War Cry,54,0,-9,W,0
+Extended Range,Kick Dirt,60,0,-1,W,0
+Extended Range,Block and Close,56,0,-4,B,0
+Extended Range,Dodge,52,0,-6,B
+Extended Range,Jump Back,62,0,-6,B

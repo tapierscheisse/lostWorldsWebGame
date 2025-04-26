@@ -1,0 +1,37 @@
+Height: 4
+Attacks: 1
+Body Points: 12
+Tactics Points: 10
+Weapon:Ninjato
+Cloth Armor
+Metal Weapon
+Gimmicks
+--
+Down Swing,Smash,24,50,2,O,1
+Side Swing,Strong,28,64,2,O,1
+Side Swing,Swing High,10,64,1,D,1
+Side Swing,Swing Low,2,58,1,U,1
+Thrust,High,32,54,0,D,1
+Thrust,Low,14,60,0,U,1
+Fake,High,42,58,0,D,1
+Fake,Low,12,64,0,U,1
+Fake,Side Swing,22,60,-1,U,1
+Fake,Thrust,38,58,0,D,1
+Special,Move Behind,26,52,-3,U,S
+Special,Kick,34,56,2,U,0
+Special,Wild Swing,40,58,2,Y,1
+Special,Disarm Opponent,30,58,-4,U,1
+Special,Retrieve Weapon,46,52,-6,G,0
+Special,Gimmick,36,54,-9,G,S
+Jump,Up,18,52,-6,G,0
+Jump,Dodge,8,52,-4,Y,0
+Jump,Duck,20,52,-5,G,0
+Jump,Away,16,62,-4,Y,0
+Extended Range,Charge,50,0,3,W,1
+Extended Range,Swing High,64,0,-1,K,1
+Extended Range,Swing Low,58,0,-1,K,1
+Extended Range,Gimmick,54,0,-9,W,S
+Extended Range,Thrust,60,0,0,W,1
+Extended Range,Block and Close,56,0,0,B,0
+Extended Range,Dodge,52,0,-4,B,0
+Extended Range,Jump Back,62,0,-4,B,0
