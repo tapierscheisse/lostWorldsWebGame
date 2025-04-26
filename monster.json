@@ -1,17 +1,23 @@
-[
-  {
-    "id": "drache",
-    "name": "Drache",
-    "bild": "/images/monster/drache/avatar.jpg"
-  },
-  {
-    "id": "ork",
-    "name": "Ork",
-    "bild": "/images/monster/ork/avatar.jpg"
-  },
-  {
-    "id": "zombie",
-    "name": "Zombie",
-    "bild": "/images/monster/zombie/avatar.jpg"
+function generateMonsterList() {
+  const monstersDir = path.join(__dirname, 'public', 'images', 'monster');
+  console.log(`Suche Monster in: ${monstersDir}`); // Debug-Log
+
+  try {
+    if (!fs.existsSync(monstersDir)) {
+      console.error('Monster-Verzeichnis existiert nicht!');
+      return [];
+    }
+
+    const monsterFolders = fs.readdirSync(monstersDir).filter(file => {
+      const fullPath = path.join(monstersDir, file);
+      const isDir = fs.statSync(fullPath).isDirectory();
+      console.log(`- ${file} ${isDir ? '(Ordner)' : '(Datei)'}`); // Debug
+      return isDir;
+    });
+
+    // ... restlicher Code ...
+  } catch (error) {
+    console.error('Fehler:', error);
+    return [];
   }
-]
+}
