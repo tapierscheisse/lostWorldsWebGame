@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burton's Combat System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        .loading {
+            text-align: center;
+            font-style: italic;
+            color: #666;
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .button {
+            padding: 6px 8px;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: opacity 0.3s, filter 0.3s;
+            width: 100%;
+            text-align: center;
+            height: 30px;
+            box-sizing: border-box;
+            position: relative;
+        }
+        .button:hover:not(:disabled) {
+            opacity: 0.9;
+        }
+        .button:disabled {
+            cursor: not-allowed;
+            filter: grayscale(80%);
+            opacity: 0.5;
+        }
+        .button.O { background-color: #FF9800; }
+        .button.D { background-color: #F44336; }
+        .button.U { background-color: #2196F3; }
+        .button.Y { background-color: #FFEB3B; color: #333; }
+        .button.G { background-color: #4CAF50; }
+        .button.W { background-color: #FFFFFF; color: #333; border: 1px solid #ddd; }
+        .button.K { background-color: #000000; }
+        .button.B { background-color: #795548; }
+        .button.S { background-color: #9C27B0; }
+        
+        .button[data-tooltip]:hover:after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #333;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            white-space: nowrap;
+            z-index: 10;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.4);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 300px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover {
+            color: black;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button.submit {
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button.submit:hover {
+            background-color: #45a049;
+        }
+        .result-modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.4);
+        }
+        .result-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 300px;
+            border-radius: 5px;
+            text-align: center;
+            white-space: pre-line;
+        }
+        .mode-switcher {
+            text-align: center;
+            margin: 10px 0;
+        }
+        .mode-btn {
+            background-color: #2196F3;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Burton's Combat System (Extended Range)</h1>
+    <div class="mode-switcher">
+        <button class="mode-btn" id="switchMode">Zu Normalmodus wechseln</button>
+    </div>
+    <div id="loading" class="loading">Lade Daten...</div>
+    <div class="button-container" id="buttons" style="display:none;"></div>
+
+    <div id="inputModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modalValue"></p>
+            <label for="maneuverInput">Generisches Manöver:</label>
+            <input type="number" id="maneuverInput" min="0" max="63">
+            <button class="submit" id="submitBtn">OK</button>
+        </div>
+    </div>
+
+    <div id="resultModal" class="result-modal">
+        <div class="result-content">
+            <span class="close">&times;</span>
+            <p id="finalResult"></p>
+        </div>
+    </div>
+
+    <script>
+        // ========== GLOBALE VARIABLEN ==========
+        let currentButtonValue = 0;
+        let savedManeuverValue = null;
+        let buttonData = [];
+        let pagesData = [];
+        let pages2Data = [];
+        let restrictions = [];
+        let damageData = [];
+        let isExtendedRangeMode = true;
+        let currentRestriction = "Only move Extended Range";
+
+        // ========== HILFSFUNKTIONEN ==========
+        function processButtonData(data) {
+            buttonData = data.split('\n')
+                .filter(line => line.trim() !== '')
+                .map(line => {
+                    const parts = line.split(',');
+                    return {
+                        type: parts[0].trim(),
+                        name: parts[1].trim(),
+                        value: parseInt(parts[2].trim()),
+                        colorCode: parts[5].trim()
+                    };
+                });
+        }
+
+        function processPagesData(pagesText, pages2Text) {
+            pagesData = pagesText.split('\n')
+                .filter(line => line.includes('='))
+                .map(line => {
+                    const content = line.split('=')[1].trim();
+                    return content.substring(1, content.length-1)
+                        .split(',')
+                        .map(num => parseInt(num.trim()));
+                });
+
+            pages2Data = pages2Text.split('\n')
+                .filter(line => line.includes('='))
+                .map(line => {
+                    const content = line.split('=')[1].trim();
+                    return content.substring(1, content.length-1)
+                        .split(',')
+                        .map(num => parseInt(num.trim()));
+                });
+        }
+
+        function processRestrictionsData(data) {
+            restrictions = data.split('\n')
+                .filter(line => line.includes('='))
+                .map(line => line.split('=')[1].trim());
+        }
+
+        function processDamageData(data) {
+            damageData = data.split('|').map(pair => {
+                const values = pair.split(',');
+                return [
+                    parseInt(values[0].trim()),
+                    parseInt(values[1].trim()),
+                    parseInt(values[2].trim())
+                ];
+            });
+        }
+
+        // ========== RESTRIKTIONSLOGIK ==========
+        function updateButtonRestrictions(restrictionText) {
+            currentRestriction = restrictionText;
+            const buttons = document.querySelectorAll('.button');
+            
+            buttons.forEach(button => {
+                const colorCode = button.classList[1];
+                const buttonType = button.textContent.split(' ')[0];
+                let isAllowed = true;
+
+                if (isExtendedRangeMode) {
+                    isAllowed = buttonType === "Extended";
+                } else {
+                    if (restrictionText.includes("Can't use move " + buttonType)) {
+                        isAllowed = false;
+                    }
+                    
+                    const colorBans = restrictionText.match(/Can't use [A-Z]/g) || [];
+                    if (colorBans.some(ban => ban.includes(colorCode))) {
+                        isAllowed = false;
+                    }
+                    
+                    const onlyColors = restrictionText.match(/Only [A-Z]/g) || [];
+                    if (onlyColors.length > 0 && !onlyColors.some(oc => oc.includes(colorCode))) {
+                        isAllowed = false;
+                    }
+                    
+                    if (restrictionText.includes("Drop weapon") && isWeaponButton(buttonType)) {
+                        isAllowed = false;
+                    }
+                    if (restrictionText.includes("Shield broken") && isShieldButton(buttonType)) {
+                        isAllowed = false;
+                    }
+                }
+                
+                button.disabled = !isAllowed;
+                button.style.opacity = isAllowed ? "1" : "0.5";
+                button.setAttribute('data-tooltip', isAllowed ? "" : "Blockiert durch: " + restrictionText);
+            });
+        }
+
+        function isWeaponButton(type) {
+            return ["Thrust", "Side Swing", "Down Swing", "Smash", "Protected Attack"].includes(type);
+        }
+
+        function isShieldButton(type) {
+            return ["Shield Block", "Protected Attack"].includes(type);
+        }
+
+        // ========== SPIELFUNKTIONEN ==========
+        function initGame() {
+            const buttonsContainer = document.getElementById('buttons');
+            buttonsContainer.innerHTML = '';
+
+            buttonData.forEach(button => {
+                const btn = document.createElement('button');
+                btn.className = `button ${button.colorCode}`;
+                btn.textContent = `${button.type} ${button.name}`;
+                btn.value = button.value;
+                
+                btn.addEventListener('click', () => {
+                    openInputModal(button.value);
+                });
+                
+                buttonsContainer.appendChild(btn);
+            });
+
+            // Start im Extended Range Mode
+            toggleMode(true);
+
+            // Event Listener
+            document.querySelectorAll('.close').forEach(btn => {
+                btn.onclick = closeModals;
+            });
+            
+            window.onclick = function(event) {
+                if (event.target.classList.contains('modal')) {
+                    closeModals();
+                }
+            };
+
+            document.getElementById('submitBtn').onclick = function() {
+                savedManeuverValue = parseInt(document.getElementById('maneuverInput').value);
+                
+                if (isNaN(savedManeuverValue)) {
+                    alert("Bitte eine gültige Zahl zwischen 0 und 63 eingeben!");
+                    return;
+                }
+                
+                if (savedManeuverValue < 0 || savedManeuverValue > 63) {
+                    alert("Die Zahl muss zwischen 0 und 63 liegen!");
+                    return;
+                }
+                
+                calculateResult();
+            };
+
+            document.getElementById('switchMode').onclick = function() {
+                isExtendedRangeMode = !isExtendedRangeMode;
+                toggleMode(isExtendedRangeMode);
+            };
+        }
+
+        function toggleMode(extendedMode) {
+            isExtendedRangeMode = extendedMode;
+            if (extendedMode) {
+                updateButtonRestrictions("Only move Extended Range");
+                document.getElementById('switchMode').textContent = "Zu Normalmodus wechseln";
+                document.querySelector('h1').textContent = "Burton's Combat System (Extended Range)";
+            } else {
+                updateButtonRestrictions(currentRestriction);
+                document.getElementById('switchMode').textContent = "Zu Extended Range wechseln";
+                document.querySelector('h1').textContent = "Burton's Combat System";
+            }
+        }
+
+        function openInputModal(value) {
+            currentButtonValue = parseInt(value);
+            document.getElementById('modalValue').textContent = `Button Wert: ${value}`;
+            document.getElementById('inputModal').style.display = "block";
+            document.getElementById('maneuverInput').value = "";
+            document.getElementById('maneuverInput').focus();
+        }
+
+        function closeModals() {
+            document.getElementById('inputModal').style.display = "none";
+            document.getElementById('resultModal').style.display = "none";
+        }
+
+        function calculateResult() {
+            let rowIndex, colIndex, result = null, source = "";
+            
+            if (currentButtonValue < 50) {
+                rowIndex = Math.floor(currentButtonValue / 2) - 1;
+                colIndex = Math.floor(savedManeuverValue / 2) - 1;
+                
+                if (rowIndex >= 0 && rowIndex < pagesData.length && 
+                    colIndex >= 0 && colIndex < pagesData[rowIndex].length) {
+                    result = pagesData[rowIndex][colIndex];
+                    source = `pages[${rowIndex}][${colIndex}]`;
+                }
+            } else {
+                rowIndex = Math.floor(currentButtonValue / 2) - 25;
+                colIndex = Math.floor(savedManeuverValue / 2) - 25;
+                
+                if (rowIndex >= 0 && rowIndex < pages2Data.length && 
+                    colIndex >= 0 && colIndex < pages2Data[rowIndex].length) {
+                    result = pages2Data[rowIndex][colIndex];
+                    source = `pages2[${rowIndex}][${colIndex}]`;
+                }
+            }
+            
+            if (result !== null && result !== undefined) {
+                const restrictionIndex = Math.floor((result - 1) / 2);
+                let restrictionText = "No restrictions";
+                
+                if (restrictionIndex >= 0 && restrictionIndex < restrictions.length) {
+                    restrictionText = restrictions[restrictionIndex];
+                    currentRestriction = restrictionText;
+                    if (!isExtendedRangeMode) {
+                        updateButtonRestrictions(restrictionText);
+                    }
+                }
+                
+                let damageValue = "Kein Damage-Wert gefunden";
+                for (const damageEntry of damageData) {
+                    if (damageEntry[0] === result) {
+                        damageValue = damageEntry[1];
+                        break;
+                    }
+                }
+                
+                document.getElementById('finalResult').textContent = 
+                    `Ergebniswert: ${result}\n\nDamage: ${damageValue}\n\nRestriktion:\n${restrictionText.replace(/,/g, "\n")}`;
+                document.getElementById('inputModal').style.display = "none";
+                document.getElementById('resultModal').style.display = "block";
+            } else {
+                alert(`Kein Ergebnis gefunden für:\nButton: ${currentButtonValue}\nManöver: ${savedManeuverValue}\n\nBerechnete Indizes:\nZeile: ${rowIndex}\nSpalte: ${colIndex}`);
+                closeModals();
+            }
+        }
+
+        // ========== DATENLADUNG ==========
+        async function loadGameData() {
+            try {
+                const [buttons, pages, pages2, restrictionsTxt, damage] = await Promise.all([
+                    fetch('buttons.txt').then(r => r.text()),
+                    fetch('pages.txt').then(r => r.text()),
+                    fetch('pages2.txt').then(r => r.text()),
+                    fetch('restrictions.txt').then(r => r.text()),
+                    fetch('damage.txt').then(r => r.text())
+                ]);
+
+                processButtonData(buttons);
+                processPagesData(pages, pages2);
+                processRestrictionsData(restrictionsTxt);
+                processDamageData(damage);
+
+                initGame();
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('buttons').style.display = 'flex';
+                
+            } catch (error) {
+                console.error('Fehler beim Laden:', error);
+                document.getElementById('loading').textContent = 'Verwende Standarddaten';
+                
+                // Fallback-Daten
+                const fallbackButtons = `Extended Range,Charge,50,0,5,W,1
+Extended Range,Swing High,64,0,-6,K,1
+Extended Range,Swing Low,58,0,-6,K,1
+Extended Range,Thrust High,54,0,-5,W,1
+Extended Range,Thrust Low,60,0,-5,W,1
+Extended Range,Block and Close,56,0,4,B,0
+Extended Range,Dodge,52,0,-6,B,0
+Extended Range,Jump Back,62,0,-6,B,0
+Special,Shoulder Slam,36,50,-3,O,0
+Down Swing,Smash,24,50,3,O,1
+Side Swing,Strong,28,64,2,O,1
+Side Swing,High,10,64,1,D,1
+Side Swing,Low,2,58,1,U,1
+Thrust,High,32,54,0,D,1
+Thrust,Low,14,60,0,U,1`;
+                
+                processButtonData(fallbackButtons);
+                processPagesData(`pages[00]=(49,17,13,13,13,13,49,57,37,19,49,13,13,13,49,13,00,13,13,49,49,15,27,13)`, `pages2[0]=(45,23,09,17,41,11,19,19)`);
+                processRestrictionsData(`restriction[0]=No restrictions,Bonus 2,(P)\nrestriction[28]=Only move Extended Range,(P)`);
+                processDamageData(`7,4,0|13,1,0|17,-5,0`);
+
+                setTimeout(() => {
+                    initGame();
+                    document.getElementById('loading').style.display = 'none';
+                    document.getElementById('buttons').style.display = 'flex';
+                }, 500);
+            }
+        }
+
+        // ========== START ==========
+        loadGameData();
+    </script>
+</body>
+</html>
