@@ -1,0 +1,3479 @@
+{
+  "2-2": {
+    "resultPage": 5,
+    "message":  "Parrying Low",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "4-2": {
+    "resultPage": 5,
+    "message":  "Blocking Low",
+    "nextInstruction":  "No Orange",
+    "damageModifier": -4
+  },
+  "6-2": {
+    "resultPage": 5,
+    "message":  "Leg Wound",
+    "nextInstruction":  "No Orange",
+    "damageModifier": 4
+  },
+  "8-2": {
+    "resultPage": 5,
+    "message":  "Struck off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "10-2": {
+    "resultPage": 31,
+    "message":  "Leg Wound",
+    "nextInstruction":  "No Orange",
+    "damageModifier": 4
+  },
+  "12-2": {
+    "resultPage": 31,
+    "message":  "Leg Wound",
+    "nextInstruction":  "No Orange",
+    "damageModifier": 4
+  },
+  "14-2": {
+    "resultPage": 49,
+    "message":  "Parrying Low",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "16-2": {
+    "resultPage": 57,
+    "message":  "Extended Range Blocking",
+    "nextInstruction":  "Only Extended Range"
+  },
+  "18-2": {
+    "resultPage": 5,
+    "message":  "Jumping Up",
+    "nextInstruction":  "No Blue Add + 2 to any Orange"
+  },
+  "20-2": {
+    "resultPage": 5,
+    "message":  "Struck off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "22-2": {
+    "resultPage": 49,
+    "message":  "Parrying Low",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "24-2": {
+    "resultPage": 53,
+    "message":  "Leg Wound",
+    "nextInstruction":  "No Orange",
+    "damageModifier": 4
+  },
+  "26-2": {
+    "resultPage": 5,
+    "message":  "Leg Wound",
+    "nextInstruction":  "No Orange",
+    "damageModifier": 4
+  },
+  "28-2": {
+    "resultPage": 7,
+    "message":  "Leg Wound",
+    "nextInstruction":  "No Orange",
+    "damageModifier": 4
+  },
+  "30-2": {
+    "resultPage": 49,
+    "message":  "Parrying Low",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "32-2": {
+    "resultPage": 5,
+    "message":  "Leg Wound",
+    "nextInstruction":  "No Orange",
+    "damageModifier": 4
+  },
+  "34-2": {
+    "resultPage": 5,
+    "message":  "Knocked Down",
+    "nextInstruction":  "Only Yellow No Orange",
+    "damageModifier": 0
+  },
+  "36-2": {
+    "resultPage": 5,
+    "message":  "Leg Wound",
+    "nextInstruction":  "No Orange",
+    "damageModifier": 4
+  },
+  "38-2": {
+    "resultPage": 31,
+    "message":  "Leg Wound",
+    "nextInstruction":  "No Orange",
+    "damageModifier": 4
+  },
+  "40-2": {
+    "resultPage": 49,
+    "message":  "Parrying Low",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "42-2": {
+    "resultPage": 49,
+    "message":  "Parrying Low",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "44-2": {
+    "resultPage": 5,
+    "message":  "Swinging Down",
+    "nextInstruction":  ""
+  },
+  "46-2": {
+    "resultPage": 5,
+    "message":  "Weapon Dislodged",
+    "nextInstruction":  "Only Green Only Yellow Only Kicks Except Wildswings Until Weapon has been retrieved"
+  },
+  "48-2": {
+    "resultPage": 5,
+    "message":  "Leg Wound",
+    "nextInstruction":  "No Orange",
+    "damageModifier": 4
+  },
+  "2-4": {
+    "resultPage": 5,
+    "message":  "Swinging Low",
+    "nextInstruction":  "No Blue"
+  },
+  "2-6": {
+    "resultPage": 5,
+    "message":  "Swinging Low",
+    "nextInstruction":  "No Blue"
+  },
+  "2-8": {
+    "resultPage": 5,
+    "message":  "Swinging Low",
+    "nextInstruction":  "No Blue"
+  },
+  "2-10": {
+    "resultPage": 31,
+    "message":  "Arm Wound",
+    "nextInstruction":  "No Orange",
+    "damageModifier": 3
+  },
+  "2-12": {
+    "resultPage": 31,
+    "message":  "Arm Wound",
+    "nextInstruction":  "No Orange",
+    "damageModifier": 3
+  },
+  "2-14": {
+    "resultPage": 49,
+    "message":  "Parrying Low",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "2-16": {
+    "resultPage": 57,
+    "message":  "Extended Range Blocking",
+    "nextInstruction":  "Only Extended Range"
+  },
+  "2-18": {
+    "resultPage": 5,
+    "message":  "Swinging Low",
+    "nextInstruction":  "No Blue"
+  },
+  "2-20": {
+    "resultPage": 5,
+    "message":  "Swinging Low",
+    "nextInstruction":  "No Blue"
+  },
+  "2-22": {
+    "resultPage": 49,
+    "message":  "Parrying Low",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "2-24": {
+    "resultPage": 53,
+    "message":  "Body Wound",
+    "nextInstruction":  "No Red No Orange",
+    "damageModifier": 5
+  },
+  "2-26": {
+    "resultPage": 5,
+    "message":  "Swinging Low",
+    "nextInstruction":  "No Blue"
+  },
+  "2-28": {
+    "resultPage": 7,
+    "message":  "Dazed",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 7
+  },
+  "2-30": {
+    "resultPage": 49,
+    "message":  "Parrying Low",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "2-32": {
+    "resultPage": 5,
+    "message":  "Swinging Low",
+    "nextInstruction":  "No Blue"
+  },
+  "2-34": {
+    "resultPage": 5,
+    "message":  "Swinging Low",
+    "nextInstruction":  "No Blue"
+  },
+  "2-36": {
+    "resultPage": 5,
+    "message":  "Swinging Low",
+    "nextInstruction":  "No Blue"
+  },
+  "2-38": {
+    "resultPage": 31,
+    "message":  "Arm Wound",
+    "nextInstruction":  "No Orange",
+    "damageModifier": 3
+  },
+  "2-40": {
+    "resultPage": 49,
+    "message":  "Parrying Low",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "2-42": {
+    "resultPage": 49,
+    "message":  "Parrying Low",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "2-44": {
+    "resultPage": 5,
+    "message":  "Swinging Low",
+    "nextInstruction":  "No Blue"
+  },
+  "2-46": {
+    "resultPage": 5,
+    "message":  "Swinging Low",
+    "nextInstruction":  "No Blue"
+  },
+  "2-48": {
+    "resultPage": 5,
+    "message":  "Swinging Low",
+    "nextInstruction":  "No Blue"
+  },
+  "4-4": {
+    "resultPage": 59,
+    "message":  "Pushed off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "4-6": {
+    "resultPage": 63,
+    "message":  "Blocking Low",
+    "nextInstruction":  "No Orange",
+    "damageModifier": -4
+  },
+  "4-8": {
+    "resultPage": 63,
+    "message":  "Blocking Low",
+    "nextInstruction":  "No Orange",
+    "damageModifier": -4
+  },
+  "4-10": {
+    "resultPage": 53,
+    "message":  "Body Wound",
+    "nextInstruction":  "No Red No Orange",
+    "damageModifier": 5
+  },
+  "4-12": {
+    "resultPage": 63,
+    "message":  "Blocking Low",
+    "nextInstruction":  "No Orange",
+    "damageModifier": -4
+  },
+  "4-14": {
+    "resultPage": 63,
+    "message":  "Blocking Low",
+    "nextInstruction":  "No Orange",
+    "damageModifier": -4
+  },
+  "4-16": {
+    "resultPage": 57,
+    "message":  "Extended Range Blocking",
+    "nextInstruction":  "Only Extended Range"
+  },
+  "4-18": {
+    "resultPage": 63,
+    "message":  "Blocking Low",
+    "nextInstruction":  "No Orange",
+    "damageModifier": -4
+  },
+  "4-20": {
+    "resultPage": 63,
+    "message":  "Blocking Low",
+    "nextInstruction":  "No Orange",
+    "damageModifier": -4
+  },
+  "4-22": {
+    "resultPage": 63,
+    "message":  "Blocking Low",
+    "nextInstruction":  "No Orange",
+    "damageModifier": -4
+  },
+  "4-24": {
+    "resultPage": 41,
+    "message":  "Knocked Down",
+    "nextInstruction":  "Only Yellow No Orange",
+    "damageModifier": 0
+  },
+  "4-26": {
+    "resultPage": 63,
+    "message":  "Blocking Low",
+    "nextInstruction":  "No Orange",
+    "damageModifier": -4
+  },
+  "4-28": {
+    "resultPage": 31,
+    "message":  "Arm Wound",
+    "nextInstruction":  "No Orange",
+    "damageModifier": 3
+  },
+  "4-30": {
+    "resultPage": 63,
+    "message":  "Blocking Low",
+    "nextInstruction":  "No Orange",
+    "damageModifier": -4
+  },
+  "4-32": {
+    "resultPage": 63,
+    "message":  "Blocking Low",
+    "nextInstruction":  "No Orange",
+    "damageModifier": -4
+  },
+  "4-34": {
+    "resultPage": 63,
+    "message":  "Blocking Low",
+    "nextInstruction":  "No Orange",
+    "damageModifier": -4
+  },
+  "4-36": {
+    "resultPage": 7,
+    "message":  "Dazed",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 7
+  },
+  "4-38": {
+    "resultPage": 53,
+    "message":  "Body Wound",
+    "nextInstruction":  "No Red No Orange",
+    "damageModifier": 5
+  },
+  "4-40": {
+    "resultPage": 63,
+    "message":  "Blocking Low",
+    "nextInstruction":  "No Orange",
+    "damageModifier": -4
+  },
+  "4-42": {
+    "resultPage": 63,
+    "message":  "Blocking Low",
+    "nextInstruction":  "No Orange",
+    "damageModifier": -4
+  },
+  "4-44": {
+    "resultPage": 19,
+    "message":  "Struck off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "4-46": {
+    "resultPage": 63,
+    "message":  "Blocking Low",
+    "nextInstruction":  "No Orange",
+    "damageModifier": -4
+  },
+  "4-48": {
+    "resultPage": 19,
+    "message":  "Struck off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "6-4": {
+    "resultPage": 59,
+    "message":  "Pushed off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "6-6": {
+    "resultPage": 17,
+    "message":  "Blocking High",
+    "nextInstruction":  "No Blue",
+    "damageModifier": -4
+  },
+  "6-8": {
+    "resultPage": 9,
+    "message":  "Thrusting High",
+    "nextInstruction":  ""
+  },
+  "6-10": {
+    "resultPage": 9,
+    "message":  "Thrusting High",
+    "nextInstruction":  ""
+  },
+  "6-12": {
+    "resultPage": 9,
+    "message":  "Thrusting High",
+    "nextInstruction":  ""
+  },
+  "6-14": {
+    "resultPage": 49,
+    "message":  "Parrying Low",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "6-16": {
+    "resultPage": 9,
+    "message":  "Thrusting High",
+    "nextInstruction":  ""
+  },
+  "6-18": {
+    "resultPage": 17,
+    "message":  "Blocking High",
+    "nextInstruction":  "No Blue",
+    "damageModifier": -4
+  },
+  "6-20": {
+    "resultPage": 9,
+    "message":  "Thrusting High",
+    "nextInstruction":  ""
+  },
+  "6-22": {
+    "resultPage": 9,
+    "message":  "Thrusting High",
+    "nextInstruction":  ""
+  },
+  "6-24": {
+    "resultPage": 17,
+    "message":  "Blocking High",
+    "nextInstruction":  "No Blue",
+    "damageModifier": -4
+  },
+  "6-26": {
+    "resultPage": 59,
+    "message":  "Pushed off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "6-28": {
+    "resultPage": 45,
+    "message":  "Parrying High",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "6-30": {
+    "resultPage": 9,
+    "message":  "Thrusting High",
+    "nextInstruction":  ""
+  },
+  "6-32": {
+    "resultPage": 45,
+    "message":  "Parrying High",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "6-34": {
+    "resultPage": 11,
+    "message":  "Thrusting Low",
+    "nextInstruction":  "No Red"
+  },
+  "6-36": {
+    "resultPage": 55,
+    "message":  "Shield Smahed",
+    "nextInstruction":  "No Blocks for the rest of the game No Protected Attacks for the rest of the game",
+    "damageModifier": 0
+  },
+  "6-38": {
+    "resultPage": 9,
+    "message":  "Thrusting High",
+    "nextInstruction":  ""
+  },
+  "6-40": {
+    "resultPage": 31,
+    "message":  "Arm Wound",
+    "nextInstruction":  "No Orange",
+    "damageModifier": 3
+  },
+  "6-42": {
+    "resultPage": 9,
+    "message":  "Thrusting High",
+    "nextInstruction":  ""
+  },
+  "6-44": {
+    "resultPage": 45,
+    "message":  "Parrying High",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "6-46": {
+    "resultPage": 9,
+    "message":  "Thrusting High",
+    "nextInstruction":  ""
+  },
+  "6-48": {
+    "resultPage": 45,
+    "message":  "Parrying High",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "8-4": {
+    "resultPage": 33,
+    "message":  "Dodging",
+    "nextInstruction":  "Add + 2 to any DownSwing Add + 2 to any SideSwing"
+  },
+  "8-6": {
+    "resultPage": 33,
+    "message":  "Dodging",
+    "nextInstruction":  "Add + 2 to any DownSwing Add + 2 to any SideSwing"
+  },
+  "8-8": {
+    "resultPage": 33,
+    "message":  "Dodging",
+    "nextInstruction":  "Add + 2 to any DownSwing Add + 2 to any SideSwing"
+  },
+  "8-10": {
+    "resultPage": 19,
+    "message":  "Struck off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "8-12": {
+    "resultPage": 19,
+    "message":  "Struck off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "8-14": {
+    "resultPage": 23,
+    "message":  "Behind You",
+    "nextInstruction":  ""
+  },
+  "8-16": {
+    "resultPage": 61,
+    "message":  "Extended Range Dodging",
+    "nextInstruction":  "Only Extended Range"
+  },
+  "8-18": {
+    "resultPage": 33,
+    "message":  "Dodging",
+    "nextInstruction":  "Add + 2 to any DownSwing Add + 2 to any SideSwing"
+  },
+  "8-20": {
+    "resultPage": 33,
+    "message":  "Dodging",
+    "nextInstruction":  "Add + 2 to any DownSwing Add + 2 to any SideSwing"
+  },
+  "8-22": {
+    "resultPage": 23,
+    "message":  "Behind You",
+    "nextInstruction":  ""
+  },
+  "8-24": {
+    "resultPage": 33,
+    "message":  "Dodging",
+    "nextInstruction":  "Add + 2 to any DownSwing Add + 2 to any SideSwing"
+  },
+  "8-26": {
+    "resultPage": 33,
+    "message":  "Dodging",
+    "nextInstruction":  "Add + 2 to any DownSwing Add + 2 to any SideSwing"
+  },
+  "8-28": {
+    "resultPage": 19,
+    "message":  "Struck off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "8-30": {
+    "resultPage": 33,
+    "message":  "Dodging",
+    "nextInstruction":  "Add + 2 to any DownSwing Add + 2 to any SideSwing"
+  },
+  "8-32": {
+    "resultPage": 33,
+    "message":  "Dodging",
+    "nextInstruction":  "Add + 2 to any DownSwing Add + 2 to any SideSwing"
+  },
+  "8-34": {
+    "resultPage": 33,
+    "message":  "Dodging",
+    "nextInstruction":  "Add + 2 to any DownSwing Add + 2 to any SideSwing"
+  },
+  "8-36": {
+    "resultPage": 33,
+    "message":  "Dodging",
+    "nextInstruction":  "Add + 2 to any DownSwing Add + 2 to any SideSwing"
+  },
+  "8-38": {
+    "resultPage": 19,
+    "message":  "Struck off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "8-40": {
+    "resultPage": 33,
+    "message":  "Dodging",
+    "nextInstruction":  "Add + 2 to any DownSwing Add + 2 to any SideSwing"
+  },
+  "8-42": {
+    "resultPage": 19,
+    "message":  "Struck off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "8-44": {
+    "resultPage": 33,
+    "message":  "Dodging",
+    "nextInstruction":  "Add + 2 to any DownSwing Add + 2 to any SideSwing"
+  },
+  "8-46": {
+    "resultPage": 33,
+    "message":  "Dodging",
+    "nextInstruction":  "Add + 2 to any DownSwing Add + 2 to any SideSwing"
+  },
+  "8-48": {
+    "resultPage": 19,
+    "message":  "Struck off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "10-4": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "10-6": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "10-8": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "10-10": {
+    "resultPage": 45,
+    "message":  "Parrying High",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "10-12": {
+    "resultPage": 53,
+    "message":  "Body Wound",
+    "nextInstruction":  "No Red No Orange",
+    "damageModifier": 5
+  },
+  "10-14": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "10-16": {
+    "resultPage": 57,
+    "message":  "Extended Range Blocking",
+    "nextInstruction":  "Only Extended Range"
+  },
+  "10-18": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "10-20": {
+    "resultPage": 21,
+    "message":  "Turned Around",
+    "nextInstruction":  "Only Yellow",
+    "damageModifier": 0
+  },
+  "10-22": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "10-24": {
+    "resultPage": 45,
+    "message":  "Parrying High",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "10-26": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "10-28": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "10-30": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "10-32": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "10-34": {
+    "resultPage": 51,
+    "message":  "Kicked Off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "10-36": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "10-38": {
+    "resultPage": 45,
+    "message":  "Parrying High",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "10-40": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "10-42": {
+    "resultPage": 13,
+    "message":  "Leg Wound",
+    "nextInstruction":  "No Orange",
+    "damageModifier": 4
+  },
+  "10-44": {
+    "resultPage": 45,
+    "message":  "Parrying High",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "10-46": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "10-48": {
+    "resultPage": 45,
+    "message":  "Parrying High",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "12-4": {
+    "resultPage": 59,
+    "message":  "Pushed off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "12-6": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "12-8": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "12-10": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "12-12": {
+    "resultPage": 45,
+    "message":  "Parrying High",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "12-14": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "12-16": {
+    "resultPage": 57,
+    "message":  "Extended Range Blocking",
+    "nextInstruction":  "Only Extended Range"
+  },
+  "12-18": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "12-20": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "12-22": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "12-24": {
+    "resultPage": 45,
+    "message":  "Parrying High",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "12-26": {
+    "resultPage": 59,
+    "message":  "Pushed off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "12-28": {
+    "resultPage": 53,
+    "message":  "Body Wound",
+    "nextInstruction":  "No Red No Orange",
+    "damageModifier": 5
+  },
+  "12-30": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "12-32": {
+    "resultPage": 45,
+    "message":  "Parrying High",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "12-34": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "12-36": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "12-38": {
+    "resultPage": 45,
+    "message":  "Parrying High",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "12-40": {
+    "resultPage": 41,
+    "message":  "Knocked Down",
+    "nextInstruction":  "Only Yellow No Orange",
+    "damageModifier": 0
+  },
+  "12-42": {
+    "resultPage": 49,
+    "message":  "Parrying Low",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "12-44": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "12-46": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "12-48": {
+    "resultPage": 45,
+    "message":  "Parrying High",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "14-4": {
+    "resultPage": 11,
+    "message":  "Thrusting Low",
+    "nextInstruction":  "No Red"
+  },
+  "14-6": {
+    "resultPage": 49,
+    "message":  "Parrying Low",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "14-8": {
+    "resultPage": 21,
+    "message":  "Turned Around",
+    "nextInstruction":  "Only Yellow",
+    "damageModifier": 0
+  },
+  "14-10": {
+    "resultPage": 7,
+    "message":  "Dazed",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 7
+  },
+  "14-12": {
+    "resultPage": 11,
+    "message":  "Thrusting Low",
+    "nextInstruction":  "No Red"
+  },
+  "14-14": {
+    "resultPage": 11,
+    "message":  "Thrusting Low",
+    "nextInstruction":  "No Red"
+  },
+  "14-16": {
+    "resultPage": 11,
+    "message":  "Thrusting Low",
+    "nextInstruction":  "No Red"
+  },
+  "14-18": {
+    "resultPage": 11,
+    "message":  "Thrusting Low",
+    "nextInstruction":  "No Red"
+  },
+  "14-20": {
+    "resultPage": 11,
+    "message":  "Thrusting Low",
+    "nextInstruction":  "No Red"
+  },
+  "14-22": {
+    "resultPage": 11,
+    "message":  "Thrusting Low",
+    "nextInstruction":  "No Red"
+  },
+  "14-24": {
+    "resultPage": 11,
+    "message":  "Thrusting Low",
+    "nextInstruction":  "No Red"
+  },
+  "14-26": {
+    "resultPage": 11,
+    "message":  "Thrusting Low",
+    "nextInstruction":  "No Red"
+  },
+  "14-28": {
+    "resultPage": 11,
+    "message":  "Thrusting Low",
+    "nextInstruction":  "No Red"
+  },
+  "14-30": {
+    "resultPage": 11,
+    "message":  "Thrusting Low",
+    "nextInstruction":  "No Red"
+  },
+  "14-32": {
+    "resultPage": 11,
+    "message":  "Thrusting Low",
+    "nextInstruction":  "No Red"
+  },
+  "14-34": {
+    "resultPage": 11,
+    "message":  "Thrusting Low",
+    "nextInstruction":  "No Red"
+  },
+  "14-36": {
+    "resultPage": 11,
+    "message":  "Thrusting Low",
+    "nextInstruction":  "No Red"
+  },
+  "14-38": {
+    "resultPage": 7,
+    "message":  "Dazed",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 7
+  },
+  "14-40": {
+    "resultPage": 49,
+    "message":  "Parrying Low",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "14-42": {
+    "resultPage": 49,
+    "message":  "Parrying Low",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "14-44": {
+    "resultPage": 19,
+    "message":  "Struck off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "14-46": {
+    "resultPage": 11,
+    "message":  "Thrusting Low",
+    "nextInstruction":  "No Red"
+  },
+  "14-48": {
+    "resultPage": 49,
+    "message":  "Parrying Low",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "16-4": {
+    "resultPage": 57,
+    "message":  "Extended Range Blocking",
+    "nextInstruction":  "Only Extended Range"
+  },
+  "16-6": {
+    "resultPage": 19,
+    "message":  "Struck off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "16-8": {
+    "resultPage": 57,
+    "message":  "Extended Range Blocking",
+    "nextInstruction":  "Only Extended Range"
+  },
+  "16-10": {
+    "resultPage": 57,
+    "message":  "Extended Range Blocking",
+    "nextInstruction":  "Only Extended Range"
+  },
+  "16-12": {
+    "resultPage": 57,
+    "message":  "Extended Range Blocking",
+    "nextInstruction":  "Only Extended Range"
+  },
+  "16-14": {
+    "resultPage": 19,
+    "message":  "Struck off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "16-16": {
+    "resultPage": 57,
+    "message":  "Extended Range Blocking",
+    "nextInstruction":  "Only Extended Range"
+  },
+  "16-18": {
+    "resultPage": 57,
+    "message":  "Extended Range Blocking",
+    "nextInstruction":  "Only Extended Range"
+  },
+  "16-20": {
+    "resultPage": 57,
+    "message":  "Extended Range Blocking",
+    "nextInstruction":  "Only Extended Range"
+  },
+  "16-22": {
+    "resultPage": 19,
+    "message":  "Struck off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "16-24": {
+    "resultPage": 1,
+    "message":  "Jumping Away",
+    "nextInstruction":  "Add + 2 to your Score"
+  },
+  "16-26": {
+    "resultPage": 57,
+    "message":  "Extended Range Blocking",
+    "nextInstruction":  "Only Extended Range"
+  },
+  "16-28": {
+    "resultPage": 23,
+    "message":  "Behind You",
+    "nextInstruction":  ""
+  },
+  "16-30": {
+    "resultPage": 57,
+    "message":  "Extended Range Blocking",
+    "nextInstruction":  "Only Extended Range"
+  },
+  "16-32": {
+    "resultPage": 19,
+    "message":  "Struck off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "16-34": {
+    "resultPage": 1,
+    "message":  "Jumping Away",
+    "nextInstruction":  "Add + 2 to your Score"
+  },
+  "16-36": {
+    "resultPage": 1,
+    "message":  "Jumping Away",
+    "nextInstruction":  "Add + 2 to your Score"
+  },
+  "16-38": {
+    "resultPage": 57,
+    "message":  "Extended Range Blocking",
+    "nextInstruction":  "Only Extended Range"
+  },
+  "16-40": {
+    "resultPage": 23,
+    "message":  "Behind You",
+    "nextInstruction":  ""
+  },
+  "16-42": {
+    "resultPage": 57,
+    "message":  "Extended Range Blocking",
+    "nextInstruction":  "Only Extended Range"
+  },
+  "16-44": {
+    "resultPage": 57,
+    "message":  "Extended Range Blocking",
+    "nextInstruction":  "Only Extended Range"
+  },
+  "16-46": {
+    "resultPage": 1,
+    "message":  "Jumping Away",
+    "nextInstruction":  "Add + 2 to your Score"
+  },
+  "16-48": {
+    "resultPage": 57,
+    "message":  "Extended Range Blocking",
+    "nextInstruction":  "Only Extended Range"
+  },
+  "18-4": {
+    "resultPage": 37,
+    "message":  "Jumping Up",
+    "nextInstruction":  "No Blue Add + 2 to any Orange"
+  },
+  "18-6": {
+    "resultPage": 37,
+    "message":  "Jumping Up",
+    "nextInstruction":  "No Blue Add + 2 to any Orange"
+  },
+  "18-8": {
+    "resultPage": 37,
+    "message":  "Jumping Up",
+    "nextInstruction":  "No Blue Add + 2 to any Orange"
+  },
+  "18-10": {
+    "resultPage": 13,
+    "message":  "Leg Wound",
+    "nextInstruction":  "No Orange",
+    "damageModifier": 4
+  },
+  "18-12": {
+    "resultPage": 13,
+    "message":  "Leg Wound",
+    "nextInstruction":  "No Orange",
+    "damageModifier": 4
+  },
+  "18-14": {
+    "resultPage": 37,
+    "message":  "Jumping Up",
+    "nextInstruction":  "No Blue Add + 2 to any Orange"
+  },
+  "18-16": {
+    "resultPage": 61,
+    "message":  "Extended Range Dodging",
+    "nextInstruction":  "Only Extended Range"
+  },
+  "18-18": {
+    "resultPage": 37,
+    "message":  "Jumping Up",
+    "nextInstruction":  "No Blue Add + 2 to any Orange"
+  },
+  "18-20": {
+    "resultPage": 37,
+    "message":  "Jumping Up",
+    "nextInstruction":  "No Blue Add + 2 to any Orange"
+  },
+  "18-22": {
+    "resultPage": 37,
+    "message":  "Jumping Up",
+    "nextInstruction":  "No Blue Add + 2 to any Orange"
+  },
+  "18-24": {
+    "resultPage": 53,
+    "message":  "Body Wound",
+    "nextInstruction":  "No Red No Orange",
+    "damageModifier": 5
+  },
+  "18-26": {
+    "resultPage": 59,
+    "message":  "Pushed off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "18-28": {
+    "resultPage": 37,
+    "message":  "Jumping Up",
+    "nextInstruction":  "No Blue Add + 2 to any Orange"
+  },
+  "18-30": {
+    "resultPage": 37,
+    "message":  "Jumping Up",
+    "nextInstruction":  "No Blue Add + 2 to any Orange"
+  },
+  "18-32": {
+    "resultPage": 37,
+    "message":  "Jumping Up",
+    "nextInstruction":  "No Blue Add + 2 to any Orange"
+  },
+  "18-34": {
+    "resultPage": 37,
+    "message":  "Jumping Up",
+    "nextInstruction":  "No Blue Add + 2 to any Orange"
+  },
+  "18-36": {
+    "resultPage": 7,
+    "message":  "Dazed",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 7
+  },
+  "18-38": {
+    "resultPage": 13,
+    "message":  "Leg Wound",
+    "nextInstruction":  "No Orange",
+    "damageModifier": 4
+  },
+  "18-40": {
+    "resultPage": 23,
+    "message":  "Behind You",
+    "nextInstruction":  ""
+  },
+  "18-42": {
+    "resultPage": 37,
+    "message":  "Jumping Up",
+    "nextInstruction":  "No Blue Add + 2 to any Orange"
+  },
+  "18-44": {
+    "resultPage": 7,
+    "message":  "Dazed",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 7
+  },
+  "18-46": {
+    "resultPage": 37,
+    "message":  "Jumping Up",
+    "nextInstruction":  "No Blue Add + 2 to any Orange"
+  },
+  "18-48": {
+    "resultPage": 19,
+    "message":  "Struck off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "20-4": {
+    "resultPage": 59,
+    "message":  "Pushed off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "20-6": {
+    "resultPage": 29,
+    "message":  "Ducking",
+    "nextInstruction":  "No Orange Add + 2 to any DownSwing Restore 1 Body Point"
+  },
+  "20-8": {
+    "resultPage": 29,
+    "message":  "Ducking",
+    "nextInstruction":  "No Orange Add + 2 to any DownSwing Restore 1 Body Point"
+  },
+  "20-10": {
+    "resultPage": 23,
+    "message":  "Behind You",
+    "nextInstruction":  ""
+  },
+  "20-12": {
+    "resultPage": 29,
+    "message":  "Ducking",
+    "nextInstruction":  "No Orange Add + 2 to any DownSwing Restore 1 Body Point"
+  },
+  "20-14": {
+    "resultPage": 29,
+    "message":  "Ducking",
+    "nextInstruction":  "No Orange Add + 2 to any DownSwing Restore 1 Body Point"
+  },
+  "20-16": {
+    "resultPage": 61,
+    "message":  "Extended Range Dodging",
+    "nextInstruction":  "Only Extended Range"
+  },
+  "20-18": {
+    "resultPage": 29,
+    "message":  "Ducking",
+    "nextInstruction":  "No Orange Add + 2 to any DownSwing Restore 1 Body Point"
+  },
+  "20-20": {
+    "resultPage": 29,
+    "message":  "Ducking",
+    "nextInstruction":  "No Orange Add + 2 to any DownSwing Restore 1 Body Point"
+  },
+  "20-22": {
+    "resultPage": 53,
+    "message":  "Body Wound",
+    "nextInstruction":  "No Red No Orange",
+    "damageModifier": 5
+  },
+  "20-24": {
+    "resultPage": 7,
+    "message":  "Dazed",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 7
+  },
+  "20-26": {
+    "resultPage": 29,
+    "message":  "Ducking",
+    "nextInstruction":  "No Orange Add + 2 to any DownSwing Restore 1 Body Point"
+  },
+  "20-28": {
+    "resultPage": 23,
+    "message":  "Behind You",
+    "nextInstruction":  ""
+  },
+  "20-30": {
+    "resultPage": 29,
+    "message":  "Ducking",
+    "nextInstruction":  "No Orange Add + 2 to any DownSwing Restore 1 Body Point"
+  },
+  "20-32": {
+    "resultPage": 29,
+    "message":  "Ducking",
+    "nextInstruction":  "No Orange Add + 2 to any DownSwing Restore 1 Body Point"
+  },
+  "20-34": {
+    "resultPage": 41,
+    "message":  "Knocked Down",
+    "nextInstruction":  "Only Yellow No Orange",
+    "damageModifier": 0
+  },
+  "20-36": {
+    "resultPage": 7,
+    "message":  "Dazed",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 7
+  },
+  "20-38": {
+    "resultPage": 29,
+    "message":  "Ducking",
+    "nextInstruction":  "No Orange Add + 2 to any DownSwing Restore 1 Body Point"
+  },
+  "20-40": {
+    "resultPage": 53,
+    "message":  "Body Wound",
+    "nextInstruction":  "No Red No Orange",
+    "damageModifier": 5
+  },
+  "20-42": {
+    "resultPage": 31,
+    "message":  "Arm Wound",
+    "nextInstruction":  "No Orange",
+    "damageModifier": 3
+  },
+  "20-44": {
+    "resultPage": 19,
+    "message":  "Struck off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "20-46": {
+    "resultPage": 29,
+    "message":  "Ducking",
+    "nextInstruction":  "No Orange Add + 2 to any DownSwing Restore 1 Body Point"
+  },
+  "20-48": {
+    "resultPage": 29,
+    "message":  "Ducking",
+    "nextInstruction":  "No Orange Add + 2 to any DownSwing Restore 1 Body Point"
+  },
+  "22-4": {
+    "resultPage": 11,
+    "message":  "Thrusting Low",
+    "nextInstruction":  "No Red"
+  },
+  "22-6": {
+    "resultPage": 11,
+    "message":  "Thrusting Low",
+    "nextInstruction":  "No Red"
+  },
+  "22-8": {
+    "resultPage": 21,
+    "message":  "Turned Around",
+    "nextInstruction":  "Only Yellow",
+    "damageModifier": 0
+  },
+  "22-10": {
+    "resultPage": 7,
+    "message":  "Dazed",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 7
+  },
+  "22-12": {
+    "resultPage": 11,
+    "message":  "Thrusting Low",
+    "nextInstruction":  "No Red"
+  },
+  "22-14": {
+    "resultPage": 11,
+    "message":  "Thrusting Low",
+    "nextInstruction":  "No Red"
+  },
+  "22-16": {
+    "resultPage": 11,
+    "message":  "Thrusting Low",
+    "nextInstruction":  "No Red"
+  },
+  "22-18": {
+    "resultPage": 11,
+    "message":  "Thrusting Low",
+    "nextInstruction":  "No Red"
+  },
+  "22-20": {
+    "resultPage": 11,
+    "message":  "Thrusting Low",
+    "nextInstruction":  "No Red"
+  },
+  "22-22": {
+    "resultPage": 11,
+    "message":  "Thrusting Low",
+    "nextInstruction":  "No Red"
+  },
+  "22-24": {
+    "resultPage": 11,
+    "message":  "Thrusting Low",
+    "nextInstruction":  "No Red"
+  },
+  "22-26": {
+    "resultPage": 11,
+    "message":  "Thrusting Low",
+    "nextInstruction":  "No Red"
+  },
+  "22-28": {
+    "resultPage": 11,
+    "message":  "Thrusting Low",
+    "nextInstruction":  "No Red"
+  },
+  "22-30": {
+    "resultPage": 27,
+    "message":  "Weapon Dislodged",
+    "nextInstruction":  "Only Green Only Yellow Only Kicks Except Wildswings Until Weapon has been retrieved"
+  },
+  "22-32": {
+    "resultPage": 11,
+    "message":  "Thrusting Low",
+    "nextInstruction":  "No Red"
+  },
+  "22-34": {
+    "resultPage": 51,
+    "message":  "Kicked Off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "22-36": {
+    "resultPage": 11,
+    "message":  "Thrusting Low",
+    "nextInstruction":  "No Red"
+  },
+  "22-38": {
+    "resultPage": 9,
+    "message":  "Thrusting High",
+    "nextInstruction":  ""
+  },
+  "22-40": {
+    "resultPage": 13,
+    "message":  "Leg Wound",
+    "nextInstruction":  "No Orange",
+    "damageModifier": 4
+  },
+  "22-42": {
+    "resultPage": 49,
+    "message":  "Parrying Low",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "22-44": {
+    "resultPage": 19,
+    "message":  "Struck off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "22-46": {
+    "resultPage": 11,
+    "message":  "Thrusting Low",
+    "nextInstruction":  "No Red"
+  },
+  "22-48": {
+    "resultPage": 49,
+    "message":  "Parrying Low",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "24-4": {
+    "resultPage": 15,
+    "message":  "Swinging Down",
+    "nextInstruction":  ""
+  },
+  "24-6": {
+    "resultPage": 15,
+    "message":  "Swinging Down",
+    "nextInstruction":  ""
+  },
+  "24-8": {
+    "resultPage": 15,
+    "message":  "Swinging Down",
+    "nextInstruction":  ""
+  },
+  "24-10": {
+    "resultPage": 45,
+    "message":  "Parrying High",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "24-12": {
+    "resultPage": 45,
+    "message":  "Parrying High",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "24-14": {
+    "resultPage": 15,
+    "message":  "Swinging Down",
+    "nextInstruction":  ""
+  },
+  "24-16": {
+    "resultPage": 19,
+    "message":  "Struck off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "24-18": {
+    "resultPage": 15,
+    "message":  "Swinging Down",
+    "nextInstruction":  ""
+  },
+  "24-20": {
+    "resultPage": 15,
+    "message":  "Swinging Down",
+    "nextInstruction":  ""
+  },
+  "24-22": {
+    "resultPage": 15,
+    "message":  "Swinging Down",
+    "nextInstruction":  ""
+  },
+  "24-24": {
+    "resultPage": 7,
+    "message":  "Dazed",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 7
+  },
+  "24-26": {
+    "resultPage": 15,
+    "message":  "Swinging Down",
+    "nextInstruction":  ""
+  },
+  "24-28": {
+    "resultPage": 53,
+    "message":  "Body Wound",
+    "nextInstruction":  "No Red No Orange",
+    "damageModifier": 5
+  },
+  "24-30": {
+    "resultPage": 15,
+    "message":  "Swinging Down",
+    "nextInstruction":  ""
+  },
+  "24-32": {
+    "resultPage": 45,
+    "message":  "Parrying High",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "24-34": {
+    "resultPage": 15,
+    "message":  "Swinging Down",
+    "nextInstruction":  ""
+  },
+  "24-36": {
+    "resultPage": 15,
+    "message":  "Swinging Down",
+    "nextInstruction":  ""
+  },
+  "24-38": {
+    "resultPage": 45,
+    "message":  "Parrying High",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "24-40": {
+    "resultPage": 23,
+    "message":  "Behind You",
+    "nextInstruction":  ""
+  },
+  "24-42": {
+    "resultPage": 13,
+    "message":  "Leg Wound",
+    "nextInstruction":  "No Orange",
+    "damageModifier": 4
+  },
+  "24-44": {
+    "resultPage": 15,
+    "message":  "Swinging Down",
+    "nextInstruction":  ""
+  },
+  "24-46": {
+    "resultPage": 15,
+    "message":  "Swinging Down",
+    "nextInstruction":  ""
+  },
+  "24-48": {
+    "resultPage": 19,
+    "message":  "Struck off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "26-4": {
+    "resultPage": 17,
+    "message":  "Blocking High",
+    "nextInstruction":  "No Blue",
+    "damageModifier": -4
+  },
+  "26-6": {
+    "resultPage": 17,
+    "message":  "Blocking High",
+    "nextInstruction":  "No Blue",
+    "damageModifier": -4
+  },
+  "26-8": {
+    "resultPage": 17,
+    "message":  "Blocking High",
+    "nextInstruction":  "No Blue",
+    "damageModifier": -4
+  },
+  "26-10": {
+    "resultPage": 17,
+    "message":  "Blocking High",
+    "nextInstruction":  "No Blue",
+    "damageModifier": -4
+  },
+  "26-12": {
+    "resultPage": 17,
+    "message":  "Blocking High",
+    "nextInstruction":  "No Blue",
+    "damageModifier": -4
+  },
+  "26-14": {
+    "resultPage": 17,
+    "message":  "Blocking High",
+    "nextInstruction":  "No Blue",
+    "damageModifier": -4
+  },
+  "26-16": {
+    "resultPage": 57,
+    "message":  "Extended Range Blocking",
+    "nextInstruction":  "Only Extended Range"
+  },
+  "26-18": {
+    "resultPage": 17,
+    "message":  "Blocking High",
+    "nextInstruction":  "No Blue",
+    "damageModifier": -4
+  },
+  "26-20": {
+    "resultPage": 17,
+    "message":  "Blocking High",
+    "nextInstruction":  "No Blue",
+    "damageModifier": -4
+  },
+  "26-22": {
+    "resultPage": 17,
+    "message":  "Blocking High",
+    "nextInstruction":  "No Blue",
+    "damageModifier": -4
+  },
+  "26-24": {
+    "resultPage": 17,
+    "message":  "Blocking High",
+    "nextInstruction":  "No Blue",
+    "damageModifier": -4
+  },
+  "26-26": {
+    "resultPage": 59,
+    "message":  "Pushed off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "26-28": {
+    "resultPage": 53,
+    "message":  "Body Wound",
+    "nextInstruction":  "No Red No Orange",
+    "damageModifier": 5
+  },
+  "26-30": {
+    "resultPage": 17,
+    "message":  "Blocking High",
+    "nextInstruction":  "No Blue",
+    "damageModifier": -4
+  },
+  "26-32": {
+    "resultPage": 17,
+    "message":  "Blocking High",
+    "nextInstruction":  "No Blue",
+    "damageModifier": -4
+  },
+  "26-34": {
+    "resultPage": 51,
+    "message":  "Kicked Off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "26-36": {
+    "resultPage": 55,
+    "message":  "Shield Smahed",
+    "nextInstruction":  "No Blocks for the rest of the game No Protected Attacks for the rest of the game",
+    "damageModifier": 0
+  },
+  "26-38": {
+    "resultPage": 17,
+    "message":  "Blocking High",
+    "nextInstruction":  "No Blue",
+    "damageModifier": -4
+  },
+  "26-40": {
+    "resultPage": 13,
+    "message":  "Leg Wound",
+    "nextInstruction":  "No Orange",
+    "damageModifier": 4
+  },
+  "26-42": {
+    "resultPage": 17,
+    "message":  "Blocking High",
+    "nextInstruction":  "No Blue",
+    "damageModifier": -4
+  },
+  "26-44": {
+    "resultPage": 17,
+    "message":  "Blocking High",
+    "nextInstruction":  "No Blue",
+    "damageModifier": -4
+  },
+  "26-46": {
+    "resultPage": 17,
+    "message":  "Blocking High",
+    "nextInstruction":  "No Blue",
+    "damageModifier": -4
+  },
+  "26-48": {
+    "resultPage": 17,
+    "message":  "Blocking High",
+    "nextInstruction":  "No Blue",
+    "damageModifier": -4
+  },
+  "28-4": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "28-6": {
+    "resultPage": 45,
+    "message":  "Parrying High",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "28-8": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "28-10": {
+    "resultPage": 31,
+    "message":  "Arm Wound",
+    "nextInstruction":  "No Orange",
+    "damageModifier": 3
+  },
+  "28-12": {
+    "resultPage": 31,
+    "message":  "Arm Wound",
+    "nextInstruction":  "No Orange",
+    "damageModifier": 3
+  },
+  "28-14": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "28-16": {
+    "resultPage": 21,
+    "message":  "Turned Around",
+    "nextInstruction":  "Only Yellow",
+    "damageModifier": 0
+  },
+  "28-18": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "28-20": {
+    "resultPage": 21,
+    "message":  "Turned Around",
+    "nextInstruction":  "Only Yellow",
+    "damageModifier": 0
+  },
+  "28-22": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "28-24": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "28-26": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "28-28": {
+    "resultPage": 19,
+    "message":  "Struck off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "28-30": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "28-32": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "28-34": {
+    "resultPage": 51,
+    "message":  "Kicked Off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "28-36": {
+    "resultPage": 7,
+    "message":  "Dazed",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 7
+  },
+  "28-38": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "28-40": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "28-42": {
+    "resultPage": 13,
+    "message":  "Leg Wound",
+    "nextInstruction":  "No Orange",
+    "damageModifier": 4
+  },
+  "28-44": {
+    "resultPage": 19,
+    "message":  "Struck off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "28-46": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "28-48": {
+    "resultPage": 19,
+    "message":  "Struck off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "30-4": {
+    "resultPage": 15,
+    "message":  "Swinging Down",
+    "nextInstruction":  ""
+  },
+  "30-6": {
+    "resultPage": 5,
+    "message":  "Swinging Low",
+    "nextInstruction":  "No Blue"
+  },
+  "30-8": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "30-10": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "30-12": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "30-14": {
+    "resultPage": 5,
+    "message":  "Swinging Low",
+    "nextInstruction":  "No Blue"
+  },
+  "30-16": {
+    "resultPage": 57,
+    "message":  "Extended Range Blocking",
+    "nextInstruction":  "Only Extended Range"
+  },
+  "30-18": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "30-20": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "30-22": {
+    "resultPage": 5,
+    "message":  "Swinging Low",
+    "nextInstruction":  "No Blue"
+  },
+  "30-24": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "30-26": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "30-28": {
+    "resultPage": 31,
+    "message":  "Arm Wound",
+    "nextInstruction":  "No Orange",
+    "damageModifier": 3
+  },
+  "30-30": {
+    "resultPage": 27,
+    "message":  "Weapon Dislodged",
+    "nextInstruction":  "Only Green Only Yellow Only Kicks Except Wildswings Until Weapon has been retrieved"
+  },
+  "30-32": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "30-34": {
+    "resultPage": 51,
+    "message":  "Kicked Off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "30-36": {
+    "resultPage": 27,
+    "message":  "Weapon Dislodged",
+    "nextInstruction":  "Only Green Only Yellow Only Kicks Except Wildswings Until Weapon has been retrieved"
+  },
+  "30-38": {
+    "resultPage": 5,
+    "message":  "Swinging Low",
+    "nextInstruction":  "No Blue"
+  },
+  "30-40": {
+    "resultPage": 5,
+    "message":  "Swinging Low",
+    "nextInstruction":  "No Blue"
+  },
+  "30-42": {
+    "resultPage": 5,
+    "message":  "Swinging Low",
+    "nextInstruction":  "No Blue"
+  },
+  "30-44": {
+    "resultPage": 19,
+    "message":  "Struck off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "30-46": {
+    "resultPage": 15,
+    "message":  "Swinging Down",
+    "nextInstruction":  ""
+  },
+  "30-48": {
+    "resultPage": 19,
+    "message":  "Struck off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "32-4": {
+    "resultPage": 9,
+    "message":  "Thrusting High",
+    "nextInstruction":  ""
+  },
+  "32-6": {
+    "resultPage": 45,
+    "message":  "Parrying High",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "32-8": {
+    "resultPage": 9,
+    "message":  "Thrusting High",
+    "nextInstruction":  ""
+  },
+  "32-10": {
+    "resultPage": 53,
+    "message":  "Body Wound",
+    "nextInstruction":  "No Red No Orange",
+    "damageModifier": 5
+  },
+  "32-12": {
+    "resultPage": 45,
+    "message":  "Parrying High",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "32-14": {
+    "resultPage": 9,
+    "message":  "Thrusting High",
+    "nextInstruction":  ""
+  },
+  "32-16": {
+    "resultPage": 9,
+    "message":  "Thrusting High",
+    "nextInstruction":  ""
+  },
+  "32-18": {
+    "resultPage": 9,
+    "message":  "Thrusting High",
+    "nextInstruction":  ""
+  },
+  "32-20": {
+    "resultPage": 9,
+    "message":  "Thrusting High",
+    "nextInstruction":  ""
+  },
+  "32-22": {
+    "resultPage": 9,
+    "message":  "Thrusting High",
+    "nextInstruction":  ""
+  },
+  "32-24": {
+    "resultPage": 45,
+    "message":  "Parrying High",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "32-26": {
+    "resultPage": 9,
+    "message":  "Thrusting High",
+    "nextInstruction":  ""
+  },
+  "32-28": {
+    "resultPage": 9,
+    "message":  "Thrusting High",
+    "nextInstruction":  ""
+  },
+  "32-30": {
+    "resultPage": 27,
+    "message":  "Weapon Dislodged",
+    "nextInstruction":  "Only Green Only Yellow Only Kicks Except Wildswings Until Weapon has been retrieved"
+  },
+  "32-32": {
+    "resultPage": 9,
+    "message":  "Thrusting High",
+    "nextInstruction":  ""
+  },
+  "32-34": {
+    "resultPage": 51,
+    "message":  "Kicked Off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "32-36": {
+    "resultPage": 9,
+    "message":  "Thrusting High",
+    "nextInstruction":  ""
+  },
+  "32-38": {
+    "resultPage": 45,
+    "message":  "Parrying High",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "32-40": {
+    "resultPage": 9,
+    "message":  "Thrusting High",
+    "nextInstruction":  ""
+  },
+  "32-42": {
+    "resultPage": 9,
+    "message":  "Thrusting High",
+    "nextInstruction":  ""
+  },
+  "32-44": {
+    "resultPage": 45,
+    "message":  "Parrying High",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "32-46": {
+    "resultPage": 9,
+    "message":  "Thrusting High",
+    "nextInstruction":  ""
+  },
+  "32-48": {
+    "resultPage": 9,
+    "message":  "Thrusting High",
+    "nextInstruction":  ""
+  },
+  "34-4": {
+    "resultPage": 59,
+    "message":  "Pushed off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "34-6": {
+    "resultPage": 25,
+    "message":  "Kicking",
+    "nextInstruction":  "No Yellow"
+  },
+  "34-8": {
+    "resultPage": 19,
+    "message":  "Struck off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "34-10": {
+    "resultPage": 25,
+    "message":  "Kicking",
+    "nextInstruction":  "No Yellow"
+  },
+  "34-12": {
+    "resultPage": 25,
+    "message":  "Kicking",
+    "nextInstruction":  "No Yellow"
+  },
+  "34-14": {
+    "resultPage": 25,
+    "message":  "Kicking",
+    "nextInstruction":  "No Yellow"
+  },
+  "34-16": {
+    "resultPage": 41,
+    "message":  "Knocked Down",
+    "nextInstruction":  "Only Yellow No Orange",
+    "damageModifier": 0
+  },
+  "34-18": {
+    "resultPage": 41,
+    "message":  "Knocked Down",
+    "nextInstruction":  "Only Yellow No Orange",
+    "damageModifier": 0
+  },
+  "34-20": {
+    "resultPage": 25,
+    "message":  "Kicking",
+    "nextInstruction":  "No Yellow"
+  },
+  "34-22": {
+    "resultPage": 25,
+    "message":  "Kicking",
+    "nextInstruction":  "No Yellow"
+  },
+  "34-24": {
+    "resultPage": 53,
+    "message":  "Body Wound",
+    "nextInstruction":  "No Red No Orange",
+    "damageModifier": 5
+  },
+  "34-26": {
+    "resultPage": 25,
+    "message":  "Kicking",
+    "nextInstruction":  "No Yellow"
+  },
+  "34-28": {
+    "resultPage": 25,
+    "message":  "Kicking",
+    "nextInstruction":  "No Yellow"
+  },
+  "34-30": {
+    "resultPage": 25,
+    "message":  "Kicking",
+    "nextInstruction":  "No Yellow"
+  },
+  "34-32": {
+    "resultPage": 25,
+    "message":  "Kicking",
+    "nextInstruction":  "No Yellow"
+  },
+  "34-34": {
+    "resultPage": 51,
+    "message":  "Kicked Off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "34-36": {
+    "resultPage": 7,
+    "message":  "Dazed",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 7
+  },
+  "34-38": {
+    "resultPage": 25,
+    "message":  "Kicking",
+    "nextInstruction":  "No Yellow"
+  },
+  "34-40": {
+    "resultPage": 25,
+    "message":  "Kicking",
+    "nextInstruction":  "No Yellow"
+  },
+  "34-42": {
+    "resultPage": 41,
+    "message":  "Knocked Down",
+    "nextInstruction":  "Only Yellow No Orange",
+    "damageModifier": 0
+  },
+  "34-44": {
+    "resultPage": 19,
+    "message":  "Struck off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "34-46": {
+    "resultPage": 25,
+    "message":  "Kicking",
+    "nextInstruction":  "No Yellow"
+  },
+  "34-48": {
+    "resultPage": 25,
+    "message":  "Kicking",
+    "nextInstruction":  "No Yellow"
+  },
+  "36-4": {
+    "resultPage": 15,
+    "message":  "Swinging Down",
+    "nextInstruction":  ""
+  },
+  "36-6": {
+    "resultPage": 15,
+    "message":  "Swinging Down",
+    "nextInstruction":  ""
+  },
+  "36-8": {
+    "resultPage": 15,
+    "message":  "Swinging Down",
+    "nextInstruction":  ""
+  },
+  "36-10": {
+    "resultPage": 31,
+    "message":  "Arm Wound",
+    "nextInstruction":  "No Orange",
+    "damageModifier": 3
+  },
+  "36-12": {
+    "resultPage": 31,
+    "message":  "Arm Wound",
+    "nextInstruction":  "No Orange",
+    "damageModifier": 3
+  },
+  "36-14": {
+    "resultPage": 15,
+    "message":  "Swinging Down",
+    "nextInstruction":  ""
+  },
+  "36-16": {
+    "resultPage": 41,
+    "message":  "Knocked Down",
+    "nextInstruction":  "Only Yellow No Orange",
+    "damageModifier": 0
+  },
+  "36-18": {
+    "resultPage": 15,
+    "message":  "Swinging Down",
+    "nextInstruction":  ""
+  },
+  "36-20": {
+    "resultPage": 15,
+    "message":  "Swinging Down",
+    "nextInstruction":  ""
+  },
+  "36-22": {
+    "resultPage": 15,
+    "message":  "Swinging Down",
+    "nextInstruction":  ""
+  },
+  "36-24": {
+    "resultPage": 15,
+    "message":  "Swinging Down",
+    "nextInstruction":  ""
+  },
+  "36-26": {
+    "resultPage": 59,
+    "message":  "Pushed off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "36-28": {
+    "resultPage": 31,
+    "message":  "Arm Wound",
+    "nextInstruction":  "No Orange",
+    "damageModifier": 3
+  },
+  "36-30": {
+    "resultPage": 15,
+    "message":  "Swinging Down",
+    "nextInstruction":  ""
+  },
+  "36-32": {
+    "resultPage": 15,
+    "message":  "Swinging Down",
+    "nextInstruction":  ""
+  },
+  "36-34": {
+    "resultPage": 41,
+    "message":  "Knocked Down",
+    "nextInstruction":  "Only Yellow No Orange",
+    "damageModifier": 0
+  },
+  "36-36": {
+    "resultPage": 15,
+    "message":  "Swinging Down",
+    "nextInstruction":  ""
+  },
+  "36-38": {
+    "resultPage": 31,
+    "message":  "Arm Wound",
+    "nextInstruction":  "No Orange",
+    "damageModifier": 3
+  },
+  "36-40": {
+    "resultPage": 41,
+    "message":  "Knocked Down",
+    "nextInstruction":  "Only Yellow No Orange",
+    "damageModifier": 0
+  },
+  "36-42": {
+    "resultPage": 13,
+    "message":  "Leg Wound",
+    "nextInstruction":  "No Orange",
+    "damageModifier": 4
+  },
+  "36-44": {
+    "resultPage": 19,
+    "message":  "Struck off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "36-46": {
+    "resultPage": 15,
+    "message":  "Swinging Down",
+    "nextInstruction":  ""
+  },
+  "36-48": {
+    "resultPage": 19,
+    "message":  "Struck off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "38-4": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "38-6": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "38-8": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "38-10": {
+    "resultPage": 45,
+    "message":  "Parrying High",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "38-12": {
+    "resultPage": 45,
+    "message":  "Parrying High",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "38-14": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "38-16": {
+    "resultPage": 57,
+    "message":  "Extended Range Blocking",
+    "nextInstruction":  "Only Extended Range"
+  },
+  "38-18": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "38-20": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "38-22": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "38-24": {
+    "resultPage": 45,
+    "message":  "Parrying High",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "38-26": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "38-28": {
+    "resultPage": 27,
+    "message":  "Weapon Dislodged",
+    "nextInstruction":  "Only Green Only Yellow Only Kicks Except Wildswings Until Weapon has been retrieved"
+  },
+  "38-30": {
+    "resultPage": 27,
+    "message":  "Weapon Dislodged",
+    "nextInstruction":  "Only Green Only Yellow Only Kicks Except Wildswings Until Weapon has been retrieved"
+  },
+  "38-32": {
+    "resultPage": 45,
+    "message":  "Parrying High",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "38-34": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "38-36": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "38-38": {
+    "resultPage": 45,
+    "message":  "Parrying High",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "38-40": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "38-42": {
+    "resultPage": 13,
+    "message":  "Leg Wound",
+    "nextInstruction":  "No Orange",
+    "damageModifier": 4
+  },
+  "38-44": {
+    "resultPage": 45,
+    "message":  "Parrying High",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "38-46": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "38-48": {
+    "resultPage": 45,
+    "message":  "Parrying High",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "40-4": {
+    "resultPage": 5,
+    "message":  "Swinging Low",
+    "nextInstruction":  "No Blue"
+  },
+  "40-6": {
+    "resultPage": 5,
+    "message":  "Swinging Low",
+    "nextInstruction":  "No Blue"
+  },
+  "40-8": {
+    "resultPage": 5,
+    "message":  "Swinging Low",
+    "nextInstruction":  "No Blue"
+  },
+  "40-10": {
+    "resultPage": 53,
+    "message":  "Body Wound",
+    "nextInstruction":  "No Red No Orange",
+    "damageModifier": 5
+  },
+  "40-12": {
+    "resultPage": 53,
+    "message":  "Body Wound",
+    "nextInstruction":  "No Red No Orange",
+    "damageModifier": 5
+  },
+  "40-14": {
+    "resultPage": 49,
+    "message":  "Parrying Low",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "40-16": {
+    "resultPage": 21,
+    "message":  "Turned Around",
+    "nextInstruction":  "Only Yellow",
+    "damageModifier": 0
+  },
+  "40-18": {
+    "resultPage": 21,
+    "message":  "Turned Around",
+    "nextInstruction":  "Only Yellow",
+    "damageModifier": 0
+  },
+  "40-20": {
+    "resultPage": 5,
+    "message":  "Swinging Low",
+    "nextInstruction":  "No Blue"
+  },
+  "40-22": {
+    "resultPage": 49,
+    "message":  "Parrying Low",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "40-24": {
+    "resultPage": 21,
+    "message":  "Turned Around",
+    "nextInstruction":  "Only Yellow",
+    "damageModifier": 0
+  },
+  "40-26": {
+    "resultPage": 5,
+    "message":  "Swinging Low",
+    "nextInstruction":  "No Blue"
+  },
+  "40-28": {
+    "resultPage": 41,
+    "message":  "Knocked Down",
+    "nextInstruction":  "Only Yellow No Orange",
+    "damageModifier": 0
+  },
+  "40-30": {
+    "resultPage": 5,
+    "message":  "Swinging Low",
+    "nextInstruction":  "No Blue"
+  },
+  "40-32": {
+    "resultPage": 5,
+    "message":  "Swinging Low",
+    "nextInstruction":  "No Blue"
+  },
+  "40-34": {
+    "resultPage": 41,
+    "message":  "Knocked Down",
+    "nextInstruction":  "Only Yellow No Orange",
+    "damageModifier": 0
+  },
+  "40-36": {
+    "resultPage": 7,
+    "message":  "Dazed",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 7
+  },
+  "40-38": {
+    "resultPage": 5,
+    "message":  "Swinging Low",
+    "nextInstruction":  "No Blue"
+  },
+  "40-40": {
+    "resultPage": 5,
+    "message":  "Swinging Low",
+    "nextInstruction":  "No Blue"
+  },
+  "40-42": {
+    "resultPage": 49,
+    "message":  "Parrying Low",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "40-44": {
+    "resultPage": 19,
+    "message":  "Struck off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "40-46": {
+    "resultPage": 5,
+    "message":  "Swinging Low",
+    "nextInstruction":  "No Blue"
+  },
+  "40-48": {
+    "resultPage": 19,
+    "message":  "Struck off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "42-4": {
+    "resultPage": 59,
+    "message":  "Pushed off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "42-6": {
+    "resultPage": 5,
+    "message":  "Swinging Low",
+    "nextInstruction":  "No Blue"
+  },
+  "42-8": {
+    "resultPage": 5,
+    "message":  "Swinging Low",
+    "nextInstruction":  "No Blue"
+  },
+  "42-10": {
+    "resultPage": 31,
+    "message":  "Arm Wound",
+    "nextInstruction":  "No Orange",
+    "damageModifier": 3
+  },
+  "42-12": {
+    "resultPage": 49,
+    "message":  "Parrying Low",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "42-14": {
+    "resultPage": 49,
+    "message":  "Parrying Low",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "42-16": {
+    "resultPage": 57,
+    "message":  "Extended Range Blocking",
+    "nextInstruction":  "Only Extended Range"
+  },
+  "42-18": {
+    "resultPage": 5,
+    "message":  "Swinging Low",
+    "nextInstruction":  "No Blue"
+  },
+  "42-20": {
+    "resultPage": 5,
+    "message":  "Swinging Low",
+    "nextInstruction":  "No Blue"
+  },
+  "42-22": {
+    "resultPage": 49,
+    "message":  "Parrying Low",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "42-24": {
+    "resultPage": 5,
+    "message":  "Swinging Low",
+    "nextInstruction":  "No Blue"
+  },
+  "42-26": {
+    "resultPage": 59,
+    "message":  "Pushed off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "42-28": {
+    "resultPage": 5,
+    "message":  "Swinging Low",
+    "nextInstruction":  "No Blue"
+  },
+  "42-30": {
+    "resultPage": 27,
+    "message":  "Weapon Dislodged",
+    "nextInstruction":  "Only Green Only Yellow Only Kicks Except Wildswings Until Weapon has been retrieved"
+  },
+  "42-32": {
+    "resultPage": 5,
+    "message":  "Swinging Low",
+    "nextInstruction":  "No Blue"
+  },
+  "42-34": {
+    "resultPage": 5,
+    "message":  "Swinging Low",
+    "nextInstruction":  "No Blue"
+  },
+  "42-36": {
+    "resultPage": 5,
+    "message":  "Swinging Low",
+    "nextInstruction":  "No Blue"
+  },
+  "42-38": {
+    "resultPage": 31,
+    "message":  "Arm Wound",
+    "nextInstruction":  "No Orange",
+    "damageModifier": 3
+  },
+  "42-40": {
+    "resultPage": 49,
+    "message":  "Parrying Low",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "42-42": {
+    "resultPage": 49,
+    "message":  "Parrying Low",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "42-44": {
+    "resultPage": 5,
+    "message":  "Swinging Low",
+    "nextInstruction":  "No Blue"
+  },
+  "42-46": {
+    "resultPage": 5,
+    "message":  "Swinging Low",
+    "nextInstruction":  "No Blue"
+  },
+  "42-48": {
+    "resultPage": 49,
+    "message":  "Parrying Low",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "44-4": {
+    "resultPage": 15,
+    "message":  "Swinging Down",
+    "nextInstruction":  ""
+  },
+  "44-6": {
+    "resultPage": 45,
+    "message":  "Parrying High",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "44-8": {
+    "resultPage": 15,
+    "message":  "Swinging Down",
+    "nextInstruction":  ""
+  },
+  "44-10": {
+    "resultPage": 45,
+    "message":  "Parrying High",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "44-12": {
+    "resultPage": 15,
+    "message":  "Swinging Down",
+    "nextInstruction":  ""
+  },
+  "44-14": {
+    "resultPage": 15,
+    "message":  "Swinging Down",
+    "nextInstruction":  ""
+  },
+  "44-16": {
+    "resultPage": 57,
+    "message":  "Extended Range Blocking",
+    "nextInstruction":  "Only Extended Range"
+  },
+  "44-18": {
+    "resultPage": 15,
+    "message":  "Swinging Down",
+    "nextInstruction":  ""
+  },
+  "44-20": {
+    "resultPage": 15,
+    "message":  "Swinging Down",
+    "nextInstruction":  ""
+  },
+  "44-22": {
+    "resultPage": 15,
+    "message":  "Swinging Down",
+    "nextInstruction":  ""
+  },
+  "44-24": {
+    "resultPage": 15,
+    "message":  "Swinging Down",
+    "nextInstruction":  ""
+  },
+  "44-26": {
+    "resultPage": 59,
+    "message":  "Pushed off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "44-28": {
+    "resultPage": 15,
+    "message":  "Swinging Down",
+    "nextInstruction":  ""
+  },
+  "44-30": {
+    "resultPage": 15,
+    "message":  "Swinging Down",
+    "nextInstruction":  ""
+  },
+  "44-32": {
+    "resultPage": 45,
+    "message":  "Parrying High",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "44-34": {
+    "resultPage": 15,
+    "message":  "Swinging Down",
+    "nextInstruction":  ""
+  },
+  "44-36": {
+    "resultPage": 55,
+    "message":  "Shield Smahed",
+    "nextInstruction":  "No Blocks for the rest of the game No Protected Attacks for the rest of the game",
+    "damageModifier": 0
+  },
+  "44-38": {
+    "resultPage": 45,
+    "message":  "Parrying High",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "44-40": {
+    "resultPage": 15,
+    "message":  "Swinging Down",
+    "nextInstruction":  ""
+  },
+  "44-42": {
+    "resultPage": 15,
+    "message":  "Swinging Down",
+    "nextInstruction":  ""
+  },
+  "44-44": {
+    "resultPage": 45,
+    "message":  "Parrying High",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "44-46": {
+    "resultPage": 15,
+    "message":  "Swinging Down",
+    "nextInstruction":  ""
+  },
+  "44-48": {
+    "resultPage": 45,
+    "message":  "Parrying High",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "46-4": {
+    "resultPage": 43,
+    "message":  "Retrieving Weapon",
+    "nextInstruction":  "X"
+  },
+  "46-6": {
+    "resultPage": 43,
+    "message":  "Retrieving Weapon",
+    "nextInstruction":  "X"
+  },
+  "46-8": {
+    "resultPage": 43,
+    "message":  "Retrieving Weapon",
+    "nextInstruction":  "X"
+  },
+  "46-10": {
+    "resultPage": 43,
+    "message":  "Retrieving Weapon",
+    "nextInstruction":  "X"
+  },
+  "46-12": {
+    "resultPage": 31,
+    "message":  "Arm Wound",
+    "nextInstruction":  "No Orange",
+    "damageModifier": 3
+  },
+  "46-14": {
+    "resultPage": 43,
+    "message":  "Retrieving Weapon",
+    "nextInstruction":  "X"
+  },
+  "46-16": {
+    "resultPage": 43,
+    "message":  "Retrieving Weapon",
+    "nextInstruction":  "X"
+  },
+  "46-18": {
+    "resultPage": 43,
+    "message":  "Retrieving Weapon",
+    "nextInstruction":  "X"
+  },
+  "46-20": {
+    "resultPage": 43,
+    "message":  "Retrieving Weapon",
+    "nextInstruction":  "X"
+  },
+  "46-22": {
+    "resultPage": 43,
+    "message":  "Retrieving Weapon",
+    "nextInstruction":  "X"
+  },
+  "46-24": {
+    "resultPage": 41,
+    "message":  "Knocked Down",
+    "nextInstruction":  "Only Yellow No Orange",
+    "damageModifier": 0
+  },
+  "46-26": {
+    "resultPage": 43,
+    "message":  "Retrieving Weapon",
+    "nextInstruction":  "X"
+  },
+  "46-28": {
+    "resultPage": 31,
+    "message":  "Arm Wound",
+    "nextInstruction":  "No Orange",
+    "damageModifier": 3
+  },
+  "46-30": {
+    "resultPage": 27,
+    "message":  "Weapon Dislodged",
+    "nextInstruction":  "Only Green Only Yellow Only Kicks Except Wildswings Until Weapon has been retrieved"
+  },
+  "46-32": {
+    "resultPage": 43,
+    "message":  "Retrieving Weapon",
+    "nextInstruction":  "X"
+  },
+  "46-34": {
+    "resultPage": 27,
+    "message":  "Weapon Dislodged",
+    "nextInstruction":  "Only Green Only Yellow Only Kicks Except Wildswings Until Weapon has been retrieved"
+  },
+  "46-36": {
+    "resultPage": 7,
+    "message":  "Dazed",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 7
+  },
+  "46-38": {
+    "resultPage": 43,
+    "message":  "Retrieving Weapon",
+    "nextInstruction":  "X"
+  },
+  "46-40": {
+    "resultPage": 43,
+    "message":  "Retrieving Weapon",
+    "nextInstruction":  "X"
+  },
+  "46-42": {
+    "resultPage": 27,
+    "message":  "Weapon Dislodged",
+    "nextInstruction":  "Only Green Only Yellow Only Kicks Except Wildswings Until Weapon has been retrieved"
+  },
+  "46-44": {
+    "resultPage": 27,
+    "message":  "Weapon Dislodged",
+    "nextInstruction":  "Only Green Only Yellow Only Kicks Except Wildswings Until Weapon has been retrieved"
+  },
+  "46-46": {
+    "resultPage": 43,
+    "message":  "Retrieving Weapon",
+    "nextInstruction":  "X"
+  },
+  "46-48": {
+    "resultPage": 19,
+    "message":  "Struck off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "48-4": {
+    "resultPage": 59,
+    "message":  "Pushed off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "48-6": {
+    "resultPage": 45,
+    "message":  "Parrying High",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "48-8": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "48-10": {
+    "resultPage": 45,
+    "message":  "Parrying High",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "48-12": {
+    "resultPage": 45,
+    "message":  "Parrying High",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "48-14": {
+    "resultPage": 49,
+    "message":  "Parrying Low",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "48-16": {
+    "resultPage": 57,
+    "message":  "Extended Range Blocking",
+    "nextInstruction":  "Only Extended Range"
+  },
+  "48-18": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "48-20": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "48-22": {
+    "resultPage": 49,
+    "message":  "Parrying Low",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "48-24": {
+    "resultPage": 17,
+    "message":  "Blocking High",
+    "nextInstruction":  "No Blue",
+    "damageModifier": -4
+  },
+  "48-26": {
+    "resultPage": 59,
+    "message":  "Pushed off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "48-28": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "48-30": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "48-32": {
+    "resultPage": 17,
+    "message":  "Blocking High",
+    "nextInstruction":  "No Blue",
+    "damageModifier": -4
+  },
+  "48-34": {
+    "resultPage": 51,
+    "message":  "Kicked Off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "48-36": {
+    "resultPage": 55,
+    "message":  "Shield Smahed",
+    "nextInstruction":  "No Blocks for the rest of the game No Protected Attacks for the rest of the game",
+    "damageModifier": 0
+  },
+  "48-38": {
+    "resultPage": 45,
+    "message":  "Parrying High",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "48-40": {
+    "resultPage": 5,
+    "message":  "Swinging Low",
+    "nextInstruction":  "No Blue"
+  },
+  "48-42": {
+    "resultPage": 49,
+    "message":  "Parrying Low",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "48-44": {
+    "resultPage": 45,
+    "message":  "Parrying High",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "48-46": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "48-48": {
+    "resultPage": 49,
+    "message":  "Parrying Low",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "50-50": {
+    "resultPage": 45,
+    "message":  "Parrying High",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "50-52": {
+    "resultPage": 21,
+    "message":  "Turned Around",
+    "nextInstruction":  "Only Yellow",
+    "damageModifier": 0
+  },
+  "50-54": {
+    "resultPage": 53,
+    "message":  "Body Wound",
+    "nextInstruction":  "No Red No Orange",
+    "damageModifier": 5
+  },
+  "50-56": {
+    "resultPage": 39,
+    "message":  "Charging",
+    "nextInstruction":  "No Yellow"
+  },
+  "50-58": {
+    "resultPage": 39,
+    "message":  "Charging",
+    "nextInstruction":  "No Yellow"
+  },
+  "50-60": {
+    "resultPage": 13,
+    "message":  "Leg Wound",
+    "nextInstruction":  "No Orange",
+    "damageModifier": 4
+  },
+  "50-62": {
+    "resultPage": 39,
+    "message":  "Charging",
+    "nextInstruction":  "No Yellow"
+  },
+  "50-64": {
+    "resultPage": 7,
+    "message":  "Dazed",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 7
+  },
+  "52-50": {
+    "resultPage": 23,
+    "message":  "Behind You",
+    "nextInstruction":  ""
+  },
+  "52-52": {
+    "resultPage": 61,
+    "message":  "Extended Range Dodging",
+    "nextInstruction":  "Only Extended Range"
+  },
+  "52-54": {
+    "resultPage": 33,
+    "message":  "Dodging",
+    "nextInstruction":  "Add + 2 to any DownSwing Add + 2 to any SideSwing"
+  },
+  "52-56": {
+    "resultPage": 61,
+    "message":  "Extended Range Dodging",
+    "nextInstruction":  "Only Extended Range"
+  },
+  "52-58": {
+    "resultPage": 33,
+    "message":  "Dodging",
+    "nextInstruction":  "Add + 2 to any DownSwing Add + 2 to any SideSwing"
+  },
+  "52-60": {
+    "resultPage": 33,
+    "message":  "Dodging",
+    "nextInstruction":  "Add + 2 to any DownSwing Add + 2 to any SideSwing"
+  },
+  "52-62": {
+    "resultPage": 61,
+    "message":  "Extended Range Dodging",
+    "nextInstruction":  "Only Extended Range"
+  },
+  "52-64": {
+    "resultPage": 35,
+    "message":  "Extended Range Body Wound",
+    "nextInstruction":  "Only Brown",
+    "damageModifier": 4
+  },
+  "54-50": {
+    "resultPage": 9,
+    "message":  "Thrusting High",
+    "nextInstruction":  ""
+  },
+  "54-52": {
+    "resultPage": 9,
+    "message":  "Thrusting High",
+    "nextInstruction":  ""
+  },
+  "54-54": {
+    "resultPage": 45,
+    "message":  "Parrying High",
+    "nextInstruction":  "",
+    "damageModifier": -4
+  },
+  "54-56": {
+    "resultPage": 9,
+    "message":  "Thrusting High",
+    "nextInstruction":  ""
+  },
+  "54-58": {
+    "resultPage": 47,
+    "message":  "Extended Range Leg Wound",
+    "nextInstruction":  "Only Brown",
+    "damageModifier": 4
+  },
+  "54-60": {
+    "resultPage": 13,
+    "message":  "Leg Wound",
+    "nextInstruction":  "No Orange",
+    "damageModifier": 4
+  },
+  "54-62": {
+    "resultPage": 57,
+    "message":  "Extended Range Blocking",
+    "nextInstruction":  "Only Extended Range"
+  },
+  "54-64": {
+    "resultPage": 9,
+    "message":  "Thrusting High",
+    "nextInstruction":  ""
+  },
+  "56-50": {
+    "resultPage": 17,
+    "message":  "Blocking High",
+    "nextInstruction":  "No Blue",
+    "damageModifier": -4
+  },
+  "56-52": {
+    "resultPage": 57,
+    "message":  "Extended Range Blocking",
+    "nextInstruction":  "Only Extended Range"
+  },
+  "56-54": {
+    "resultPage": 17,
+    "message":  "Blocking High",
+    "nextInstruction":  "No Blue",
+    "damageModifier": -4
+  },
+  "56-56": {
+    "resultPage": 17,
+    "message":  "Blocking High",
+    "nextInstruction":  "No Blue",
+    "damageModifier": -4
+  },
+  "56-58": {
+    "resultPage": 47,
+    "message":  "Extended Range Leg Wound",
+    "nextInstruction":  "Only Brown",
+    "damageModifier": 4
+  },
+  "56-60": {
+    "resultPage": 57,
+    "message":  "Extended Range Blocking",
+    "nextInstruction":  "Only Extended Range"
+  },
+  "56-62": {
+    "resultPage": 57,
+    "message":  "Extended Range Blocking",
+    "nextInstruction":  "Only Extended Range"
+  },
+  "56-64": {
+    "resultPage": 17,
+    "message":  "Blocking High",
+    "nextInstruction":  "No Blue",
+    "damageModifier": -4
+  },
+  "58-50": {
+    "resultPage": 41,
+    "message":  "Knocked Down",
+    "nextInstruction":  "Only Yellow No Orange",
+    "damageModifier": 0
+  },
+  "58-52": {
+    "resultPage": 5,
+    "message":  "Swinging Low",
+    "nextInstruction":  "No Blue"
+  },
+  "58-54": {
+    "resultPage": 35,
+    "message":  "Extended Range Body Wound",
+    "nextInstruction":  "Only Brown",
+    "damageModifier": 4
+  },
+  "58-56": {
+    "resultPage": 57,
+    "message":  "Extended Range Blocking",
+    "nextInstruction":  "Only Extended Range"
+  },
+  "58-58": {
+    "resultPage": 5,
+    "message":  "Swinging Low",
+    "nextInstruction":  "No Blue"
+  },
+  "58-60": {
+    "resultPage": 5,
+    "message":  "Swinging Low",
+    "nextInstruction":  "No Blue"
+  },
+  "58-62": {
+    "resultPage": 57,
+    "message":  "Extended Range Blocking",
+    "nextInstruction":  "Only Extended Range"
+  },
+  "58-64": {
+    "resultPage": 57,
+    "message":  "Extended Range Blocking",
+    "nextInstruction":  "Only Extended Range"
+  },
+  "60-50": {
+    "resultPage": 11,
+    "message":  "Thrusting Low",
+    "nextInstruction":  "No Red"
+  },
+  "60-52": {
+    "resultPage": 11,
+    "message":  "Thrusting Low",
+    "nextInstruction":  "No Red"
+  },
+  "60-54": {
+    "resultPage": 11,
+    "message":  "Thrusting Low",
+    "nextInstruction":  "No Red"
+  },
+  "60-56": {
+    "resultPage": 57,
+    "message":  "Extended Range Blocking",
+    "nextInstruction":  "Only Extended Range"
+  },
+  "60-58": {
+    "resultPage": 11,
+    "message":  "Thrusting Low",
+    "nextInstruction":  "No Red"
+  },
+  "60-60": {
+    "resultPage": 11,
+    "message":  "Thrusting Low",
+    "nextInstruction":  "No Red"
+  },
+  "60-62": {
+    "resultPage": 57,
+    "message":  "Extended Range Blocking",
+    "nextInstruction":  "Only Extended Range"
+  },
+  "60-64": {
+    "resultPage": 35,
+    "message":  "Extended Range Body Wound",
+    "nextInstruction":  "Only Brown",
+    "damageModifier": 4
+  },
+  "62-50": {
+    "resultPage": 19,
+    "message":  "Struck off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "62-52": {
+    "resultPage": 57,
+    "message":  "Extended Range Blocking",
+    "nextInstruction":  "Only Extended Range"
+  },
+  "62-54": {
+    "resultPage": 35,
+    "message":  "Extended Range Body Wound",
+    "nextInstruction":  "Only Brown",
+    "damageModifier": 4
+  },
+  "62-56": {
+    "resultPage": 57,
+    "message":  "Extended Range Blocking",
+    "nextInstruction":  "Only Extended Range"
+  },
+  "62-58": {
+    "resultPage": 57,
+    "message":  "Extended Range Blocking",
+    "nextInstruction":  "Only Extended Range"
+  },
+  "62-60": {
+    "resultPage": 57,
+    "message":  "Extended Range Blocking",
+    "nextInstruction":  "Only Extended Range"
+  },
+  "62-62": {
+    "resultPage": 57,
+    "message":  "Extended Range Blocking",
+    "nextInstruction":  "Only Extended Range"
+  },
+  "62-64": {
+    "resultPage": 57,
+    "message":  "Extended Range Blocking",
+    "nextInstruction":  "Only Extended Range"
+  },
+  "64-50": {
+    "resultPage": 19,
+    "message":  "Struck off Balance",
+    "nextInstruction":  "Only Green Only Yellow",
+    "damageModifier": 0
+  },
+  "64-52": {
+    "resultPage": 57,
+    "message":  "Extended Range Blocking",
+    "nextInstruction":  "Only Extended Range"
+  },
+  "64-54": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "64-56": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  },
+  "64-58": {
+    "resultPage": 57,
+    "message":  "Extended Range Blocking",
+    "nextInstruction":  "Only Extended Range"
+  },
+  "64-60": {
+    "resultPage": 47,
+    "message":  "Extended Range Leg Wound",
+    "nextInstruction":  "Only Brown",
+    "damageModifier": 4
+  },
+  "64-62": {
+    "resultPage": 57,
+    "message":  "Extended Range Blocking",
+    "nextInstruction":  "Only Extended Range"
+  },
+  "64-64": {
+    "resultPage": 3,
+    "message":  "Swinging High",
+    "nextInstruction":  "No Red"
+  }
+}
