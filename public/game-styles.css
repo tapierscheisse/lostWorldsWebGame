@@ -1,0 +1,51 @@
+/* Spiel-spezifische Styles */
+.game-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 20px;
+}
+.player-area, .monster-area, .action-area {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+}
+.health-bar {
+  height: 20px;
+  background: #e9ecef;
+  border-radius: 4px;
+  margin-top: 5px;
+  overflow: hidden;
+}
+.health-progress {
+  height: 100%;
+  background: #28a745;
+  width: 100%;
+  transition: width 0.3s;
+}
+/* Kampfsystem Styles */
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 15px;
+}
+.button {
+  padding: 6px 8px;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: opacity 0.3s, filter 0.3s;
+  width: 100%;
+  text-align: center;
+  height: 30px;
+  box-sizing: border-box;
+  position: relative;
+}
+/* ... (restliche Kampfsystem-Styles) ... */
+.loading {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+}
