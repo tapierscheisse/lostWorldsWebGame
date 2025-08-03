@@ -275,9 +275,9 @@
     document.getElementById('displayGameId').textContent = gameId;
     document.getElementById('displayPlayerId').textContent = playerId ? playerId : (isMaster ? 'Master' : 'Unbekannt');
     
-    // WebSocket-Verbindung
+    // WebSocket-Verbindung mit wss/ws Protokoll
     const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-const socket = new WebSocket(`${protocol}//${window.location.host}`);
+    const socket = new WebSocket(`${protocol}//${window.location.host}`);
     socket.onopen = () => {
       socket.send(JSON.stringify({ 
         type: 'join-game', 
@@ -298,6 +298,22 @@ const socket = new WebSocket(`${protocol}//${window.location.host}`);
         case 'dice-roll':
           // showDiceResult(data.value, data.player);
           break;
+        // === Kampfsystem WebSocket Nachrichten ===
+        case 'action':
+            // Nachricht von einem anderen Spieler
+            if (data.playerId !== playerId) { // Nur Nachrichten von anderen verarbeiten
+                if (data.actionType === 'button') {
+                    // Ein anderer Spieler hat eine Aktion ausgewählt
+                    // In einer späteren Version könnte dies den W64-Wert auslösen
+                    console.log(`Anderer Spieler (${data.playerId}) hat Button ${data.buttonValue} gewählt.`);
+                } else if (data.actionType === 'maneuver') {
+                    // Ein anderer Spieler hat den W64-Wert eingegeben
+                    // In einer späteren Version könnte dies das Ergebnis berechnen
+                    console.log(`Anderer Spieler (${data.playerId}) hat Manöver ${data.maneuverValue} eingegeben.`);
+                }
+            }
+            break;
+        // =======================================
       }
     };
     
@@ -477,8 +493,26 @@ const socket = new WebSocket(`${protocol}//${window.location.host}`);
             btn.addEventListener('click', () => {
                 if (isMasterSystem) {
                     openInputModalMaster(button.value);
+                     // === WebSocket Senden (Master) ===
+                     socket.send(JSON.stringify({
+                         type: 'action',
+                         gameId: gameId,
+                         playerId: playerId,
+                         actionType: 'button',
+                         buttonValue: parseInt(button.value)
+                     }));
+                     // =================================
                 } else {
                     openInputModal(button.value);
+                     // === WebSocket Senden (Spieler) ===
+                     socket.send(JSON.stringify({
+                         type: 'action',
+                         gameId: gameId,
+                         playerId: playerId,
+                         actionType: 'button',
+                         buttonValue: parseInt(button.value)
+                     }));
+                     // ==================================
                 }
             });
             
@@ -711,6 +745,15 @@ restriction[28]=Only move Extended Range,(P)`);
             alert("Die Zahl muss zwischen 0 und 63 liegen!");
             return;
         }
+         // === WebSocket Senden (Spieler Manöver) ===
+         socket.send(JSON.stringify({
+             type: 'action',
+             gameId: gameId,
+             playerId: playerId,
+             actionType: 'maneuver',
+             maneuverValue: savedManeuverValue
+         }));
+         // ==========================================
         calculateResult(false); // Für Spieler
     };
     
@@ -724,6 +767,15 @@ restriction[28]=Only move Extended Range,(P)`);
             alert("Die Zahl muss zwischen 0 und 63 liegen!");
             return;
         }
+         // === WebSocket Senden (Master Manöver) ===
+         socket.send(JSON.stringify({
+             type: 'action',
+             gameId: gameId,
+             playerId: playerId,
+             actionType: 'maneuver',
+             maneuverValue: savedManeuverValueMaster
+         }));
+         // =========================================
         calculateResult(true); // Für Master
     };
     
