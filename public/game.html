@@ -277,7 +277,7 @@
       <!-- Monsterbereich -->
       <div class="monster-area">
         <h2>Monster</h2>
-        <div id="monstersList"></div>
+        <div id="monsterList"></div>
       </div>
     </div>
   </div>
@@ -384,8 +384,8 @@
         </div>
       `).join('');
       // Monsterliste
-      const monstersList = document.getElementById('monstersList');
-      monstersList.innerHTML = state.monsters.map(monster => `
+      const monsterList = document.getElementById('monsterList');
+      monsterList.innerHTML = state.monster.map(monster => `
         <div class="monster-card" data-id="${monster.id}">
           <h3>${monster.name}</h3>
           <div>HP: ${monster.hp}/${monster.maxHp}</div>
@@ -741,7 +741,7 @@
     async function loadGameData() {
         try {
             // Bestimme den Basispfad basierend auf isMaster
-            const basePath = isMaster ? '/images/monsters/' : '/images/characters/';
+            const basePath = isMaster ? '/images/monster/' : '/images/characters/';
             console.log(`Lade Kampfsystem-Daten von: ${basePath}`);
             const [buttons, pages, pages2, restrictionsTxt, damage] = await Promise.all([
                 fetch(`${basePath}buttons.txt`).then(r => {
